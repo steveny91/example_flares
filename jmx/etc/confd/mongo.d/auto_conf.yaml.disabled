@@ -1,0 +1,4 @@
+init_config:
+instances:
+  - server: mongodb://<USER>:********@<HOST>:<PORT>/<DB_NAME>
+    replica_check: true

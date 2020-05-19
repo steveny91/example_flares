@@ -1,0 +1,732 @@
+2020-05-19 21:14:18 UTC | CORE | INFO | (cmd/agent/app/run.go:179 in StartAgent) | Starting Datadog Agent v7.19.2
+2020-05-19 21:14:18 UTC | CORE | INFO | (cmd/agent/app/run.go:203 in StartAgent) | pid '19218' written to pid file '/opt/datadog-agent/run/agent.pid'
+2020-05-19 21:14:18 UTC | CORE | INFO | (cmd/agent/app/run.go:210 in StartAgent) | Hostname is: missingkecl
+2020-05-19 21:14:18 UTC | CORE | INFO | (pkg/api/security/security.go:145 in fetchAuthToken) | Saved a new authentication token to /etc/datadog-agent/auth_token
+2020-05-19 21:14:18 UTC | CORE | INFO | (cmd/agent/app/run.go:237 in StartAgent) | GUI server port -1 specified: not starting the GUI.
+2020-05-19 21:14:18 UTC | CORE | INFO | (pkg/forwarder/forwarder.go:231 in Start) | Forwarder started, sending to 1 endpoint(s) with 1 worker(s) each: "https://7-19-2-app.agent.datadoghq.com" (1 api key(s))
+2020-05-19 21:14:18 UTC | CORE | INFO | (cmd/agent/app/run.go:277 in StartAgent) | logs-agent disabled
+2020-05-19 21:14:18 UTC | CORE | INFO | (pkg/dogstatsd/listeners/udp.go:97 in Listen) | dogstatsd-udp: starting to listen on 127.0.0.1:8125
+2020-05-19 21:14:18 UTC | CORE | INFO | (pkg/collector/runner/runner.go:92 in NewRunner) | Runner started with 4 workers.
+2020-05-19 21:14:18 UTC | CORE | INFO | (pkg/collector/python/init.go:303 in Initialize) | Initializing rtloader with python3 /opt/datadog-agent/embedded
+2020-05-19 21:14:19 UTC | CORE | INFO | (pkg/collector/python/datadog_agent.go:120 in LogMessage) | - | (ddyaml.py:123) | monkey patching yaml.load...
+2020-05-19 21:14:19 UTC | CORE | INFO | (pkg/collector/python/datadog_agent.go:120 in LogMessage) | - | (ddyaml.py:127) | monkey patching yaml.load_all...
+2020-05-19 21:14:19 UTC | CORE | INFO | (pkg/collector/python/datadog_agent.go:120 in LogMessage) | - | (ddyaml.py:131) | monkey patching yaml.dump_all... (affects all yaml dump operations)
+2020-05-19 21:14:19 UTC | CORE | INFO | (pkg/collector/collector.go:57 in NewCollector) | Embedding Python 3.8.1 (default, May 11 2020, 16:02:59) [GCC 4.7.2]
+2020-05-19 21:14:19 UTC | CORE | INFO | (pkg/autodiscovery/providers/file.go:74 in Collect) | file: searching for configuration files at: /etc/datadog-agent/conf.d
+2020-05-19 21:14:19 UTC | CORE | INFO | (pkg/autodiscovery/providers/file.go:74 in Collect) | file: searching for configuration files at: /opt/datadog-agent/bin/agent/dist/conf.d
+2020-05-19 21:14:19 UTC | CORE | WARN | (pkg/autodiscovery/providers/file.go:78 in Collect) | Skipping, open /opt/datadog-agent/bin/agent/dist/conf.d: no such file or directory
+2020-05-19 21:14:19 UTC | CORE | INFO | (pkg/autodiscovery/providers/file.go:74 in Collect) | file: searching for configuration files at: 
+2020-05-19 21:14:19 UTC | CORE | WARN | (pkg/autodiscovery/providers/file.go:78 in Collect) | Skipping, open : no such file or directory
+2020-05-19 21:14:19 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check cpu with an interval of 15s
+2020-05-19 21:14:19 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check disk with an interval of 15s
+2020-05-19 21:14:19 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check file_handle with an interval of 15s
+2020-05-19 21:14:19 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check io with an interval of 15s
+2020-05-19 21:14:19 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check load with an interval of 15s
+2020-05-19 21:14:19 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check memory with an interval of 15s
+2020-05-19 21:14:19 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check network with an interval of 15s
+2020-05-19 21:14:19 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check ntp with an interval of 15m0s
+2020-05-19 21:14:19 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check uptime with an interval of 15s
+2020-05-19 21:14:19 UTC | CORE | INFO | (pkg/util/cloudprovider.go:45 in DetectCloudProvider) | No cloud provider detected
+2020-05-19 21:14:20 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check ntp
+2020-05-19 21:14:20 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check cpu
+2020-05-19 21:14:20 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check cpu
+2020-05-19 21:14:22 UTC | CORE | INFO | (pkg/metadata/host/host.go:164 in getNetworkMeta) | could not get network metadata: could not detect network ID
+2020-05-19 21:14:22 UTC | CORE | INFO | (pkg/serializer/serializer.go:346 in SendMetadata) | Sent metadata payload, size (raw/compressed): 3887/1687 bytes.
+2020-05-19 21:14:22 UTC | CORE | INFO | (pkg/forwarder/transaction.go:258 in internalProcess) | Successfully posted payload to "https://7-19-2-app.agent.datadoghq.com/intake/?api_key=*************************cec0d", the agent will only log transaction success every 500 transactions
+2020-05-19 21:14:24 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check uptime
+2020-05-19 21:14:24 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check uptime
+2020-05-19 21:14:25 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check memory
+2020-05-19 21:14:25 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check memory
+2020-05-19 21:14:26 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check ntp
+2020-05-19 21:14:26 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check io
+2020-05-19 21:14:26 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check io
+2020-05-19 21:14:27 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check disk
+2020-05-19 21:14:27 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check disk
+2020-05-19 21:14:32 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check network
+2020-05-19 21:14:32 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check network
+2020-05-19 21:14:33 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check load
+2020-05-19 21:14:33 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check load
+2020-05-19 21:14:34 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check file_handle
+2020-05-19 21:14:34 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check file_handle
+2020-05-19 21:14:35 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check cpu
+2020-05-19 21:14:35 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check cpu
+2020-05-19 21:14:39 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check uptime
+2020-05-19 21:14:39 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check uptime
+2020-05-19 21:14:40 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check memory
+2020-05-19 21:14:40 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check memory
+2020-05-19 21:14:41 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check io
+2020-05-19 21:14:41 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check io
+2020-05-19 21:14:42 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check disk
+2020-05-19 21:14:42 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check disk
+2020-05-19 21:14:47 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check network
+2020-05-19 21:14:47 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check network
+2020-05-19 21:14:48 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check load
+2020-05-19 21:14:48 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check load
+2020-05-19 21:14:49 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check file_handle
+2020-05-19 21:14:49 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check file_handle
+2020-05-19 21:14:50 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check cpu
+2020-05-19 21:14:50 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check cpu
+2020-05-19 21:14:54 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check uptime
+2020-05-19 21:14:54 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check uptime
+2020-05-19 21:14:55 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check memory
+2020-05-19 21:14:55 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check memory
+2020-05-19 21:14:56 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check io
+2020-05-19 21:14:56 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check io
+2020-05-19 21:14:57 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check disk
+2020-05-19 21:14:57 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check disk
+2020-05-19 21:15:02 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check network
+2020-05-19 21:15:02 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check network
+2020-05-19 21:15:03 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check load
+2020-05-19 21:15:03 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check load
+2020-05-19 21:15:04 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check file_handle
+2020-05-19 21:15:04 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check file_handle
+2020-05-19 21:15:05 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check cpu
+2020-05-19 21:15:05 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check cpu
+2020-05-19 21:15:09 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check uptime
+2020-05-19 21:15:09 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check uptime
+2020-05-19 21:15:10 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check memory
+2020-05-19 21:15:10 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check memory
+2020-05-19 21:15:11 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check io
+2020-05-19 21:15:11 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check io
+2020-05-19 21:15:12 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check disk
+2020-05-19 21:15:12 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check disk
+2020-05-19 21:15:17 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check network
+2020-05-19 21:15:17 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check network
+2020-05-19 21:15:18 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check load
+2020-05-19 21:15:18 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check load
+2020-05-19 21:15:19 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check file_handle
+2020-05-19 21:15:19 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check file_handle
+2020-05-19 21:15:20 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check cpu
+2020-05-19 21:15:20 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check cpu
+2020-05-19 21:15:24 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check uptime
+2020-05-19 21:15:24 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check uptime
+2020-05-19 21:15:25 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check memory
+2020-05-19 21:15:25 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check memory
+2020-05-19 21:15:26 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check io
+2020-05-19 21:15:26 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check io
+2020-05-19 21:15:27 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check disk
+2020-05-19 21:15:27 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check disk
+2020-05-19 21:15:32 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check network
+2020-05-19 21:15:32 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check network
+2020-05-19 21:15:33 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check load
+2020-05-19 21:15:33 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check load
+2020-05-19 21:15:34 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check file_handle
+2020-05-19 21:15:34 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check file_handle
+2020-05-19 21:15:35 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check cpu
+2020-05-19 21:15:35 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check cpu, next runs will be logged every 500 runs
+2020-05-19 21:15:39 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check uptime
+2020-05-19 21:15:39 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check uptime, next runs will be logged every 500 runs
+2020-05-19 21:15:40 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check memory
+2020-05-19 21:15:40 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check memory, next runs will be logged every 500 runs
+2020-05-19 21:15:41 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check io
+2020-05-19 21:15:41 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check io, next runs will be logged every 500 runs
+2020-05-19 21:15:42 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check disk
+2020-05-19 21:15:42 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check disk, next runs will be logged every 500 runs
+2020-05-19 21:15:47 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check network
+2020-05-19 21:15:47 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check network, next runs will be logged every 500 runs
+2020-05-19 21:15:48 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check load
+2020-05-19 21:15:48 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check load, next runs will be logged every 500 runs
+2020-05-19 21:15:49 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check file_handle
+2020-05-19 21:15:49 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check file_handle, next runs will be logged every 500 runs
+2020-05-19 21:15:56 UTC | CORE | INFO | (cmd/agent/api/agent/agent.go:138 in getStatus) | Got a request for the status. Making status.
+2020-05-19 21:18:05 UTC | CORE | INFO | (cmd/agent/app/run.go:104 in func2) | Received signal 'terminated', shutting down...
+2020-05-19 21:18:05 UTC | CORE | INFO | (pkg/collector/runner/runner.go:149 in Stop) | Runner is shutting down...
+2020-05-19 21:18:05 UTC | CORE | INFO | (pkg/collector/python/subprocesses.go:48 in TerminateRunningProcesses) | Canceling all running python subprocesses
+2020-05-19 21:18:05 UTC | CORE | INFO | (pkg/forwarder/forwarder.go:243 in Stop) | stopping the Forwarder
+2020-05-19 21:18:05 UTC | CORE | INFO | (pkg/aggregator/aggregator.go:639 in run) | Stopping aggregator
+2020-05-19 21:18:06 UTC | CORE | INFO | (pkg/forwarder/domain_forwarder.go:200 in Stop) | domainForwarder stopped
+2020-05-19 21:18:06 UTC | CORE | INFO | (pkg/logs/logs.go:110 in Stop) | Stopping logs-agent
+2020-05-19 21:18:06 UTC | CORE | INFO | (pkg/logs/logs.go:123 in Stop) | logs-agent stopped
+2020-05-19 21:18:06 UTC | CORE | INFO | (cmd/agent/app/run.go:338 in StopAgent) | See ya!
+2020-05-19 21:19:28 UTC | CORE | INFO | (cmd/agent/app/run.go:179 in StartAgent) | Starting Datadog Agent v7.19.2
+2020-05-19 21:19:28 UTC | CORE | INFO | (cmd/agent/app/run.go:203 in StartAgent) | pid '1141' written to pid file '/opt/datadog-agent/run/agent.pid'
+2020-05-19 21:19:28 UTC | CORE | INFO | (cmd/agent/app/run.go:210 in StartAgent) | Hostname is: ubuntu-xenial
+2020-05-19 21:19:29 UTC | CORE | INFO | (cmd/agent/app/run.go:237 in StartAgent) | GUI server port -1 specified: not starting the GUI.
+2020-05-19 21:19:29 UTC | CORE | INFO | (pkg/forwarder/forwarder.go:231 in Start) | Forwarder started, sending to 1 endpoint(s) with 1 worker(s) each: "https://7-19-2-app.agent.datadoghq.com" (1 api key(s))
+2020-05-19 21:19:29 UTC | CORE | INFO | (cmd/agent/app/run.go:277 in StartAgent) | logs-agent disabled
+2020-05-19 21:19:29 UTC | CORE | INFO | (pkg/dogstatsd/listeners/udp.go:97 in Listen) | dogstatsd-udp: starting to listen on 127.0.0.1:8125
+2020-05-19 21:19:29 UTC | CORE | INFO | (pkg/collector/runner/runner.go:92 in NewRunner) | Runner started with 4 workers.
+2020-05-19 21:19:29 UTC | CORE | INFO | (pkg/collector/python/init.go:303 in Initialize) | Initializing rtloader with python3 /opt/datadog-agent/embedded
+2020-05-19 21:19:29 UTC | CORE | INFO | (pkg/collector/python/datadog_agent.go:120 in LogMessage) | - | (ddyaml.py:123) | monkey patching yaml.load...
+2020-05-19 21:19:29 UTC | CORE | INFO | (pkg/collector/python/datadog_agent.go:120 in LogMessage) | - | (ddyaml.py:127) | monkey patching yaml.load_all...
+2020-05-19 21:19:29 UTC | CORE | INFO | (pkg/collector/python/datadog_agent.go:120 in LogMessage) | - | (ddyaml.py:131) | monkey patching yaml.dump_all... (affects all yaml dump operations)
+2020-05-19 21:19:29 UTC | CORE | INFO | (pkg/collector/collector.go:57 in NewCollector) | Embedding Python 3.8.1 (default, May 11 2020, 16:02:59) [GCC 4.7.2]
+2020-05-19 21:19:29 UTC | CORE | INFO | (pkg/autodiscovery/providers/file.go:74 in Collect) | file: searching for configuration files at: /etc/datadog-agent/conf.d
+2020-05-19 21:19:29 UTC | CORE | INFO | (pkg/autodiscovery/providers/file.go:74 in Collect) | file: searching for configuration files at: /opt/datadog-agent/bin/agent/dist/conf.d
+2020-05-19 21:19:29 UTC | CORE | WARN | (pkg/autodiscovery/providers/file.go:78 in Collect) | Skipping, open /opt/datadog-agent/bin/agent/dist/conf.d: no such file or directory
+2020-05-19 21:19:29 UTC | CORE | INFO | (pkg/autodiscovery/providers/file.go:74 in Collect) | file: searching for configuration files at: 
+2020-05-19 21:19:29 UTC | CORE | WARN | (pkg/autodiscovery/providers/file.go:78 in Collect) | Skipping, open : no such file or directory
+2020-05-19 21:19:29 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check cpu with an interval of 15s
+2020-05-19 21:19:29 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check disk with an interval of 15s
+2020-05-19 21:19:29 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check file_handle with an interval of 15s
+2020-05-19 21:19:29 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check io with an interval of 15s
+2020-05-19 21:19:29 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check load with an interval of 15s
+2020-05-19 21:19:29 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check memory with an interval of 15s
+2020-05-19 21:19:29 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check network with an interval of 15s
+2020-05-19 21:19:29 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check ntp with an interval of 15m0s
+2020-05-19 21:19:29 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check uptime with an interval of 15s
+2020-05-19 21:19:30 UTC | CORE | INFO | (pkg/util/cloudprovider.go:45 in DetectCloudProvider) | No cloud provider detected
+2020-05-19 21:19:30 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check ntp
+2020-05-19 21:19:30 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check cpu
+2020-05-19 21:19:30 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check cpu
+2020-05-19 21:19:32 UTC | CORE | INFO | (pkg/metadata/host/host.go:164 in getNetworkMeta) | could not get network metadata: could not detect network ID
+2020-05-19 21:19:32 UTC | CORE | INFO | (pkg/serializer/serializer.go:346 in SendMetadata) | Sent metadata payload, size (raw/compressed): 3624/1616 bytes.
+2020-05-19 21:19:32 UTC | CORE | INFO | (pkg/forwarder/transaction.go:258 in internalProcess) | Successfully posted payload to "https://7-19-2-app.agent.datadoghq.com/intake/?api_key=*************************cec0d", the agent will only log transaction success every 500 transactions
+2020-05-19 21:19:34 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check uptime
+2020-05-19 21:19:34 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check uptime
+2020-05-19 21:19:35 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check memory
+2020-05-19 21:19:35 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check memory
+2020-05-19 21:19:36 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check io
+2020-05-19 21:19:36 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check io
+2020-05-19 21:19:37 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check disk
+2020-05-19 21:19:37 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check disk
+2020-05-19 21:19:42 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check network
+2020-05-19 21:19:42 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check network
+2020-05-19 21:19:43 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check load
+2020-05-19 21:19:43 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check load
+2020-05-19 21:19:44 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check file_handle
+2020-05-19 21:19:44 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check file_handle
+2020-05-19 21:19:45 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check cpu
+2020-05-19 21:19:45 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check cpu
+2020-05-19 21:19:46 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check ntp
+2020-05-19 21:19:46 UTC | CORE | INFO | (cmd/agent/api/agent/agent.go:138 in getStatus) | Got a request for the status. Making status.
+2020-05-19 21:19:49 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check uptime
+2020-05-19 21:19:49 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check uptime
+2020-05-19 21:19:50 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check memory
+2020-05-19 21:19:50 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check memory
+2020-05-19 21:19:51 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check io
+2020-05-19 21:19:51 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check io
+2020-05-19 21:19:52 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check disk
+2020-05-19 21:19:52 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check disk
+2020-05-19 21:19:57 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check network
+2020-05-19 21:19:57 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check network
+2020-05-19 21:19:58 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check load
+2020-05-19 21:19:58 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check load
+2020-05-19 21:19:59 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check file_handle
+2020-05-19 21:19:59 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check file_handle
+2020-05-19 21:20:00 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check cpu
+2020-05-19 21:20:00 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check cpu
+2020-05-19 21:20:04 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check uptime
+2020-05-19 21:20:04 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check uptime
+2020-05-19 21:20:05 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check memory
+2020-05-19 21:20:05 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check memory
+2020-05-19 21:20:06 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check io
+2020-05-19 21:20:06 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check io
+2020-05-19 21:20:07 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check disk
+2020-05-19 21:20:07 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check disk
+2020-05-19 21:20:12 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check network
+2020-05-19 21:20:12 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check network
+2020-05-19 21:20:13 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check load
+2020-05-19 21:20:13 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check load
+2020-05-19 21:20:14 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check file_handle
+2020-05-19 21:20:14 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check file_handle
+2020-05-19 21:20:15 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check cpu
+2020-05-19 21:20:15 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check cpu
+2020-05-19 21:20:19 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check uptime
+2020-05-19 21:20:19 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check uptime
+2020-05-19 21:20:20 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check memory
+2020-05-19 21:20:20 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check memory
+2020-05-19 21:20:21 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check io
+2020-05-19 21:20:21 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check io
+2020-05-19 21:20:22 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check disk
+2020-05-19 21:20:22 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check disk
+2020-05-19 21:20:27 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check network
+2020-05-19 21:20:27 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check network
+2020-05-19 21:20:28 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check load
+2020-05-19 21:20:28 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check load
+2020-05-19 21:20:29 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check file_handle
+2020-05-19 21:20:29 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check file_handle
+2020-05-19 21:20:30 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check cpu
+2020-05-19 21:20:30 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check cpu
+2020-05-19 21:20:34 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check uptime
+2020-05-19 21:20:34 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check uptime
+2020-05-19 21:20:35 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check memory
+2020-05-19 21:20:35 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check memory
+2020-05-19 21:20:36 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check io
+2020-05-19 21:20:36 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check io
+2020-05-19 21:20:37 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check disk
+2020-05-19 21:20:37 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check disk
+2020-05-19 21:20:42 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check network
+2020-05-19 21:20:42 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check network
+2020-05-19 21:20:43 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check load
+2020-05-19 21:20:43 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check load
+2020-05-19 21:20:44 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check file_handle
+2020-05-19 21:20:44 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check file_handle
+2020-05-19 21:20:45 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check cpu
+2020-05-19 21:20:45 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check cpu, next runs will be logged every 500 runs
+2020-05-19 21:20:49 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check uptime
+2020-05-19 21:20:49 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check uptime, next runs will be logged every 500 runs
+2020-05-19 21:20:50 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check memory
+2020-05-19 21:20:50 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check memory, next runs will be logged every 500 runs
+2020-05-19 21:20:51 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check io
+2020-05-19 21:20:51 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check io, next runs will be logged every 500 runs
+2020-05-19 21:20:52 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check disk
+2020-05-19 21:20:52 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check disk, next runs will be logged every 500 runs
+2020-05-19 21:20:57 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check network
+2020-05-19 21:20:57 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check network, next runs will be logged every 500 runs
+2020-05-19 21:20:58 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check load
+2020-05-19 21:20:58 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check load, next runs will be logged every 500 runs
+2020-05-19 21:20:59 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check file_handle
+2020-05-19 21:20:59 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check file_handle, next runs will be logged every 500 runs
+2020-05-19 21:24:28 UTC | CORE | INFO | (pkg/serializer/serializer.go:346 in SendMetadata) | Sent metadata payload, size (raw/compressed): 1020/279 bytes.
+2020-05-19 21:24:32 UTC | CORE | INFO | (pkg/serializer/serializer.go:366 in SendJSONToV1Intake) | Sent processes metadata payload, size: 1357 bytes.
+2020-05-19 21:27:21 UTC | CORE | INFO | (cmd/agent/app/run.go:104 in func2) | Received signal 'terminated', shutting down...
+2020-05-19 21:27:21 UTC | CORE | INFO | (pkg/collector/runner/runner.go:149 in Stop) | Runner is shutting down...
+2020-05-19 21:27:21 UTC | CORE | INFO | (pkg/collector/python/subprocesses.go:48 in TerminateRunningProcesses) | Canceling all running python subprocesses
+2020-05-19 21:27:21 UTC | CORE | INFO | (pkg/aggregator/aggregator.go:639 in run) | Stopping aggregator
+2020-05-19 21:27:21 UTC | CORE | INFO | (pkg/forwarder/forwarder.go:243 in Stop) | stopping the Forwarder
+2020-05-19 21:27:21 UTC | CORE | INFO | (pkg/forwarder/domain_forwarder.go:200 in Stop) | domainForwarder stopped
+2020-05-19 21:27:21 UTC | CORE | INFO | (pkg/logs/logs.go:110 in Stop) | Stopping logs-agent
+2020-05-19 21:27:21 UTC | CORE | INFO | (pkg/logs/logs.go:123 in Stop) | logs-agent stopped
+2020-05-19 21:27:21 UTC | CORE | INFO | (cmd/agent/app/run.go:338 in StopAgent) | See ya!
+2020-05-19 21:27:21 UTC | CORE | INFO | (cmd/agent/app/run.go:179 in StartAgent) | Starting Datadog Agent v7.19.2
+2020-05-19 21:27:21 UTC | CORE | INFO | (cmd/agent/app/run.go:203 in StartAgent) | pid '3444' written to pid file '/opt/datadog-agent/run/agent.pid'
+2020-05-19 21:27:21 UTC | CORE | INFO | (cmd/agent/app/run.go:210 in StartAgent) | Hostname is: ubuntu-xenial
+2020-05-19 21:27:22 UTC | CORE | INFO | (cmd/agent/app/run.go:237 in StartAgent) | GUI server port -1 specified: not starting the GUI.
+2020-05-19 21:27:22 UTC | CORE | INFO | (pkg/forwarder/forwarder.go:231 in Start) | Forwarder started, sending to 1 endpoint(s) with 1 worker(s) each: "https://7-19-2-app.agent.datadoghq.com" (1 api key(s))
+2020-05-19 21:27:22 UTC | CORE | INFO | (cmd/agent/app/run.go:277 in StartAgent) | logs-agent disabled
+2020-05-19 21:27:22 UTC | CORE | INFO | (pkg/collector/runner/runner.go:92 in NewRunner) | Runner started with 4 workers.
+2020-05-19 21:27:22 UTC | CORE | INFO | (pkg/collector/python/init.go:303 in Initialize) | Initializing rtloader with python3 /opt/datadog-agent/embedded
+2020-05-19 21:27:22 UTC | CORE | INFO | (pkg/dogstatsd/listeners/udp.go:97 in Listen) | dogstatsd-udp: starting to listen on 127.0.0.1:8125
+2020-05-19 21:27:22 UTC | CORE | INFO | (pkg/collector/python/datadog_agent.go:120 in LogMessage) | - | (ddyaml.py:123) | monkey patching yaml.load...
+2020-05-19 21:27:22 UTC | CORE | INFO | (pkg/collector/python/datadog_agent.go:120 in LogMessage) | - | (ddyaml.py:127) | monkey patching yaml.load_all...
+2020-05-19 21:27:22 UTC | CORE | INFO | (pkg/collector/python/datadog_agent.go:120 in LogMessage) | - | (ddyaml.py:131) | monkey patching yaml.dump_all... (affects all yaml dump operations)
+2020-05-19 21:27:22 UTC | CORE | INFO | (pkg/collector/collector.go:57 in NewCollector) | Embedding Python 3.8.1 (default, May 11 2020, 16:02:59) [GCC 4.7.2]
+2020-05-19 21:27:22 UTC | CORE | INFO | (pkg/autodiscovery/providers/file.go:74 in Collect) | file: searching for configuration files at: /etc/datadog-agent/conf.d
+2020-05-19 21:27:22 UTC | CORE | WARN | (pkg/autodiscovery/providers/file.go:184 in collectEntry) | /etc/datadog-agent/conf.d/log.yaml is not a valid config file: open /etc/datadog-agent/conf.d/log.yaml: permission denied
+2020-05-19 21:27:22 UTC | CORE | INFO | (pkg/autodiscovery/providers/file.go:74 in Collect) | file: searching for configuration files at: /opt/datadog-agent/bin/agent/dist/conf.d
+2020-05-19 21:27:22 UTC | CORE | WARN | (pkg/autodiscovery/providers/file.go:78 in Collect) | Skipping, open /opt/datadog-agent/bin/agent/dist/conf.d: no such file or directory
+2020-05-19 21:27:22 UTC | CORE | INFO | (pkg/autodiscovery/providers/file.go:74 in Collect) | file: searching for configuration files at: 
+2020-05-19 21:27:22 UTC | CORE | WARN | (pkg/autodiscovery/providers/file.go:78 in Collect) | Skipping, open : no such file or directory
+2020-05-19 21:27:22 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check cpu with an interval of 15s
+2020-05-19 21:27:22 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check disk with an interval of 15s
+2020-05-19 21:27:22 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check file_handle with an interval of 15s
+2020-05-19 21:27:22 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check io with an interval of 15s
+2020-05-19 21:27:22 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check load with an interval of 15s
+2020-05-19 21:27:22 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check memory with an interval of 15s
+2020-05-19 21:27:22 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check network with an interval of 15s
+2020-05-19 21:27:22 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check ntp with an interval of 15m0s
+2020-05-19 21:27:22 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check uptime with an interval of 15s
+2020-05-19 21:27:23 UTC | CORE | INFO | (pkg/util/cloudprovider.go:45 in DetectCloudProvider) | No cloud provider detected
+2020-05-19 21:27:23 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check ntp
+2020-05-19 21:27:23 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check cpu
+2020-05-19 21:27:23 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check cpu
+2020-05-19 21:27:25 UTC | CORE | INFO | (pkg/metadata/host/host.go:164 in getNetworkMeta) | could not get network metadata: could not detect network ID
+2020-05-19 21:27:25 UTC | CORE | INFO | (pkg/serializer/serializer.go:346 in SendMetadata) | Sent metadata payload, size (raw/compressed): 3896/1688 bytes.
+2020-05-19 21:27:25 UTC | CORE | INFO | (pkg/forwarder/transaction.go:258 in internalProcess) | Successfully posted payload to "https://7-19-2-app.agent.datadoghq.com/intake/?api_key=*************************cec0d", the agent will only log transaction success every 500 transactions
+2020-05-19 21:27:27 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check uptime
+2020-05-19 21:27:27 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check uptime
+2020-05-19 21:27:28 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check memory
+2020-05-19 21:27:28 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check memory
+2020-05-19 21:27:28 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check ntp
+2020-05-19 21:27:29 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check io
+2020-05-19 21:27:29 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check io
+2020-05-19 21:27:30 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check disk
+2020-05-19 21:27:30 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check disk
+2020-05-19 21:27:35 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check network
+2020-05-19 21:27:35 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check network
+2020-05-19 21:27:36 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check load
+2020-05-19 21:27:36 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check load
+2020-05-19 21:27:37 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check file_handle
+2020-05-19 21:27:37 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check file_handle
+2020-05-19 21:27:38 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check cpu
+2020-05-19 21:27:38 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check cpu
+2020-05-19 21:27:42 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check uptime
+2020-05-19 21:27:42 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check uptime
+2020-05-19 21:27:43 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check memory
+2020-05-19 21:27:43 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check memory
+2020-05-19 21:27:44 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check io
+2020-05-19 21:27:44 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check io
+2020-05-19 21:27:45 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check disk
+2020-05-19 21:27:45 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check disk
+2020-05-19 21:27:50 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check network
+2020-05-19 21:27:50 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check network
+2020-05-19 21:27:51 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check load
+2020-05-19 21:27:51 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check load
+2020-05-19 21:27:52 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check file_handle
+2020-05-19 21:27:52 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check file_handle
+2020-05-19 21:27:53 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check cpu
+2020-05-19 21:27:53 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check cpu
+2020-05-19 21:27:57 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check uptime
+2020-05-19 21:27:57 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check uptime
+2020-05-19 21:27:58 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check memory
+2020-05-19 21:27:58 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check memory
+2020-05-19 21:27:59 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check io
+2020-05-19 21:27:59 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check io
+2020-05-19 21:28:00 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check disk
+2020-05-19 21:28:00 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check disk
+2020-05-19 21:28:05 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check network
+2020-05-19 21:28:05 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check network
+2020-05-19 21:28:06 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check load
+2020-05-19 21:28:06 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check load
+2020-05-19 21:28:07 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check file_handle
+2020-05-19 21:28:07 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check file_handle
+2020-05-19 21:28:08 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check cpu
+2020-05-19 21:28:08 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check cpu
+2020-05-19 21:28:12 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check uptime
+2020-05-19 21:28:12 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check uptime
+2020-05-19 21:28:13 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check memory
+2020-05-19 21:28:13 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check memory
+2020-05-19 21:28:14 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check io
+2020-05-19 21:28:14 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check io
+2020-05-19 21:28:15 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check disk
+2020-05-19 21:28:15 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check disk
+2020-05-19 21:28:20 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check network
+2020-05-19 21:28:20 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check network
+2020-05-19 21:28:21 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check load
+2020-05-19 21:28:21 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check load
+2020-05-19 21:28:22 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check file_handle
+2020-05-19 21:28:22 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check file_handle
+2020-05-19 21:28:23 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check cpu
+2020-05-19 21:28:23 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check cpu
+2020-05-19 21:28:27 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check uptime
+2020-05-19 21:28:27 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check uptime
+2020-05-19 21:28:28 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check memory
+2020-05-19 21:28:28 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check memory
+2020-05-19 21:28:29 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check io
+2020-05-19 21:28:29 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check io
+2020-05-19 21:28:30 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check disk
+2020-05-19 21:28:30 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check disk
+2020-05-19 21:28:31 UTC | CORE | INFO | (cmd/agent/api/agent/agent.go:138 in getStatus) | Got a request for the status. Making status.
+2020-05-19 21:28:35 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check network
+2020-05-19 21:28:35 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check network
+2020-05-19 21:28:36 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check load
+2020-05-19 21:28:36 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check load
+2020-05-19 21:28:37 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check file_handle
+2020-05-19 21:28:37 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check file_handle
+2020-05-19 21:28:38 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check cpu
+2020-05-19 21:28:38 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check cpu, next runs will be logged every 500 runs
+2020-05-19 21:28:42 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check uptime
+2020-05-19 21:28:42 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check uptime, next runs will be logged every 500 runs
+2020-05-19 21:28:43 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check memory
+2020-05-19 21:28:43 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check memory, next runs will be logged every 500 runs
+2020-05-19 21:28:44 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check io
+2020-05-19 21:28:44 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check io, next runs will be logged every 500 runs
+2020-05-19 21:28:45 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check disk
+2020-05-19 21:28:45 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check disk, next runs will be logged every 500 runs
+2020-05-19 21:28:50 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check network
+2020-05-19 21:28:50 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check network, next runs will be logged every 500 runs
+2020-05-19 21:28:51 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check load
+2020-05-19 21:28:51 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check load, next runs will be logged every 500 runs
+2020-05-19 21:28:52 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check file_handle
+2020-05-19 21:28:52 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check file_handle, next runs will be logged every 500 runs
+2020-05-19 21:30:21 UTC | CORE | INFO | (cmd/agent/app/run.go:104 in func2) | Received signal 'terminated', shutting down...
+2020-05-19 21:30:21 UTC | CORE | INFO | (pkg/collector/runner/runner.go:149 in Stop) | Runner is shutting down...
+2020-05-19 21:30:21 UTC | CORE | INFO | (pkg/collector/python/subprocesses.go:48 in TerminateRunningProcesses) | Canceling all running python subprocesses
+2020-05-19 21:30:21 UTC | CORE | INFO | (pkg/aggregator/aggregator.go:639 in run) | Stopping aggregator
+2020-05-19 21:30:21 UTC | CORE | INFO | (pkg/forwarder/forwarder.go:243 in Stop) | stopping the Forwarder
+2020-05-19 21:30:21 UTC | CORE | INFO | (pkg/forwarder/domain_forwarder.go:200 in Stop) | domainForwarder stopped
+2020-05-19 21:30:21 UTC | CORE | INFO | (pkg/logs/logs.go:110 in Stop) | Stopping logs-agent
+2020-05-19 21:30:21 UTC | CORE | INFO | (pkg/logs/logs.go:123 in Stop) | logs-agent stopped
+2020-05-19 21:30:21 UTC | CORE | INFO | (cmd/agent/app/run.go:338 in StopAgent) | See ya!
+2020-05-19 21:30:21 UTC | CORE | INFO | (cmd/agent/app/run.go:179 in StartAgent) | Starting Datadog Agent v7.19.2
+2020-05-19 21:30:21 UTC | CORE | INFO | (cmd/agent/app/run.go:203 in StartAgent) | pid '4045' written to pid file '/opt/datadog-agent/run/agent.pid'
+2020-05-19 21:30:21 UTC | CORE | INFO | (cmd/agent/app/run.go:210 in StartAgent) | Hostname is: ubuntu-xenial
+2020-05-19 21:30:21 UTC | CORE | INFO | (cmd/agent/app/run.go:237 in StartAgent) | GUI server port -1 specified: not starting the GUI.
+2020-05-19 21:30:21 UTC | CORE | INFO | (pkg/forwarder/forwarder.go:231 in Start) | Forwarder started, sending to 1 endpoint(s) with 1 worker(s) each: "https://7-19-2-app.agent.datadoghq.com" (1 api key(s))
+2020-05-19 21:30:21 UTC | CORE | INFO | (pkg/logs/client/http/destination.go:170 in CheckConnectivity) | Checking HTTP connectivity...
+2020-05-19 21:30:21 UTC | CORE | INFO | (pkg/logs/client/http/destination.go:176 in CheckConnectivity) | Sending HTTP connectivity request to https://agent-http-intake.logs.datadoghq.com/v1/input/***************************cec0d...
+2020-05-19 21:30:21 UTC | CORE | INFO | (pkg/dogstatsd/listeners/udp.go:97 in Listen) | dogstatsd-udp: starting to listen on 127.0.0.1:8125
+2020-05-19 21:30:21 UTC | CORE | INFO | (pkg/logs/client/http/destination.go:181 in CheckConnectivity) | HTTP connectivity successful
+2020-05-19 21:30:21 UTC | CORE | INFO | (pkg/logs/input/container/launcher.go:52 in NewLauncher) | Could not setup the docker launcher: temporary failure in dockerutil, will retry later: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+2020-05-19 21:30:21 UTC | CORE | INFO | (pkg/logs/input/container/launcher.go:59 in NewLauncher) | Could not setup the kubernetes launcher: /var/log/pods not found
+2020-05-19 21:30:21 UTC | CORE | INFO | (pkg/logs/input/container/launcher.go:68 in NewLauncher) | Container logs won't be collected unless a docker daemon is eventually started
+2020-05-19 21:30:21 UTC | CORE | INFO | (pkg/logs/logs.go:94 in Start) | Starting logs-agent...
+2020-05-19 21:30:21 UTC | CORE | INFO | (pkg/logs/logs.go:97 in Start) | logs-agent started
+2020-05-19 21:30:21 UTC | CORE | INFO | (pkg/collector/runner/runner.go:92 in NewRunner) | Runner started with 4 workers.
+2020-05-19 21:30:21 UTC | CORE | INFO | (pkg/collector/python/init.go:303 in Initialize) | Initializing rtloader with python3 /opt/datadog-agent/embedded
+2020-05-19 21:30:22 UTC | CORE | INFO | (pkg/collector/python/datadog_agent.go:120 in LogMessage) | - | (ddyaml.py:123) | monkey patching yaml.load...
+2020-05-19 21:30:22 UTC | CORE | INFO | (pkg/collector/python/datadog_agent.go:120 in LogMessage) | - | (ddyaml.py:127) | monkey patching yaml.load_all...
+2020-05-19 21:30:22 UTC | CORE | INFO | (pkg/collector/python/datadog_agent.go:120 in LogMessage) | - | (ddyaml.py:131) | monkey patching yaml.dump_all... (affects all yaml dump operations)
+2020-05-19 21:30:22 UTC | CORE | INFO | (pkg/collector/collector.go:57 in NewCollector) | Embedding Python 3.8.1 (default, May 11 2020, 16:02:59) [GCC 4.7.2]
+2020-05-19 21:30:22 UTC | CORE | INFO | (pkg/autodiscovery/providers/file.go:74 in Collect) | file: searching for configuration files at: /etc/datadog-agent/conf.d
+2020-05-19 21:30:22 UTC | CORE | WARN | (pkg/autodiscovery/providers/file.go:184 in collectEntry) | /etc/datadog-agent/conf.d/log.yaml is not a valid config file: open /etc/datadog-agent/conf.d/log.yaml: permission denied
+2020-05-19 21:30:22 UTC | CORE | INFO | (pkg/autodiscovery/providers/file.go:74 in Collect) | file: searching for configuration files at: /opt/datadog-agent/bin/agent/dist/conf.d
+2020-05-19 21:30:22 UTC | CORE | WARN | (pkg/autodiscovery/providers/file.go:78 in Collect) | Skipping, open /opt/datadog-agent/bin/agent/dist/conf.d: no such file or directory
+2020-05-19 21:30:22 UTC | CORE | INFO | (pkg/autodiscovery/providers/file.go:74 in Collect) | file: searching for configuration files at: 
+2020-05-19 21:30:22 UTC | CORE | WARN | (pkg/autodiscovery/providers/file.go:78 in Collect) | Skipping, open : no such file or directory
+2020-05-19 21:30:22 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check cpu with an interval of 15s
+2020-05-19 21:30:22 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check disk with an interval of 15s
+2020-05-19 21:30:22 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check file_handle with an interval of 15s
+2020-05-19 21:30:22 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check io with an interval of 15s
+2020-05-19 21:30:22 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check load with an interval of 15s
+2020-05-19 21:30:22 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check memory with an interval of 15s
+2020-05-19 21:30:22 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check network with an interval of 15s
+2020-05-19 21:30:22 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check ntp with an interval of 15m0s
+2020-05-19 21:30:22 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check uptime with an interval of 15s
+2020-05-19 21:30:22 UTC | CORE | INFO | (pkg/util/cloudprovider.go:45 in DetectCloudProvider) | No cloud provider detected
+2020-05-19 21:30:23 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check cpu
+2020-05-19 21:30:23 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check ntp
+2020-05-19 21:30:23 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check cpu
+2020-05-19 21:30:24 UTC | CORE | INFO | (pkg/metadata/host/host.go:164 in getNetworkMeta) | could not get network metadata: could not detect network ID
+2020-05-19 21:30:24 UTC | CORE | INFO | (pkg/serializer/serializer.go:346 in SendMetadata) | Sent metadata payload, size (raw/compressed): 3897/1699 bytes.
+2020-05-19 21:30:24 UTC | CORE | INFO | (pkg/forwarder/transaction.go:258 in internalProcess) | Successfully posted payload to "https://7-19-2-app.agent.datadoghq.com/intake/?api_key=*************************cec0d", the agent will only log transaction success every 500 transactions
+2020-05-19 21:30:27 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check uptime
+2020-05-19 21:30:27 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check uptime
+2020-05-19 21:30:28 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check memory
+2020-05-19 21:30:28 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check memory
+2020-05-19 21:30:29 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check io
+2020-05-19 21:30:29 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check io
+2020-05-19 21:30:30 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check disk
+2020-05-19 21:30:30 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check disk
+2020-05-19 21:30:33 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check ntp
+2020-05-19 21:30:35 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check network
+2020-05-19 21:30:35 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check network
+2020-05-19 21:30:36 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check load
+2020-05-19 21:30:36 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check load
+2020-05-19 21:30:37 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check file_handle
+2020-05-19 21:30:37 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check file_handle
+2020-05-19 21:30:38 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check cpu
+2020-05-19 21:30:38 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check cpu
+2020-05-19 21:30:42 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check uptime
+2020-05-19 21:30:42 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check uptime
+2020-05-19 21:30:43 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check memory
+2020-05-19 21:30:43 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check memory
+2020-05-19 21:30:44 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check io
+2020-05-19 21:30:44 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check io
+2020-05-19 21:30:45 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check disk
+2020-05-19 21:30:45 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check disk
+2020-05-19 21:30:50 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check network
+2020-05-19 21:30:50 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check network
+2020-05-19 21:30:51 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check load
+2020-05-19 21:30:51 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check load
+2020-05-19 21:30:52 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check file_handle
+2020-05-19 21:30:52 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check file_handle
+2020-05-19 21:30:53 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check cpu
+2020-05-19 21:30:53 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check cpu
+2020-05-19 21:30:57 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check uptime
+2020-05-19 21:30:57 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check uptime
+2020-05-19 21:30:58 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check memory
+2020-05-19 21:30:58 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check memory
+2020-05-19 21:30:59 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check io
+2020-05-19 21:30:59 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check io
+2020-05-19 21:31:00 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check disk
+2020-05-19 21:31:00 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check disk
+2020-05-19 21:31:05 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check network
+2020-05-19 21:31:05 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check network
+2020-05-19 21:31:06 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check load
+2020-05-19 21:31:06 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check load
+2020-05-19 21:31:07 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check file_handle
+2020-05-19 21:31:07 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check file_handle
+2020-05-19 21:31:08 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check cpu
+2020-05-19 21:31:08 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check cpu
+2020-05-19 21:31:12 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check uptime
+2020-05-19 21:31:12 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check uptime
+2020-05-19 21:31:13 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check memory
+2020-05-19 21:31:13 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check memory
+2020-05-19 21:31:14 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check io
+2020-05-19 21:31:14 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check io
+2020-05-19 21:31:15 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check disk
+2020-05-19 21:31:15 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check disk
+2020-05-19 21:31:20 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check network
+2020-05-19 21:31:20 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check network
+2020-05-19 21:31:21 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check load
+2020-05-19 21:31:21 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check load
+2020-05-19 21:31:22 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check file_handle
+2020-05-19 21:31:22 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check file_handle
+2020-05-19 21:31:23 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check cpu
+2020-05-19 21:31:23 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check cpu
+2020-05-19 21:31:27 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check uptime
+2020-05-19 21:31:27 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check uptime
+2020-05-19 21:31:28 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check memory
+2020-05-19 21:31:28 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check memory
+2020-05-19 21:31:29 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check io
+2020-05-19 21:31:29 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check io
+2020-05-19 21:31:30 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check disk
+2020-05-19 21:31:30 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check disk
+2020-05-19 21:31:35 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check network
+2020-05-19 21:31:35 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check network
+2020-05-19 21:31:36 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check load
+2020-05-19 21:31:36 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check load
+2020-05-19 21:31:37 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check file_handle
+2020-05-19 21:31:37 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check file_handle
+2020-05-19 21:31:38 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check cpu
+2020-05-19 21:31:38 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check cpu, next runs will be logged every 500 runs
+2020-05-19 21:31:42 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check uptime
+2020-05-19 21:31:42 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check uptime, next runs will be logged every 500 runs
+2020-05-19 21:31:43 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check memory
+2020-05-19 21:31:43 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check memory, next runs will be logged every 500 runs
+2020-05-19 21:31:44 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check io
+2020-05-19 21:31:44 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check io, next runs will be logged every 500 runs
+2020-05-19 21:31:45 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check disk
+2020-05-19 21:31:45 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check disk, next runs will be logged every 500 runs
+2020-05-19 21:31:50 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check network
+2020-05-19 21:31:50 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check network, next runs will be logged every 500 runs
+2020-05-19 21:31:51 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check load
+2020-05-19 21:31:51 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check load, next runs will be logged every 500 runs
+2020-05-19 21:31:52 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check file_handle
+2020-05-19 21:31:52 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check file_handle, next runs will be logged every 500 runs
+2020-05-19 21:35:21 UTC | CORE | INFO | (pkg/serializer/serializer.go:346 in SendMetadata) | Sent metadata payload, size (raw/compressed): 1020/278 bytes.
+2020-05-19 21:35:24 UTC | CORE | INFO | (pkg/serializer/serializer.go:366 in SendJSONToV1Intake) | Sent processes metadata payload, size: 1354 bytes.
+2020-05-19 21:40:24 UTC | CORE | INFO | (pkg/serializer/serializer.go:346 in SendMetadata) | Sent metadata payload, size (raw/compressed): 851/426 bytes.
+2020-05-19 21:40:24 UTC | CORE | INFO | (pkg/serializer/serializer.go:366 in SendJSONToV1Intake) | Sent processes metadata payload, size: 1354 bytes.
+2020-05-19 21:45:21 UTC | CORE | INFO | (pkg/serializer/serializer.go:346 in SendMetadata) | Sent metadata payload, size (raw/compressed): 1020/280 bytes.
+2020-05-19 21:45:23 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check ntp
+2020-05-19 21:45:24 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check ntp
+2020-05-19 21:45:24 UTC | CORE | INFO | (pkg/serializer/serializer.go:366 in SendJSONToV1Intake) | Sent processes metadata payload, size: 1354 bytes.
+2020-05-19 21:50:24 UTC | CORE | INFO | (pkg/serializer/serializer.go:346 in SendMetadata) | Sent metadata payload, size (raw/compressed): 851/427 bytes.
+2020-05-19 21:50:24 UTC | CORE | INFO | (pkg/serializer/serializer.go:366 in SendJSONToV1Intake) | Sent processes metadata payload, size: 1354 bytes.
+2020-05-19 21:55:21 UTC | CORE | INFO | (pkg/serializer/serializer.go:346 in SendMetadata) | Sent metadata payload, size (raw/compressed): 1020/279 bytes.
+2020-05-19 21:55:24 UTC | CORE | INFO | (pkg/serializer/serializer.go:366 in SendJSONToV1Intake) | Sent processes metadata payload, size: 1354 bytes.
+2020-05-19 22:00:23 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check ntp
+2020-05-19 22:00:24 UTC | CORE | INFO | (pkg/serializer/serializer.go:346 in SendMetadata) | Sent metadata payload, size (raw/compressed): 851/423 bytes.
+2020-05-19 22:00:24 UTC | CORE | INFO | (pkg/serializer/serializer.go:366 in SendJSONToV1Intake) | Sent processes metadata payload, size: 1354 bytes.
+2020-05-19 22:00:26 UTC | CORE | INFO | (pkg/metadata/host/host.go:164 in getNetworkMeta) | could not get network metadata: could not detect network ID
+2020-05-19 22:00:26 UTC | CORE | INFO | (pkg/serializer/serializer.go:346 in SendMetadata) | Sent metadata payload, size (raw/compressed): 3898/1698 bytes.
+2020-05-19 22:00:33 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check ntp
+2020-05-19 22:08:46 UTC | CORE | INFO | (cmd/agent/app/run.go:179 in StartAgent) | Starting Datadog Agent v7.19.2
+2020-05-19 22:08:46 UTC | CORE | INFO | (cmd/agent/app/run.go:203 in StartAgent) | pid '1139' written to pid file '/opt/datadog-agent/run/agent.pid'
+2020-05-19 22:08:46 UTC | CORE | INFO | (cmd/agent/app/run.go:210 in StartAgent) | Hostname is: ubuntu-xenial
+2020-05-19 22:08:46 UTC | CORE | INFO | (cmd/agent/app/run.go:237 in StartAgent) | GUI server port -1 specified: not starting the GUI.
+2020-05-19 22:08:46 UTC | CORE | INFO | (pkg/forwarder/forwarder.go:231 in Start) | Forwarder started, sending to 1 endpoint(s) with 1 worker(s) each: "https://7-19-2-app.agent.datadoghq.com" (1 api key(s))
+2020-05-19 22:08:46 UTC | CORE | INFO | (pkg/logs/client/http/destination.go:170 in CheckConnectivity) | Checking HTTP connectivity...
+2020-05-19 22:08:46 UTC | CORE | INFO | (pkg/logs/client/http/destination.go:176 in CheckConnectivity) | Sending HTTP connectivity request to https://agent-http-intake.logs.datadoghq.com/v1/input/***************************cec0d...
+2020-05-19 22:08:46 UTC | CORE | INFO | (pkg/dogstatsd/listeners/udp.go:97 in Listen) | dogstatsd-udp: starting to listen on 127.0.0.1:8125
+2020-05-19 22:08:47 UTC | CORE | INFO | (pkg/logs/client/http/destination.go:181 in CheckConnectivity) | HTTP connectivity successful
+2020-05-19 22:08:47 UTC | CORE | INFO | (pkg/logs/input/container/launcher.go:52 in NewLauncher) | Could not setup the docker launcher: temporary failure in dockerutil, will retry later: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+2020-05-19 22:08:47 UTC | CORE | INFO | (pkg/logs/input/container/launcher.go:59 in NewLauncher) | Could not setup the kubernetes launcher: /var/log/pods not found
+2020-05-19 22:08:47 UTC | CORE | INFO | (pkg/logs/input/container/launcher.go:68 in NewLauncher) | Container logs won't be collected unless a docker daemon is eventually started
+2020-05-19 22:08:47 UTC | CORE | INFO | (pkg/logs/logs.go:94 in Start) | Starting logs-agent...
+2020-05-19 22:08:47 UTC | CORE | INFO | (pkg/logs/logs.go:97 in Start) | logs-agent started
+2020-05-19 22:08:47 UTC | CORE | INFO | (pkg/collector/runner/runner.go:92 in NewRunner) | Runner started with 4 workers.
+2020-05-19 22:08:47 UTC | CORE | INFO | (pkg/collector/python/init.go:303 in Initialize) | Initializing rtloader with python3 /opt/datadog-agent/embedded
+2020-05-19 22:08:47 UTC | CORE | INFO | (pkg/collector/python/datadog_agent.go:120 in LogMessage) | - | (ddyaml.py:123) | monkey patching yaml.load...
+2020-05-19 22:08:47 UTC | CORE | INFO | (pkg/collector/python/datadog_agent.go:120 in LogMessage) | - | (ddyaml.py:127) | monkey patching yaml.load_all...
+2020-05-19 22:08:47 UTC | CORE | INFO | (pkg/collector/python/datadog_agent.go:120 in LogMessage) | - | (ddyaml.py:131) | monkey patching yaml.dump_all... (affects all yaml dump operations)
+2020-05-19 22:08:47 UTC | CORE | INFO | (pkg/collector/collector.go:57 in NewCollector) | Embedding Python 3.8.1 (default, May 11 2020, 16:02:59) [GCC 4.7.2]
+2020-05-19 22:08:47 UTC | CORE | INFO | (pkg/autodiscovery/providers/file.go:74 in Collect) | file: searching for configuration files at: /etc/datadog-agent/conf.d
+2020-05-19 22:08:47 UTC | CORE | WARN | (pkg/autodiscovery/providers/file.go:184 in collectEntry) | /etc/datadog-agent/conf.d/log.yaml is not a valid config file: open /etc/datadog-agent/conf.d/log.yaml: permission denied
+2020-05-19 22:08:47 UTC | CORE | INFO | (pkg/autodiscovery/providers/file.go:74 in Collect) | file: searching for configuration files at: /opt/datadog-agent/bin/agent/dist/conf.d
+2020-05-19 22:08:47 UTC | CORE | WARN | (pkg/autodiscovery/providers/file.go:78 in Collect) | Skipping, open /opt/datadog-agent/bin/agent/dist/conf.d: no such file or directory
+2020-05-19 22:08:47 UTC | CORE | INFO | (pkg/autodiscovery/providers/file.go:74 in Collect) | file: searching for configuration files at: 
+2020-05-19 22:08:47 UTC | CORE | WARN | (pkg/autodiscovery/providers/file.go:78 in Collect) | Skipping, open : no such file or directory
+2020-05-19 22:08:47 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check cpu with an interval of 15s
+2020-05-19 22:08:47 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check disk with an interval of 15s
+2020-05-19 22:08:47 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check file_handle with an interval of 15s
+2020-05-19 22:08:47 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check io with an interval of 15s
+2020-05-19 22:08:47 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check load with an interval of 15s
+2020-05-19 22:08:47 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check memory with an interval of 15s
+2020-05-19 22:08:47 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check network with an interval of 15s
+2020-05-19 22:08:47 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check ntp with an interval of 15m0s
+2020-05-19 22:08:47 UTC | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check uptime with an interval of 15s
+2020-05-19 22:08:48 UTC | CORE | INFO | (pkg/util/cloudprovider.go:45 in DetectCloudProvider) | No cloud provider detected
+2020-05-19 22:08:48 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check ntp
+2020-05-19 22:08:48 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check cpu
+2020-05-19 22:08:48 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check cpu
+2020-05-19 22:08:49 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check ntp
+2020-05-19 22:08:50 UTC | CORE | INFO | (pkg/metadata/host/host.go:164 in getNetworkMeta) | could not get network metadata: could not detect network ID
+2020-05-19 22:08:50 UTC | CORE | INFO | (pkg/serializer/serializer.go:346 in SendMetadata) | Sent metadata payload, size (raw/compressed): 3634/1615 bytes.
+2020-05-19 22:08:50 UTC | CORE | INFO | (pkg/forwarder/transaction.go:258 in internalProcess) | Successfully posted payload to "https://7-19-2-app.agent.datadoghq.com/intake/?api_key=*************************cec0d", the agent will only log transaction success every 500 transactions
+2020-05-19 22:08:52 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check uptime
+2020-05-19 22:08:52 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check uptime
+2020-05-19 22:08:53 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check memory
+2020-05-19 22:08:53 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check memory
+2020-05-19 22:08:54 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check io
+2020-05-19 22:08:54 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check io
+2020-05-19 22:08:55 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check disk
+2020-05-19 22:08:55 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check disk
+2020-05-19 22:09:00 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check network
+2020-05-19 22:09:00 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check network
+2020-05-19 22:09:01 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check load
+2020-05-19 22:09:01 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check load
+2020-05-19 22:09:02 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check file_handle
+2020-05-19 22:09:02 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check file_handle
+2020-05-19 22:09:03 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check cpu
+2020-05-19 22:09:03 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check cpu
+2020-05-19 22:09:07 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check uptime
+2020-05-19 22:09:07 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check uptime
+2020-05-19 22:09:08 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check memory
+2020-05-19 22:09:08 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check memory
+2020-05-19 22:09:09 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check io
+2020-05-19 22:09:09 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check io
+2020-05-19 22:09:10 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check disk
+2020-05-19 22:09:10 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check disk
+2020-05-19 22:09:15 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check network
+2020-05-19 22:09:15 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check network
+2020-05-19 22:09:16 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check load
+2020-05-19 22:09:16 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check load
+2020-05-19 22:09:17 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check file_handle
+2020-05-19 22:09:17 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check file_handle
+2020-05-19 22:09:18 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check cpu
+2020-05-19 22:09:18 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check cpu
+2020-05-19 22:09:22 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check uptime
+2020-05-19 22:09:22 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check uptime
+2020-05-19 22:09:23 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check memory
+2020-05-19 22:09:23 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check memory
+2020-05-19 22:09:24 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check io
+2020-05-19 22:09:24 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check io
+2020-05-19 22:09:25 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check disk
+2020-05-19 22:09:25 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check disk
+2020-05-19 22:09:30 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check network
+2020-05-19 22:09:30 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check network
+2020-05-19 22:09:31 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check load
+2020-05-19 22:09:31 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check load
+2020-05-19 22:09:32 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check file_handle
+2020-05-19 22:09:32 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check file_handle
+2020-05-19 22:09:33 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check cpu
+2020-05-19 22:09:33 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check cpu
+2020-05-19 22:09:37 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check uptime
+2020-05-19 22:09:37 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check uptime
+2020-05-19 22:09:38 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check memory
+2020-05-19 22:09:38 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check memory
+2020-05-19 22:09:39 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check io
+2020-05-19 22:09:39 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check io
+2020-05-19 22:09:40 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check disk
+2020-05-19 22:09:40 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check disk
+2020-05-19 22:09:45 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check network
+2020-05-19 22:09:45 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check network
+2020-05-19 22:09:46 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check load
+2020-05-19 22:09:46 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check load
+2020-05-19 22:09:47 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check file_handle
+2020-05-19 22:09:47 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check file_handle
+2020-05-19 22:09:48 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check cpu
+2020-05-19 22:09:48 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check cpu
+2020-05-19 22:09:52 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check uptime
+2020-05-19 22:09:52 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check uptime
+2020-05-19 22:09:53 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check memory
+2020-05-19 22:09:53 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check memory
+2020-05-19 22:09:54 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check io
+2020-05-19 22:09:54 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check io
+2020-05-19 22:09:55 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check disk
+2020-05-19 22:09:55 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check disk
+2020-05-19 22:10:00 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check network
+2020-05-19 22:10:00 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check network
+2020-05-19 22:10:01 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check load
+2020-05-19 22:10:01 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check load
+2020-05-19 22:10:02 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check file_handle
+2020-05-19 22:10:02 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check file_handle
+2020-05-19 22:10:03 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check cpu
+2020-05-19 22:10:03 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check cpu, next runs will be logged every 500 runs
+2020-05-19 22:10:07 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check uptime
+2020-05-19 22:10:07 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check uptime, next runs will be logged every 500 runs
+2020-05-19 22:10:08 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check memory
+2020-05-19 22:10:08 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check memory, next runs will be logged every 500 runs
+2020-05-19 22:10:09 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check io
+2020-05-19 22:10:09 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check io, next runs will be logged every 500 runs
+2020-05-19 22:10:10 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check disk
+2020-05-19 22:10:10 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check disk, next runs will be logged every 500 runs
+2020-05-19 22:10:15 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check network
+2020-05-19 22:10:15 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check network, next runs will be logged every 500 runs
+2020-05-19 22:10:16 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check load
+2020-05-19 22:10:16 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check load, next runs will be logged every 500 runs
+2020-05-19 22:10:17 UTC | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check file_handle
+2020-05-19 22:10:17 UTC | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check file_handle, next runs will be logged every 500 runs
+2020-05-19 22:10:33 UTC | CORE | INFO | (cmd/agent/api/agent/agent.go:138 in getStatus) | Got a request for the status. Making status.
+2020-05-19 22:11:51 UTC | CORE | INFO | (cmd/agent/api/agent/agent.go:85 in makeFlare) | Making a flare
+2020-05-19 22:11:51 UTC | CORE | ERROR | (pkg/flare/archive.go:171 in createArchive) | Could not zip config: open /etc/datadog-agent/conf.d/log.yaml: permission denied
+2020-05-19 22:11:51 UTC | CORE | ERROR | (pkg/util/alibaba/diagnosis.go:21 in diagnose) | Alibaba HostAliases: unable to query metadata endpoint: Get http://100.100.100.200/latest/meta-data/instance-id: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+2020-05-19 22:11:52 UTC | CORE | ERROR | (pkg/util/azure/diagnosis.go:21 in diagnose) | Azure HostAliases: unable to query metadata endpoint: Get http://169.254.169.254/metadata/instance/compute/vmId?api-version=2017-04-02&format=text: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+2020-05-19 22:11:52 UTC | CORE | ERROR | (pkg/util/containers/cri/diagnosis.go:23 in diagnose) | temporary failure in criutil, will retry later: no cri_socket_path was set
+2020-05-19 22:11:52 UTC | CORE | ERROR | (pkg/util/clusteragent/diagnosis.go:20 in diagnose) | temporary failure in clusterAgentClient, will retry later: cannot get a cluster agent endpoint for kubernetes service DATADOG_CLUSTER_AGENT, env DATADOG_CLUSTER_AGENT_SERVICE_HOST is empty
+2020-05-19 22:11:52 UTC | CORE | INFO | (pkg/util/containerd/containerd_util.go:68 in func1) | No socket path was specified, defaulting to /var/run/containerd/containerd.sock
+2020-05-19 22:11:53 UTC | CORE | ERROR | (pkg/util/containerd/containerd_util.go:81 in GetContainerdUtil) | Containerd init error: temporary failure in containerdutil, will retry later: failed to dial "/var/run/containerd/containerd.sock": context deadline exceeded
+2020-05-19 22:11:53 UTC | CORE | ERROR | (pkg/util/docker/diagnosis.go:23 in diagnose) | temporary failure in dockerutil, will retry later: try delay not elapsed yet
+2020-05-19 22:11:53 UTC | CORE | ERROR | (pkg/util/docker/diagnosis.go:30 in diagnose) | returned hostname "" with error: temporary failure in dockerutil, will retry later: try delay not elapsed yet
+2020-05-19 22:11:53 UTC | CORE | ERROR | (pkg/util/ec2/diagnosis.go:21 in diagnose) | unable to fetch EC2 API, Get http://169.254.169.254/latest/meta-data/hostname: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+2020-05-19 22:11:53 UTC | CORE | ERROR | (pkg/util/ecs/diagnosis.go:62 in diagnoseFargate) | Get http://169.254.170.2/v2/metadata: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+2020-05-19 22:11:53 UTC | CORE | ERROR | (pkg/util/ecs/diagnosis.go:27 in diagnoseECS) | temporary failure in ecsutil-meta-v1, will retry later: could not detect ECS agent, tried URLs: [http://localhost:51678/]
+2020-05-19 22:11:53 UTC | CORE | ERROR | (pkg/util/ecs/diagnosis.go:45 in diagnoseECSTags) | temporary failure in ecsutil-meta-v3, will retry later: Could not initialize client: missing metadata v3 URL
+2020-05-19 22:11:54 UTC | CORE | ERROR | (pkg/util/gce/diagnosis.go:21 in diagnose) | unable to retrieve hostname from GCE: Get http://169.254.169.254/computeMetadata/v1/instance/hostname: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+2020-05-19 22:11:54 UTC | CORE | ERROR | (pkg/util/kubernetes/kubelet/diagnosis.go:24 in diagnose) | temporary failure in kubeutil, will retry later: try delay not elapsed yet
+2020-05-19 22:11:54 UTC | CORE | INFO | (pkg/util/kubernetes/apiserver/apiserver.go:171 in connect) | Could not get apiserver client: unable to load in-cluster configuration, KUBERNETES_SERVICE_HOST and KUBERNETES_SERVICE_PORT must be defined
+2020-05-19 22:11:54 UTC | CORE | ERROR | (pkg/util/kubernetes/apiserver/diagnosis.go:25 in diagnose) | temporary failure in apiserver, will retry later: unable to load in-cluster configuration, KUBERNETES_SERVICE_HOST and KUBERNETES_SERVICE_PORT must be defined

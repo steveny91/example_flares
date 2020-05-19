@@ -1,0 +1,5 @@
+init_config: {}
+instances:
+- tags:
+  - cluster:webs
+  varnishstat: docker exec ci_varnish varnishstat

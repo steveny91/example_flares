@@ -1,0 +1,7 @@
+init_config: {}
+instances:
+- password: ********
+  url: http://localhost:9200
+  username: user
+  index_stats: true
+  pshard_stats: true

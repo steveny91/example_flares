@@ -1,0 +1,350 @@
+ChecksHistogramBucketMetricSample: 0
+ChecksMetricSample: 2708
+DogstatsdMetricSample: 906
+Event: 1
+EventsFlushErrors: 0
+EventsFlushed: 1
+Flush:
+  ChecksMetricSampleFlushTime:
+    FlushIndex: 11
+    Flushes:
+    - 5.405003e+06
+    - 1.912503e+06
+    - 3.619929e+06
+    - 3.963114e+06
+    - 1.717548e+06
+    - 2.714656e+06
+    - 1.852978e+06
+    - 2.397289e+06
+    - 2.391688e+06
+    - 3.390753e+06
+    - 3.915692e+06
+    - 1.821272e+06
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    LastFlush: 1.821272e+06
+    Name: ChecksMetricSampleFlushTime
+  EventFlushTime:
+    FlushIndex: 0
+    Flushes:
+    - 995284
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    LastFlush: 995284
+    Name: EventFlushTime
+  MainFlushTime:
+    FlushIndex: 11
+    Flushes:
+    - 117179
+    - 203518
+    - 160678
+    - 121478
+    - 143894
+    - 195937
+    - 248466
+    - 295536
+    - 106744
+    - 221686
+    - 218134
+    - 119521
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    LastFlush: 119521
+    Name: MainFlushTime
+  MetricSketchFlushTime:
+    FlushIndex: -1
+    Flushes:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    LastFlush: 0
+    Name: MetricSketchFlushTime
+  ServiceCheckFlushTime:
+    FlushIndex: 11
+    Flushes:
+    - 4.567867e+06
+    - 1.069079e+06
+    - 1.846616e+06
+    - 3.065813e+06
+    - 848794
+    - 1.517721e+06
+    - 1.155023e+06
+    - 1.575125e+06
+    - 888098
+    - 2.56746e+06
+    - 1.521857e+06
+    - 1.052059e+06
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    LastFlush: 1.052059e+06
+    Name: ServiceCheckFlushTime
+FlushCount:
+  Events:
+    FlushIndex: 0
+    Flushes:
+    - 1
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    LastFlush: 1
+    Name: Events
+  Series:
+    FlushIndex: 11
+    Flushes:
+    - 100
+    - 219
+    - 219
+    - 219
+    - 219
+    - 219
+    - 219
+    - 219
+    - 219
+    - 219
+    - 219
+    - 219
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    LastFlush: 219
+    Name: Series
+  ServiceChecks:
+    FlushIndex: 11
+    Flushes:
+    - 10
+    - 9
+    - 9
+    - 9
+    - 9
+    - 9
+    - 9
+    - 9
+    - 9
+    - 9
+    - 9
+    - 9
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    LastFlush: 9
+    Name: ServiceChecks
+  Sketches:
+    FlushIndex: 11
+    Flushes:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    LastFlush: 0
+    Name: Sketches
+HostnameUpdate: 0
+NumberOfFlush: 12
+SeriesFlushErrors: 0
+SeriesFlushed: 2509
+ServiceCheck: 99
+ServiceCheckFlushErrors: 0
+ServiceCheckFlushed: 109
+SketchesFlushErrors: 0
+SketchesFlushed: 0

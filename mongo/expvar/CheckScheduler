@@ -1,0 +1,13 @@
+LoaderErrors:
+  mongo:
+    Core Check Loader: Check mongo not found in Catalog
+    JMX Check Loader: check is not a jmx check, or unable to determine if it's so
+    Python Check Loader: |-
+      could not configure check instance for python check mongo: could not invoke 'mongo' python check constructor. New constructor API returned:
+      Traceback (most recent call last):
+        File "/opt/datadog-agent/embedded/lib/python3.8/site-packages/datadog_checks/mongo/mongo.py", line 93, in __init__
+          raise ConfigurationError("Missing 'server' in mongo config")
+      datadog_checks.base.errors.ConfigurationError: Missing 'server' in mongo config
+      Deprecated constructor API returned:
+      __init__() got an unexpected keyword argument 'agentConfig'
+RunErrors: {}

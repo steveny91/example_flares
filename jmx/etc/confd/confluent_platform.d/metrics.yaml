@@ -1,0 +1,905 @@
+jmx_metrics:
+  - include:
+      bean:
+        - kafka.network:type=RequestChannel,name=RequestQueueSize
+        - kafka.network:type=SocketServer,name=NetworkProcessorAvgIdlePercent
+        - kafka.server:type=DelayedOperationPurgatory,name=PurgatorySize,delayedOperation=Fetch
+        - kafka.server:type=DelayedOperationPurgatory,name=PurgatorySize,delayedOperation=Produce
+        - kafka.server:type=ReplicaFetcherManager,name=MaxLag,clientId=Replica
+        - kafka.server:type=ReplicaManager,name=LeaderCount
+        - kafka.server:type=ReplicaManager,name=PartitionCount
+        - kafka.server:type=ReplicaManager,name=UnderMinIsrPartitionCount
+        - kafka.server:type=ReplicaManager,name=UnderReplicatedPartitions
+      attribute:
+        Value:
+          alias: confluent.$domain.$type.$name
+          metric_type: gauge
+  - include:
+      domain: kafka.controller
+      bean:
+        - kafka.controller:type=KafkaController,name=OfflinePartitionsCount
+        - kafka.controller:type=KafkaController,name=ActiveControllerCount
+      attribute:
+        Value:
+          alias: confluent.$domain.$name
+          metric_type: gauge
+  - include:
+      domain: kafka.server
+      bean_regex:
+        - kafka\.server:type=FetcherLagMetrics,name=ConsumerLag,.*
+      attribute:
+        Value:
+          alias: confluent.$domain.fetcher_lag.$name
+          metric_type: gauge
+  - include:
+      domain: kafka.cluster
+      bean_regex:
+        - kafka\.cluster:type=Partition,name=UnderMinIsr,.*
+      attribute:
+        Value:
+          alias: confluent.$domain.$type.$name
+          metric_type: gauge
+  - include:
+      domain: kafka.server
+      bean:
+        - kafka.server:type=BrokerTopicMetrics,name=BytesInPerSec
+        - kafka.server:type=BrokerTopicMetrics,name=BytesOutPerSec
+        - kafka.server:type=BrokerTopicMetrics,name=BytesRejectedPerSec
+        - kafka.server:type=BrokerTopicMetrics,name=FailedFetchRequestsPerSec
+        - kafka.server:type=BrokerTopicMetrics,name=FailedProduceRequestsPerSec
+        - kafka.server:type=BrokerTopicMetrics,name=MessagesInPerSec
+        - kafka.server:type=BrokerTopicMetrics,name=TotalFetchRequestsPerSec
+        - kafka.server:type=BrokerTopicMetrics,name=TotalProduceRequestsPerSec
+      attribute:
+        Count:
+          alias: confluent.$domain.topic.$name.rate
+          metric_type: rate
+  - include:
+      domain: kafka.server
+      bean:
+        - kafka.server:type=ReplicaManager,name=IsrExpandsPerSec
+        - kafka.server:type=ReplicaManager,name=IsrShrinksPerSec
+      attribute:
+        Count:
+          alias: confluent.$domain.$type.$name.rate
+          metric_type: rate
+  - include:
+      domain: kafka.server
+      bean:
+        - kafka.server:type=KafkaRequestHandlerPool,name=RequestHandlerAvgIdlePercent
+      attribute:
+        Count:
+          alias: confluent.$domain.request_handler_pool.avg_idle_percent.rate
+          metric_type: rate
+  - include:
+      domain: kafka.server
+      bean:
+        - kafka.server:type=SessionExpireListener,name=ZooKeeperDisconnectsPerSec
+        - kafka.server:type=SessionExpireListener,name=ZooKeeperExpiresPerSec
+        - kafka.server:type=SessionExpireListener,name=ZooKeeperSyncConnectsPerSec
+        - kafka.server:type=SessionExpireListener,name=ZooKeeperAuthFailuresPerSec
+        - kafka.server:type=SessionExpireListener,name=ZooKeeperReadOnlyConnectsPerSec
+        - kafka.server:type=SessionExpireListener,name=ZooKeeperSaslAuthenticationsPerSec
+      attribute:
+        Count:
+          alias: confluent.$domain.session.$name.rate
+          metric_type: rate
+  - include:
+      domain: kafka.network
+      bean_regex:
+        - kafka.network:type=RequestMetrics,name=RequestsPerSec,request=(Produce|FetchConsumer|FetchFollower).*
+      attribute:
+        Count:
+          alias: confluent.$domain.request.$name.rate
+          metric_type: rate
+  - include:
+      domain: kafka.controller
+      bean:
+        - kafka.controller:type=ControllerStats,name=UncleanLeaderElectionsPerSec
+        - kafka.controller:type=ControllerStats,name=LeaderElectionRateAndTimeMs
+      attribute:
+        Count:  # Timer and Meter
+          alias: confluent.$domain.$name.rate
+          metric_type: rate
+        Mean: # Timer
+          alias: confluent.$domain.$name.avg
+          metric_type: gauge
+  - include:
+      domain: kafka.log
+      bean:
+        - kafka.log:type=LogFlushStats,name=LogFlushRateAndTimeMs
+      attribute:
+        Count:
+          alias: confluent.$domain.$name.rate
+          metric_type: rate
+        Mean:
+          alias: confluent.$domain.$name.avg
+          metric_type: gauge
+  - include:
+      domain: kafka.network
+      bean_regex:
+        - kafka\.network:type=RequestMetrics,name=TotalTimeMs,request=(Produce|FetchConsumer|FetchFollower).*
+        - kafka\.network:type=RequestMetrics,name=RequestQueueTimeMs,request=(Produce|FetchConsumer|FetchFollower).*
+        - kafka\.network:type=RequestMetrics,name=LocalTimeMs,request=(Produce|FetchConsumer|FetchFollower).*
+        - kafka\.network:type=RequestMetrics,name=RemoteTimeMs,request=(Produce|FetchConsumer|FetchFollower).*
+        - kafka\.network:type=RequestMetrics,name=ResponseQueueTimeMs,request=(Produce|FetchConsumer|FetchFollower).*
+        - kafka\.network:type=RequestMetrics,name=ResponseSendTimeMs,request=(Produce|FetchConsumer|FetchFollower).*
+      attribute:
+        Count:
+          alias: confluent.$domain.request.$name.rate
+          metric_type: rate
+        Mean:
+          alias: confluent.$domain.request.$name.avg
+          metric_type: gauge
+        50thPercentile:
+          alias: confluent.$domain.request.$name.50percentile
+          metric_type: gauge
+        75thPercentile:
+          alias: confluent.$domain.request.$name.75percentile
+          metric_type: gauge
+        95thPercentile:
+          alias: confluent.$domain.request.$name.95percentile
+          metric_type: gauge
+        98thPercentile:
+          alias: confluent.$domain.request.$name.98percentile
+          metric_type: gauge
+        99thPercentile:
+          alias: confluent.$domain.request.$name.99percentile
+          metric_type: gauge
+        999thPercentile:
+          alias: confluent.$domain.request.$name.999percentile
+          metric_type: gauge
+  - include:
+      domain: kafka.producer
+      bean_regex: kafka\.producer:type=producer-metrics,client-id=.*
+      attribute:
+        batch-size-avg:
+          alias: confluent.$domain.$attribute
+          metric_type: gauge
+        batch-size-max:
+          alias: confluent.$domain.$attribute
+          metric_type: gauge
+        io-ratio:
+          alias: confluent.$domain.$attribute
+          metric_type: gauge
+        io-wait-ratio:
+          alias: confluent.$domain.$attribute
+          metric_type: gauge
+        outgoing-byte-rate:
+          alias: confluent.$domain.$attribute
+          metric_type: gauge
+        record-retry-rate:
+          alias: confluent.$domain.$attribute
+          metric_type: gauge
+        record-error-rate:
+          alias: confluent.$domain.$attribute
+          metric_type: gauge
+        produce-throttle-time-avg:
+          alias: confluent.$domain.$attribute
+          metric_type: gauge
+        produce-throttle-time-max:
+          alias: confluent.$domain.$attribute
+          metric_type: gauge
+        waiting-threads:
+          alias: confluent.$domain.$attribute
+          metric_type: gauge
+        bufferpool-wait-time-total:
+          alias: confluent.$domain.$attribute
+          metric_type: gauge
+        connection-count:
+          alias: confluent.$domain.$attribute
+          metric_type: gauge
+        network-io-rate:
+          alias: confluent.$domain.$attribute
+          metric_type: gauge
+        request-rate:
+          alias: confluent.$domain.$attribute
+          metric_type: gauge
+        response-rate:
+          alias: confluent.$domain.$attribute
+          metric_type: gauge
+        request-latency-avg:
+          alias: confluent.$domain.$attribute
+          metric_type: gauge
+        io-wait-time-ns-avg:
+          alias: confluent.$domain.$attribute
+          metric_type: gauge
+        connection-creation-rate:
+          alias: confluent.$domain.$attribute
+          metric_type: gauge
+        connection-close-rate:
+          alias: confluent.$domain.$attribute
+          metric_type: gauge
+        io-time-ns-avg:
+          alias: confluent.$domain.$attribute
+          metric_type: gauge
+        select-rate:
+          alias: confluent.$domain.$attribute
+          metric_type: gauge
+        incoming-byte-rate:
+          alias: confluent.$domain.$attribute
+          metric_type: gauge
+  - include:
+      domain: kafka.producer
+      bean_regex: kafka\.producer:type=producer-node-metrics,client-id=.*,node-id=.*
+      attribute:
+        request-size-max:
+          alias: confluent.$domain.node.$attribute
+          metric_type: gauge
+        request-size-avg:
+          alias: confluent.$domain.node.$attribute
+          metric_type: gauge
+        request-rate:
+          alias: confluent.$domain.node.$attribute
+          metric_type: gauge
+        response-rate:
+          alias: confluent.$domain.node.$attribute
+          metric_type: gauge
+        incoming-byte-rate:
+          alias: confluent.$domain.node.$attribute
+          metric_type: gauge
+        outgoing-byte-rate:
+          alias: confluent.$domain.node.$attribute
+          metric_type: gauge
+  - include:
+      domain: kafka.producer
+      bean_regex: kafka\.producer:type=producer-topic-metrics,client-id=.*,topic=.*
+      attribute:
+        byte-rate:
+          alias: confluent.$domain.topic.$attribute
+          metric_type: gauge
+        record-send-rate:
+          alias: confluent.$domain.topic.$attribute
+          metric_type: gauge
+        compression-rate:
+          alias: confluent.$domain.topic.$attribute
+          metric_type: gauge
+        record-retry-rate:
+          alias: confluent.$domain.topic.$attribute
+          metric_type: gauge
+        record-error-rate:
+          alias: confluent.$domain.topic.$attribute
+          metric_type: gauge
+  - include:
+      domain: kafka.consumer
+      bean_regex: kafka\.consumer:type=consumer-metrics,client-id=.*
+      attribute:
+        io-ratio:
+          alias: confluent.$domain.$attribute
+          metric_type: gauge
+        io-wait-ratio:
+          alias: confluent.$domain.$attribute
+          metric_type: gauge
+        bytes-consumed-rate:
+          alias: confluent.$domain.$attribute
+          metric_type: gauge
+        fetch-size-avg:
+          alias: confluent.$domain.$attribute
+          metric_type: gauge
+        fetch-size-max:
+          alias: confluent.$domain.$attribute
+          metric_type: gauge
+        records-lag-max:
+          alias: confluent.$domain.$attribute
+          metric_type: gauge
+        fetch-rate:
+          alias: confluent.$domain.$attribute
+          metric_type: gauge
+        fetch-throttle-time-max:
+          alias: confluent.$domain.$attribute
+          metric_type: gauge
+        fetch-throttle-time-avg:
+          alias: confluent.$domain.$attribute
+          metric_type: gauge
+        connection-count:
+          alias: confluent.$domain.$attribute
+          metric_type: gauge
+        network-io-rate:
+          alias: confluent.$domain.$attribute
+          metric_type: gauge
+        request-rate:
+          alias: confluent.$domain.$attribute
+          metric_type: gauge
+        response-rate:
+          alias: confluent.$domain.$attribute
+          metric_type: gauge
+        request-latency-avg:
+          alias: confluent.$domain.$attribute
+          metric_type: gauge
+  - include:
+      domain: kafka.consumer
+      bean_regex: kafka\.consumer:type=consumer-fetch-manager-metrics,client-id=([-.\w]+)$
+      attribute:
+        records-lag-max:
+          alias: confluent.$domain.fetch.$attribute
+          metric_type: gauge
+        fetch-size-avg:
+          alias: confluent.$domain.fetch.$attribute
+          metric_type: gauge
+        fetch-size-max:
+          alias: confluent.$domain.fetch.$attribute
+          metric_type: gauge
+        bytes-consumed-rate:
+          alias: confluent.$domain.fetch.$attribute
+          metric_type: gauge
+        records-per-request-avg:
+          alias: confluent.$domain.fetch.$attribute
+          metric_type: gauge
+        records-consumed-rate:
+          alias: confluent.$domain.fetch.$attribute
+          metric_type: gauge
+        fetch-rate:
+          alias: confluent.$domain.fetch.$attribute
+          metric_type: gauge
+        fetch-latency-avg:
+          alias: confluent.$domain.fetch.$attribute
+          metric_type: gauge
+        fetch-latency-max:
+          alias: confluent.$domain.fetch.$attribute
+          metric_type: gauge
+        fetch-throttle-time-avg:
+          alias: confluent.$domain.fetch.$attribute
+          metric_type: gauge
+        fetch-throttle-time-max:
+          alias: confluent.$domain.fetch.$attribute
+          metric_type: gauge
+  - include:
+      domain: kafka.consumer
+      bean_regex: kafka\.consumer:type=consumer-fetch-manager-metrics,client-id=.*,topic=.*
+      attribute:
+          fetch-size-avg:
+            alias: confluent.$domain.fetch_topic.$attribute
+            metric_type: gauge
+          fetch-size-max:
+            alias: confluent.$domain.fetch_topic.$attribute
+            metric_type: gauge
+          bytes-consumed-rate:
+            alias: confluent.$domain.fetch_topic.$attribute
+            metric_type: gauge
+          records-per-request-avg:
+            alias: confluent.$domain.fetch_topic.$attribute
+            metric_type: gauge
+          records-consumed-rate:
+            alias: confluent.$domain.fetch_topic.$attribute
+            metric_type: gauge
+  - include:
+      domain: kafka.connect
+      bean: kafka.connect:type=connect-worker-metrics
+      attribute:
+        connector-count:
+          alias: confluent.$domain.worker.$attribute
+          metric_type: gauge
+        connector-startup-attempts-total:
+          alias: confluent.$domain.worker.$attribute
+          metric_type: gauge
+        connector-startup-failure-percentage:
+          alias: confluent.$domain.worker.$attribute
+          metric_type: gauge
+        connector-startup-failure-total:
+          alias: confluent.$domain.worker.$attribute
+          metric_type: gauge
+        connector-startup-success-percentage:
+          alias: confluent.$domain.worker.$attribute
+          metric_type: gauge
+        connector-startup-success-total:
+          alias: confluent.$domain.worker.$attribute
+          metric_type: gauge
+        task-count:
+          alias: confluent.$domain.worker.$attribute
+          metric_type: gauge
+        task-startup-attempts-total:
+          alias: confluent.$domain.worker.$attribute
+          metric_type: gauge
+        task-startup-failure-percentage:
+          alias: confluent.$domain.worker.$attribute
+          metric_type: gauge
+        task-startup-failure-total:
+          alias: confluent.$domain.worker.$attribute
+          metric_type: gauge
+        task-startup-success-percentage:
+          alias: confluent.$domain.worker.$attribute
+          metric_type: gauge
+        task-startup-success-total:
+          alias: confluent.$domain.worker.$attribute
+          metric_type: gauge
+  - include:
+      domain: kafka.connect
+      bean_regex:
+        - kafka\.connect:type=connect-worker-metrics,connector=.*
+        - kafka\.connect:type=connector-metrics,connector=.*
+      attribute:
+        connector-destroyed-task-count:
+          alias: confluent.$domain.worker.$attribute
+          metric_type: gauge
+        connector-failed-task-count:
+          alias: confluent.$domain.worker.$attribute
+          metric_type: gauge
+        connector-paused-task-count:
+          alias: confluent.$domain.worker.$attribute
+          metric_type: gauge
+        connector-running-task-count:
+          alias: confluent.$domain.worker.$attribute
+          metric_type: gauge
+        connector-total-task-count:
+          alias: confluent.$domain.worker.$attribute
+          metric_type: gauge
+        connector-unassigned-task-count:
+          alias: confluent.$domain.worker.$attribute
+          metric_type: gauge
+  - include:
+      domain: kafka.connect
+      bean: kafka.connect:type=connect-worker-rebalance-metrics
+      attribute:
+        completed-rebalances-total:
+          alias: confluent.$domain.worker_rebalance.$attribute
+          metric_type: gauge
+        epoch:
+          alias: confluent.$domain.worker_rebalance.$attribute
+          metric_type: gauge
+        rebalance-avg-time-ms:
+          alias: confluent.$domain.worker_rebalance.$attribute
+          metric_type: gauge
+        rebalance-max-time-ms:
+          alias: confluent.$domain.worker_rebalance.$attribute
+          metric_type: gauge
+        rebalancing:
+          alias: confluent.$domain.worker_rebalance.$attribute
+          metric_type: gauge
+        time-since-last-rebalance-ms:
+          alias: confluent.$domain.worker_rebalance.$attribute
+          metric_type: gauge
+  - include:
+      domain: kafka.connect
+      bean_regex: kafka\.connect:type=connector-task-metrics,connector=.*,task=.*
+      attribute:
+        batch-size-avg:
+          alias: confluent.$domain.connector_task.$attribute
+          metric_type: gauge
+        batch-size-max:
+          alias: confluent.$domain.connector_task.$attribute
+          metric_type: gauge
+        offset-commit-avg-time-ms:
+          alias: confluent.$domain.connector_task.$attribute
+          metric_type: gauge
+        offset-commit-failure-percentage:
+          alias: confluent.$domain.connector_task.$attribute
+          metric_type: gauge
+        offset-commit-max-time-ms:
+          alias: confluent.$domain.connector_task.$attribute
+          metric_type: gauge
+        offset-commit-success-percentage:
+          alias: confluent.$domain.connector_task.$attribute
+          metric_type: gauge
+        pause-ratio:
+          alias: confluent.$domain.connector_task.$attribute
+          metric_type: gauge
+        running-ratio:
+          alias: confluent.$domain.connector_task.$attribute
+          metric_type: gauge
+  - include:
+      domain: kafka.connect
+      bean_regex: kafka\.connect:type=sink-task-metrics,connector=.*,task=.*
+      attribute:
+        offset-commit-completion-rate:
+          alias: confluent.$domain.sink_task.$attribute
+          metric_type: gauge
+        offset-commit-completion-total:
+          alias: confluent.$domain.sink_task.$attribute
+          metric_type: gauge
+        offset-commit-seq-no:
+          alias: confluent.$domain.sink_task.$attribute
+          metric_type: gauge
+        offset-commit-skip-rate:
+          alias: confluent.$domain.sink_task.$attribute
+          metric_type: gauge
+        offset-commit-skip-total:
+          alias: confluent.$domain.sink_task.$attribute
+          metric_type: gauge
+        partition-count:
+          alias: confluent.$domain.sink_task.$attribute
+          metric_type: gauge
+        put-batch-avg-time-ms:
+          alias: confluent.$domain.sink_task.$attribute
+          metric_type: gauge
+        put-batch-max-time-ms:
+          alias: confluent.$domain.sink_task.$attribute
+          metric_type: gauge
+        sink-record-active-count:
+          alias: confluent.$domain.sink_task.$attribute
+          metric_type: gauge
+        sink-record-active-count-avg:
+          alias: confluent.$domain.sink_task.$attribute
+          metric_type: gauge
+        sink-record-active-count-max:
+          alias: confluent.$domain.sink_task.$attribute
+          metric_type: gauge
+        sink-record-lag-max:
+          alias: confluent.$domain.sink_task.$attribute
+          metric_type: gauge
+        sink-record-read-rate:
+          alias: confluent.$domain.sink_task.$attribute
+          metric_type: gauge
+        sink-record-read-total:
+          alias: confluent.$domain.sink_task.$attribute
+          metric_type: gauge
+        sink-record-send-rate:
+          alias: confluent.$domain.sink_task.$attribute
+          metric_type: gauge
+        sink-record-send-total:
+          alias: confluent.$domain.sink_task.$attribute
+          metric_type: gauge
+  - include:
+      domain: kafka.connect
+      bean_regex: kafka\.connect:type=source-task-metrics,connector=.*,task=.*
+      attribute:
+        poll-batch-avg-time-ms:
+          alias: confluent.$domain.source_task.$attribute
+          metric_type: gauge
+        poll-batch-max-time-ms:
+          alias: confluent.$domain.source_task.$attribute
+          metric_type: gauge
+        source-record-active-count:
+          alias: confluent.$domain.source_task.$attribute
+          metric_type: gauge
+        source-record-active-count-avg:
+          alias: confluent.$domain.source_task.$attribute
+          metric_type: gauge
+        source-record-active-count-max:
+          alias: confluent.$domain.source_task.$attribute
+          metric_type: gauge
+        source-record-poll-rate:
+          alias: confluent.$domain.source_task.$attribute
+          metric_type: gauge
+        source-record-poll-total:
+          alias: confluent.$domain.source_task.$attribute
+          metric_type: gauge
+        source-record-write-rate:
+          alias: confluent.$domain.source_task.$attribute
+          metric_type: gauge
+        source-record-write-total:
+          alias: confluent.$domain.source_task.$attribute
+          metric_type: gauge
+  - include:
+      domain: kafka.connect
+      bean_regex: kafka\.connect:type=task-error-metrics,connector=.*,task=.*
+      attribute:
+        deadletterqueue-produce-failures:
+          alias: confluent.$domain.task_error.$attribute
+          metric_type: gauge
+        deadletterqueue-produce-requests:
+          alias: confluent.$domain.task_error.$attribute
+          metric_type: gauge
+        last-error-timestamp:
+          alias: confluent.$domain.task_error.$attribute
+          metric_type: gauge
+        total-errors-logged:
+          alias: confluent.$domain.task_error.$attribute
+          metric_type: gauge
+        total-record-errors:
+          alias: confluent.$domain.task_error.$attribute
+          metric_type: gauge
+        total-record-failures:
+          alias: confluent.$domain.task_error.$attribute
+          metric_type: gauge
+        total-records-skipped:
+          alias: confluent.$domain.task_error.$attribute
+          metric_type: gauge
+        total-retries:
+          alias: confluent.$domain.task_error.$attribute
+          metric_type: gauge
+  - include:
+      bean:
+        - kafka.rest:type=jetty-metrics
+        - kafka.schema.registry:type=jetty-metrics
+      attribute:
+        connections-active:
+          alias: confluent.$domain.jetty.$attribute
+          metric_type: gauge
+        connections-opened-rate:
+          alias: confluent.$domain.jetty.$attribute
+          metric_type: gauge
+        connections-closed-rate:
+          alias: confluent.$domain.jetty.$attribute
+          metric_type: gauge
+  - include:
+      bean:
+        - kafka.rest:type=jersey-metrics
+        - kafka.schema.registry:type=jersey-metrics
+      attribute:
+        brokers.list.request-error-rate:
+          alias: confluent.$domain.jersey.$attribute
+          metric_type: gauge
+        consumer.assign+v2.request-error-rate:
+          alias: confluent.$domain.jersey.$attribute
+          metric_type: gauge
+        consumer.assignment+v2.request-error-rate:
+          alias: confluent.$domain.jersey.$attribute
+          metric_type: gauge
+        consumer.commit-offsets+v2.request-error-rate:
+          alias: confluent.$domain.jersey.$attribute
+          metric_type: gauge
+        consumer.commit.request-error-rate:
+          alias: confluent.$domain.jersey.$attribute
+          metric_type: gauge
+        consumer.committed-offsets+v2.request-error-rate:
+          alias: confluent.$domain.jersey.$attribute
+          metric_type: gauge
+        consumer.create+v2.request-error-rate:
+          alias: confluent.$domain.jersey.$attribute
+          metric_type: gauge
+        consumer.create.request-error-rate:
+          alias: confluent.$domain.jersey.$attribute
+          metric_type: gauge
+        consumer.delete+v2.request-error-rate:
+          alias: confluent.$domain.jersey.$attribute
+          metric_type: gauge
+        consumer.delete.request-error-rate:
+          alias: confluent.$domain.jersey.$attribute
+          metric_type: gauge
+        consumer.records.read-avro+v2.request-error-rate:
+          alias: confluent.$domain.jersey.$attribute
+          metric_type: gauge
+        consumer.records.read-binary+v2.request-error-rate:
+          alias: confluent.$domain.jersey.$attribute
+          metric_type: gauge
+        consumer.records.read-json+v2.request-error-rate:
+          alias: confluent.$domain.jersey.$attribute
+          metric_type: gauge
+        consumer.seek-to-beginning+v2.request-error-rate:
+          alias: confluent.$domain.jersey.$attribute
+          metric_type: gauge
+        consumer.seek-to-end+v2.request-error-rate:
+          alias: confluent.$domain.jersey.$attribute
+          metric_type: gauge
+        consumer.seek-to-offset+v2.request-error-rate:
+          alias: confluent.$domain.jersey.$attribute
+          metric_type: gauge
+        consumer.subscribe+v2.request-error-rate:
+          alias: confluent.$domain.jersey.$attribute
+          metric_type: gauge
+        consumer.subscription+v2.request-error-rate:
+          alias: confluent.$domain.jersey.$attribute
+          metric_type: gauge
+        consumer.topic.read-avro.request-error-rate:
+          alias: confluent.$domain.jersey.$attribute
+          metric_type: gauge
+        consumer.topic.read-binary.request-error-rate:
+          alias: confluent.$domain.jersey.$attribute
+          metric_type: gauge
+        consumer.topic.read-json.request-error-rate:
+          alias: confluent.$domain.jersey.$attribute
+          metric_type: gauge
+        consumer.unsubscribe+v2.request-error-rate:
+          alias: confluent.$domain.jersey.$attribute
+          metric_type: gauge
+        partition.consume-avro.request-error-rate:
+          alias: confluent.$domain.jersey.$attribute
+          metric_type: gauge
+        partition.consume-binary.request-error-rate:
+          alias: confluent.$domain.jersey.$attribute
+          metric_type: gauge
+        partition.consume-json.request-error-rate:
+          alias: confluent.$domain.jersey.$attribute
+          metric_type: gauge
+        partition.get+v2.request-error-rate:
+          alias: confluent.$domain.jersey.$attribute
+          metric_type: gauge
+        partition.get.request-error-rate:
+          alias: confluent.$domain.jersey.$attribute
+          metric_type: gauge
+        partition.produce-avro+v2.request-error-rate:
+          alias: confluent.$domain.jersey.$attribute
+          metric_type: gauge
+        partition.produce-avro.request-error-rate:
+          alias: confluent.$domain.jersey.$attribute
+          metric_type: gauge
+        partition.produce-binary+v2.request-error-rate:
+          alias: confluent.$domain.jersey.$attribute
+          metric_type: gauge
+        partition.produce-binary.request-error-rate:
+          alias: confluent.$domain.jersey.$attribute
+          metric_type: gauge
+        partition.produce-json+v2.request-error-rate:
+          alias: confluent.$domain.jersey.$attribute
+          metric_type: gauge
+        partition.produce-json.request-error-rate:
+          alias: confluent.$domain.jersey.$attribute
+          metric_type: gauge
+        partitions.list+v2.request-error-rate:
+          alias: confluent.$domain.jersey.$attribute
+          metric_type: gauge
+        partitions.list.request-error-rate:
+          alias: confluent.$domain.jersey.$attribute
+          metric_type: gauge
+        request-error-rate:
+          alias: confluent.$domain.jersey.$attribute
+          metric_type: gauge
+        root.get.request-error-rate:
+          alias: confluent.$domain.jersey.$attribute
+          metric_type: gauge
+        root.post.request-error-rate:
+          alias: confluent.$domain.jersey.$attribute
+          metric_type: gauge
+        topic.get.request-error-rate:
+          alias: confluent.$domain.jersey.$attribute
+          metric_type: gauge
+        topic.produce-avro.request-error-rate:
+          alias: confluent.$domain.jersey.$attribute
+          metric_type: gauge
+        topic.produce-binary.request-error-rate:
+          alias: confluent.$domain.jersey.$attribute
+          metric_type: gauge
+        topic.produce-json.request-error-rate:
+          alias: confluent.$domain.jersey.$attribute
+          metric_type: gauge
+        topics.list.request-error-rate:
+          alias: confluent.$domain.jersey.$attribute
+          metric_type: gauge
+  - include:
+      domain: kafka.schema.registry
+      bean: kafka.schema.registry:type=master-slave-role
+      attribute:
+        master-slave-role:
+          alias: confluent.$domain.$type.$attribute
+          metric_type: gauge
+  - include:
+      domain: confluent.replicator
+      bean_regex: confluent\.replicator:type=confluent-replicator-task-metrics,confluent-replicator-task=(.*),confluent-replicator-task-topic-partition=(.*)
+      tags:
+        task: $1
+        partition: $2
+      attribute:
+        confluent-replicator-task-topic-partition-message-lag:
+          alias: $domain.task.topic_partition_message_lag
+          metric_type: gauge
+        confluent-replicator-task-topic-partition-throughput:
+          alias: $domain.task.topic_partition_throughput
+          metric_type: gauge
+        confluent-replicator-task-topic-partition-latency:
+          alias: $domain.task.topic_partition_latency
+          metric_type: gauge
+  - include:
+      domain: io.confluent.ksql.metrics
+      bean: io.confluent.ksql.metrics:type=_confluent-ksql-default_ksql-engine-query-stats
+      attribute:
+        bytes-consumed-total:
+          alias: confluent.ksql.query_stats.$attribute
+          metric_type: gauge
+        error-rate:
+          alias: confluent.ksql.query_stats.$attribute
+          metric_type: gauge
+        messages-consumed-avg:
+          alias: confluent.ksql.query_stats.$attribute
+          metric_type: gauge
+        messages-consumed-per-sec:
+          alias: confluent.ksql.query_stats.$attribute
+          metric_type: gauge
+        messages-consumed-min:
+          alias: confluent.ksql.query_stats.$attribute
+          metric_type: gauge
+        messages-consumed-max:
+          alias: confluent.ksql.query_stats.$attribute
+          metric_type: gauge
+        messages-consumed-total:
+          alias: confluent.ksql.query_stats.$attribute
+          metric_type: gauge
+        messages-produced-per-sec:
+          alias: confluent.ksql.query_stats.$attribute
+          metric_type: gauge
+        num-persistent-queries:
+          alias: confluent.ksql.query_stats.$attribute
+          metric_type: gauge
+        num-active-queries:
+          alias: confluent.ksql.query_stats.$attribute
+          metric_type: gauge
+        num-idle-queries:
+          alias: confluent.ksql.query_stats.$attribute
+          metric_type: gauge
+  - include:
+      domain: kafka.streams
+      bean_regex: kafka\.streams:type=stream-metrics,client-id=.*
+      attribute:
+        commit-latency-avg:
+          alias: confluent.$domain.stream.$attribute
+          metric_type: gauge
+        commit-latency-max:
+          alias: confluent.$domain.stream.$attribute
+          metric_type: gauge
+        commit-rate:
+          alias: confluent.$domain.stream.$attribute
+          metric_type: gauge
+        commit-total:
+          alias: confluent.$domain.stream.$attribute
+          metric_type: gauge
+        poll-latency-avg:
+          alias: confluent.$domain.stream.$attribute
+          metric_type: gauge
+        poll-latency-max:
+          alias: confluent.$domain.stream.$attribute
+          metric_type: gauge
+        poll-rate:
+          alias: confluent.$domain.stream.$attribute
+          metric_type: gauge
+        poll-total:
+          alias: confluent.$domain.stream.$attribute
+          metric_type: gauge
+        process-latency-avg:
+          alias: confluent.$domain.stream.$attribute
+          metric_type: gauge
+        process-latency-max:
+          alias: confluent.$domain.stream.$attribute
+          metric_type: gauge
+        process-rate:
+          alias: confluent.$domain.stream.$attribute
+          metric_type: gauge
+        process-total:
+          alias: confluent.$domain.stream.$attribute
+          metric_type: gauge
+        punctuate-latency-avg:
+          alias: confluent.$domain.stream.$attribute
+          metric_type: gauge
+        punctuate-latency-max:
+          alias: confluent.$domain.stream.$attribute
+          metric_type: gauge
+        punctuate-rate:
+          alias: confluent.$domain.stream.$attribute
+          metric_type: gauge
+        punctuate-total:
+          alias: confluent.$domain.stream.$attribute
+          metric_type: gauge
+        skipped-records-rate:
+          alias: confluent.$domain.stream.$attribute
+          metric_type: gauge
+        skipped-records-total:
+          alias: confluent.$domain.stream.$attribute
+          metric_type: gauge
+        task-closed-rate:
+          alias: confluent.$domain.stream.$attribute
+          metric_type: gauge
+        task-closed-total:
+          alias: confluent.$domain.stream.$attribute
+          metric_type: gauge
+        task-created-rate:
+          alias: confluent.$domain.stream.$attribute
+          metric_type: gauge
+        task-created-total:
+          alias: confluent.$domain.stream.$attribute
+          metric_type: gauge
+  - include:
+      domain: kafka.streams
+      bean_regex: kafka\.streams:type=stream-task-metrics,.*
+      attribute:
+        commit-latency-avg:
+          alias: confluent.$domain.task.$attribute
+          metric_type: gauge
+        commit-rate:
+          alias: confluent.$domain.task.$attribute
+          metric_type: gauge
+        record-lateness-avg:
+          alias: confluent.$domain.task.$attribute
+          metric_type: gauge
+  - include:
+      domain: kafka.streams
+      bean_regex: kafka\.streams:type=stream-processor-node-metrics,.*
+      attribute:
+        process-latency-avg:
+          alias: confluent.$domain.processor_node.$attribute
+          metric_type: gauge
+        process-rate:
+          alias: confluent.$domain.processor_node.$attribute
+          metric_type: gauge
+        process-total:
+          alias: confluent.$domain.processor_node.$attribute
+          metric_type: gauge
+        forward-rate:
+          alias: confluent.$domain.processor_node.$attribute
+          metric_type: gauge
+        forward-total:
+          alias: confluent.$domain.processor_node.$attribute
+          metric_type: gauge
+        suppression-emit-rate:
+          alias: confluent.$domain.processor_node.$attribute
+          metric_type: gauge
+        suppression-emit-total:
+          alias: confluent.$domain.processor_node.$attribute
+          metric_type: gauge

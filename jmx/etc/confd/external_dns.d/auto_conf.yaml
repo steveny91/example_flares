@@ -1,0 +1,7 @@
+ad_identifiers:
+  - external-dns
+init_config:
+instances:
+  - prometheus_url: "http://%%host%%:7979/metrics"
+    tags:
+      - "externaldns-pod:%%host%%"

@@ -1,0 +1,33 @@
+APIKeyStatus:
+  API key ending with cec0d: API Key valid
+Transactions:
+  CheckRunsV1: 12
+  Connections: 0
+  Containers: 0
+  Dropped: 0
+  DroppedOnInput: 0
+  Errors: 0
+  ErrorsByType:
+    ConnectionErrors: 0
+    DNSErrors: 0
+    SentRequestErrors: 0
+    TLSErrors: 0
+    WroteRequestErrors: 0
+  Events: 0
+  HTTPErrors: 0
+  HTTPErrorsByCode: {}
+  HostMetadata: 0
+  IntakeV1: 2
+  Metadata: 0
+  Pods: 0
+  Processes: 0
+  RTContainers: 0
+  RTProcesses: 0
+  Requeued: 0
+  Retried: 0
+  RetryQueueSize: 0
+  Series: 0
+  ServiceChecks: 0
+  SketchSeries: 0
+  Success: 26
+  TimeseriesV1: 12

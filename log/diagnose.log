@@ -1,0 +1,42 @@
+=== Running Alibaba Metadata availability diagnosis ===
+[ERROR] error: Alibaba HostAliases: unable to query metadata endpoint: Get http://100.100.100.200/latest/meta-data/instance-id: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers) - 1589926311966838084
+===> FAIL
+=== Running Azure Metadata availability diagnosis ===
+[ERROR] error: Azure HostAliases: unable to query metadata endpoint: Get http://169.254.169.254/metadata/instance/compute/vmId?api-version=2017-04-02&format=text: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers) - 1589926312268376529
+===> FAIL
+=== Running CRI availability diagnosis ===
+[ERROR] error: temporary failure in criutil, will retry later: no cri_socket_path was set - 1589926312268466208
+===> FAIL
+=== Running Cluster Agent availability diagnosis ===
+[ERROR] error: temporary failure in clusterAgentClient, will retry later: cannot get a cluster agent endpoint for kubernetes service DATADOG_CLUSTER_AGENT, env DATADOG_CLUSTER_AGENT_SERVICE_HOST is empty - 1589926312270235990
+===> FAIL
+=== Running Containerd availability diagnosis ===
+[INFO] info: No socket path was specified, defaulting to /var/run/containerd/containerd.sock - 1589926312271648808
+[ERROR] errorf: Containerd init error: temporary failure in containerdutil, will retry later: failed to dial "/var/run/containerd/containerd.sock": context deadline exceeded - 1589926313273211784
+===> FAIL
+=== Running Docker availability diagnosis ===
+[ERROR] error: temporary failure in dockerutil, will retry later: try delay not elapsed yet - 1589926313273393900
+[ERROR] errorf: returned hostname "" with error: temporary failure in dockerutil, will retry later: try delay not elapsed yet - 1589926313273493312
+===> FAIL
+=== Running EC2 Metadata availability diagnosis ===
+[ERROR] error: unable to fetch EC2 API, Get http://169.254.169.254/latest/meta-data/hostname: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers) - 1589926313374340079
+===> FAIL
+=== Running ECS Fargate Metadata availability diagnosis ===
+[ERROR] error: Get http://169.254.170.2/v2/metadata: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers) - 1589926313875197231
+===> FAIL
+=== Running ECS Metadata availability diagnosis ===
+[ERROR] error: temporary failure in ecsutil-meta-v1, will retry later: could not detect ECS agent, tried URLs: [http://localhost:51678/] - 1589926313875937122
+===> FAIL
+=== Running ECS Metadata with tags availability diagnosis ===
+[ERROR] error: temporary failure in ecsutil-meta-v3, will retry later: Could not initialize client: missing metadata v3 URL - 1589926313876041090
+===> FAIL
+=== Running GCE Metadata availability diagnosis ===
+[ERROR] error: unable to retrieve hostname from GCE: Get http://169.254.169.254/computeMetadata/v1/instance/hostname: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers) - 1589926314176716975
+===> FAIL
+=== Running Kubelet availability diagnosis ===
+[ERROR] error: temporary failure in kubeutil, will retry later: try delay not elapsed yet - 1589926314176843864
+===> FAIL
+=== Running Kubernetes API Server availability diagnosis ===
+[INFO] infof: Could not get apiserver client: unable to load in-cluster configuration, KUBERNETES_SERVICE_HOST and KUBERNETES_SERVICE_PORT must be defined - 1589926314178264326
+[ERROR] error: temporary failure in apiserver, will retry later: unable to load in-cluster configuration, KUBERNETES_SERVICE_HOST and KUBERNETES_SERVICE_PORT must be defined - 1589926314178459981
+===> FAIL

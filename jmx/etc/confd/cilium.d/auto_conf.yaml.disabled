@@ -1,0 +1,12 @@
+init_config:
+instances:
+  -
+      source_name:
+        - "CIT Prod"
+      type:
+        - Warning
+        - Error
+      message_filters:
+        - "%error%"
+      tags:
+        - CIT_Prod_Node_2

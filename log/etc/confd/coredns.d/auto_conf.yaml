@@ -1,0 +1,7 @@
+ad_identifiers:
+  - coredns
+init_config:
+instances:
+  - prometheus_url: "http://%%host%%:9153/metrics"
+    tags:
+      - "dns-pod:%%host%%"

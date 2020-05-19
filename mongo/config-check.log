@@ -1,0 +1,589 @@
+=== apm check ===
+Configuration provider: file
+Configuration source: file:/opt/datadog-agent/etc/conf.d/apm.yaml.default
+Instance ID: apm:d884b5186b651429
+{}
+~
+===
+=== cpu check ===
+Configuration provider: file
+Configuration source: file:/opt/datadog-agent/etc/conf.d/cpu.d/conf.yaml.default
+Instance ID: cpu:d884b5186b651429
+{}
+~
+===
+=== disk check ===
+Configuration provider: file
+Configuration source: file:/opt/datadog-agent/etc/conf.d/disk.d/conf.yaml.default
+Instance ID: disk:e5dffb8bef24336f
+use_mount: false
+~
+===
+=== io check ===
+Configuration provider: file
+Configuration source: file:/opt/datadog-agent/etc/conf.d/io.d/conf.yaml.default
+Instance ID: io:d884b5186b651429
+{}
+~
+===
+=== load check ===
+Configuration provider: file
+Configuration source: file:/opt/datadog-agent/etc/conf.d/load.d/conf.yaml.default
+Instance ID: load:d884b5186b651429
+{}
+~
+===
+=== memory check ===
+Configuration provider: file
+Configuration source: file:/opt/datadog-agent/etc/conf.d/memory.d/conf.yaml.default
+Instance ID: memory:d884b5186b651429
+{}
+~
+===
+=== mongo check ===
+Configuration provider: file
+Configuration source: file:/opt/datadog-agent/etc/conf.d/mongo.d/conf.yaml
+Instance ID: mongo:310ba9d91da317ab
+hosts:
+- <HOST_1>
+- <HOST_2>:<PORT_2>
+~
+===
+=== network check ===
+Configuration provider: file
+Configuration source: file:/opt/datadog-agent/etc/conf.d/network.d/conf.yaml.default
+Instance ID: network:e0204ad63d43c949
+collect_connection_state: false
+~
+===
+=== ntp check ===
+Configuration provider: file
+Configuration source: file:/opt/datadog-agent/etc/conf.d/ntp.d/conf.yaml.default
+Instance ID: ntp:d884b5186b651429
+{}
+~
+===
+=== process_agent check ===
+Configuration provider: file
+Configuration source: file:/opt/datadog-agent/etc/conf.d/process_agent.yaml.default
+Instance ID: process_agent:d884b5186b651429
+{}
+~
+===
+=== uptime check ===
+Configuration provider: file
+Configuration source: file:/opt/datadog-agent/etc/conf.d/uptime.d/conf.yaml.default
+Instance ID: uptime:d884b5186b651429
+{}
+~
+===
+=== Resolve warnings ===
+apache
+* No service found with this AD identifier: httpd
+* Can't resolve the template for apache at this moment.
+harbor
+* No service found with this AD identifier: nginx-photon
+* Can't resolve the template for harbor at this moment.
+kubernetes_state
+* No service found with this AD identifier: kube-state-metrics
+* Can't resolve the template for kubernetes_state at this moment.
+kube_controller_manager
+* No service found with this AD identifier: kube-controller-manager
+* Can't resolve the template for kube_controller_manager at this moment.
+mcache
+* No service found with this AD identifier: memcached
+* Can't resolve the template for mcache at this moment.
+tomcat
+* No service found with this AD identifier: tomcat
+* Can't resolve the template for tomcat at this moment.
+cilium
+* No service found with this AD identifier: cilium-agent
+* Can't resolve the template for cilium at this moment.
+couch
+* No service found with this AD identifier: couchdb
+* Can't resolve the template for couch at this moment.
+elastic
+* No service found with this AD identifier: elasticsearch
+* No service found with this AD identifier: elasticsearch-oss
+* Can't resolve the template for elastic at this moment.
+external_dns
+* No service found with this AD identifier: external-dns
+* Can't resolve the template for external_dns at this moment.
+kube_apiserver_metrics
+* No service found with this AD identifier: kube-apiserver
+* Can't resolve the template for kube_apiserver_metrics at this moment.
+etcd
+* No service found with this AD identifier: etcd
+* Can't resolve the template for etcd at this moment.
+kube_scheduler
+* No service found with this AD identifier: kube-scheduler
+* Can't resolve the template for kube_scheduler at this moment.
+redisdb
+* No service found with this AD identifier: redis
+* Can't resolve the template for redisdb at this moment.
+riak
+* No service found with this AD identifier: riak
+* Can't resolve the template for riak at this moment.
+consul
+* No service found with this AD identifier: consul
+* Can't resolve the template for consul at this moment.
+couchbase
+* No service found with this AD identifier: couchbase
+* Can't resolve the template for couchbase at this moment.
+kube_dns
+* No service found with this AD identifier: kubedns-amd64
+* No service found with this AD identifier: k8s-dns-kube-dns-amd64
+* Can't resolve the template for kube_dns at this moment.
+kyototycoon
+* No service found with this AD identifier: kyototycoon
+* Can't resolve the template for kyototycoon at this moment.
+presto
+* No service found with this AD identifier: presto
+* Can't resolve the template for presto at this moment.
+=== Unresolved Configs ===
+Auto-discovery IDs: couchdb
+Templates:
+check_name: couch
+init_config: null
+instances:
+- server: http://%%host%%:5984
+logs_config: null
+Auto-discovery IDs: httpd
+Templates:
+check_name: apache
+init_config: null
+instances:
+- apache_status_url: http://%%host%%/server-status?auto
+logs_config: null
+Auto-discovery IDs: memcached
+Templates:
+check_name: mcache
+init_config: null
+instances:
+- port: "11211"
+  url: '%%host%%'
+logs_config: null
+Auto-discovery IDs: kube-controller-manager
+Templates:
+check_name: kube_controller_manager
+init_config: null
+instances:
+- bearer_token_auth: true
+  prometheus_url: http://%%host%%:10252/metrics
+logs_config: null
+Auto-discovery IDs: kubedns-amd64,k8s-dns-kube-dns-amd64
+Templates:
+check_name: kube_dns
+init_config: null
+instances:
+- prometheus_endpoint: http://%%host%%:10055/metrics
+  tags:
+  - dns-pod:%%host%%
+logs_config: null
+Auto-discovery IDs: kyototycoon
+Templates:
+check_name: kyototycoon
+init_config: null
+instances:
+- report_url: http://%%host%%:1978/rpc/report
+logs_config: null
+Auto-discovery IDs: cilium-agent
+Templates:
+check_name: cilium
+init_config: null
+instances:
+- agent_endpoint: http://%%host%%:9090/metrics
+  tags:
+  - cilium-pod:%%host%%
+logs_config: null
+Auto-discovery IDs: couchbase
+Templates:
+check_name: couchbase
+init_config: null
+instances:
+- password: ********
+  server: http://%%host%%:8091
+  user: Administrator
+logs_config: null
+Auto-discovery IDs: external-dns
+Templates:
+check_name: external_dns
+init_config: null
+instances:
+- prometheus_url: http://%%host%%:7979/metrics
+  tags:
+  - externaldns-pod:%%host%%
+logs_config: null
+Auto-discovery IDs: kube-state-metrics
+Templates:
+check_name: kubernetes_state
+init_config: null
+instances:
+- kube_state_url: http://%%host%%:8080/metrics
+logs_config: null
+Auto-discovery IDs: presto
+Templates:
+check_name: presto
+init_config:
+  collect_default_metrics: true
+  conf:
+  - include:
+      attribute:
+        AbandonedQueries.OneMinute.Count:
+          alias: presto.execution.abandoned_queries.one_minute.count
+        AbandonedQueries.OneMinute.Rate:
+          alias: presto.execution.abandoned_queries.one_minute.rate
+        AbandonedQueries.TotalCount:
+          alias: presto.execution.abandoned_queries.total_count
+        CanceledQueries.OneMinute.Count:
+          alias: presto.execution.canceled_queries.one_minute.count
+        CanceledQueries.OneMinute.Rate:
+          alias: presto.execution.canceled_queries.one_minute.rate
+        CanceledQueries.TotalCount:
+          alias: presto.execution.canceled_queries.total_count
+        CompletedQueries.OneMinute.Count:
+          alias: presto.execution.completed_queries.one_minute.count
+        CompletedQueries.OneMinute.Rate:
+          alias: presto.execution.completed_queries.one_minute.rate
+        CompletedQueries.TotalCount:
+          alias: presto.execution.completed_queries.total_count
+        ConsumedCpuTimeSecs.OneMinute.Count:
+          alias: presto.execution.consumed_cpu_time_secs.one_minute.count
+        ConsumedCpuTimeSecs.OneMinute.Rate:
+          alias: presto.execution.consumed_cpu_time_secs.one_minute.rate
+        ConsumedCpuTimeSecs.TotalCount:
+          alias: presto.execution.consumed_cpu_time_secs.total_count
+        CpuInputByteRate.AllTime.Avg:
+          alias: presto.execution.cpu_input_byte_rate.all_time.avg
+        CpuInputByteRate.AllTime.P75:
+          alias: presto.execution.cpu_input_byte_rate.all_time.p75
+        CpuInputByteRate.AllTime.P95:
+          alias: presto.execution.cpu_input_byte_rate.all_time.p95
+        CpuInputByteRate.OneMinute.Avg:
+          alias: presto.execution.cpu_input_byte_rate.one_minute.avg
+        CpuInputByteRate.OneMinute.Count:
+          alias: presto.execution.cpu_input_byte_rate.one_minute.count
+        CpuInputByteRate.OneMinute.Max:
+          alias: presto.execution.cpu_input_byte_rate.one_minute.max
+        CpuInputByteRate.OneMinute.Min:
+          alias: presto.execution.cpu_input_byte_rate.one_minute.min
+        CpuInputByteRate.OneMinute.P75:
+          alias: presto.execution.cpu_input_byte_rate.one_minute.p75
+        CpuInputByteRate.OneMinute.P95:
+          alias: presto.execution.cpu_input_byte_rate.one_minute.p95
+        CpuInputByteRate.OneMinute.Total:
+          alias: presto.execution.cpu_input_byte_rate.one_minute.total
+        ExecutionTime.AllTime.Avg:
+          alias: presto.execution.execution_time.all_time.avg
+        ExecutionTime.AllTime.Count:
+          alias: presto.execution.execution_time.all_time.count
+        ExecutionTime.AllTime.Max:
+          alias: presto.execution.execution_time.all_time.max
+        ExecutionTime.AllTime.Min:
+          alias: presto.execution.execution_time.all_time.min
+        ExecutionTime.AllTime.P75:
+          alias: presto.execution.execution_time.all_time.p75
+        ExecutionTime.AllTime.P95:
+          alias: presto.execution.execution_time.all_time.p95
+        ExecutionTime.OneMinute.Avg:
+          alias: presto.execution.execution_time.one_minute.avg
+        ExecutionTime.OneMinute.Max:
+          alias: presto.execution.execution_time.one_minute.max
+        ExecutionTime.OneMinute.Min:
+          alias: presto.execution.execution_time.one_minute.min
+        ExecutionTime.OneMinute.P75:
+          alias: presto.execution.execution_time.one_minute.p75
+        ExecutionTime.OneMinute.P95:
+          alias: presto.execution.execution_time.one_minute.p95
+        Executor.ActiveCount:
+          alias: presto.execution.executor.active_count
+        Executor.CompletedTaskCount:
+          alias: presto.execution.executor.completed_task_count
+        Executor.CorePoolSize:
+          alias: presto.execution.executor.core_pool_size
+        Executor.PoolSize:
+          alias: presto.execution.executor.pool_size
+        Executor.QueuedTaskCount:
+          alias: presto.execution.executor.queued_task_count
+        Executor.TaskCount:
+          alias: presto.execution.executor.task_count
+        ExternalFailures.OneMinute.Count:
+          alias: presto.execution.external_failures.one_minute.count
+        ExternalFailures.OneMinute.Rate:
+          alias: presto.execution.external_failures.one_minute.rate
+        ExternalFailures.TotalCount:
+          alias: presto.execution.external_failures.total_count
+        FailedQueries.OneMinute.Count:
+          alias: presto.execution.failed_queries.one_minute.count
+        FailedQueries.OneMinute.Rate:
+          alias: presto.execution.failed_queries.one_minute.rate
+        FailedQueries.TotalCount:
+          alias: presto.execution.failed_queries.total_count
+        InsufficientResourcesFailures.OneMinute.Count:
+          alias: presto.execution.insufficient_resources_failures.one_minute.count
+        InsufficientResourcesFailures.OneMinute.Rate:
+          alias: presto.execution.insufficient_resources_failures.one_minute.rate
+        InsufficientResourcesFailures.TotalCount:
+          alias: presto.execution.insufficient_resources_failures.total_count
+        InternalFailures.OneMinute.Count:
+          alias: presto.execution.internal_failures.one_minute.count
+        InternalFailures.OneMinute.Rate:
+          alias: presto.execution.internal_failures.one_minute.rate
+        InternalFailures.TotalCount:
+          alias: presto.execution.internal_failures.total_count
+        ManagementExecutor.ActiveCount:
+          alias: presto.execution.management_executor.active_count
+        ManagementExecutor.CompletedTaskCount:
+          alias: presto.execution.management_executor.completed_task_count
+        ManagementExecutor.QueuedTaskCount:
+          alias: presto.execution.management_executor.queued_task_count
+        RunningQueries:
+          alias: presto.execution.running_queries
+        StartedQueries.OneMinute.Count:
+          alias: presto.execution.started_queries.one_minute.count
+        StartedQueries.OneMinute.Rate:
+          alias: presto.execution.started_queries.one_minute.rate
+        StartedQueries.TotalCount:
+          alias: presto.execution.started_queries.total_count
+        UserErrorFailures.OneMinute.Count:
+          alias: presto.execution.user_error_failures.one_minute.count
+        UserErrorFailures.OneMinute.Rate:
+          alias: presto.execution.user_error_failures.one_minute.rate
+        UserErrorFailures.TotalCount:
+          alias: presto.execution.user_error_failures.total_count
+        WallInputBytesRate.OneMinute.Avg:
+          alias: presto.execution.wall_input_bytes_rate.one_minute.avg
+        WallInputBytesRate.OneMinute.Max:
+          alias: presto.execution.wall_input_bytes_rate.one_minute.max
+        WallInputBytesRate.OneMinute.Min:
+          alias: presto.execution.wall_input_bytes_rate.one_minute.min
+        WallInputBytesRate.OneMinute.P75:
+          alias: presto.execution.wall_input_bytes_rate.one_minute.p75
+        WallInputBytesRate.OneMinute.P95:
+          alias: presto.execution.wall_input_bytes_rate.one_minute.p95
+      bean: presto.execution:name=QueryManager
+  - include:
+      attribute:
+        BlockedSplits:
+          alias: presto.execution.executor.blocked_splits
+        ProcessorExecutor.QueuedTaskCount:
+          alias: presto.execution.executor.processor_executor.queued_task_count
+        RunningSplits:
+          alias: presto.execution.executor.running_splits
+        TotalSplits:
+          alias: presto.execution.executor.total_splits
+        WaitingSplits:
+          alias: presto.execution.executor.waiting_splits
+      bean: presto.execution.executor:name=TaskExecutor
+  - include:
+      attribute:
+        InputDataSize.OneMinute.Count:
+          alias: presto.execution.input_data_size.one_minute.count
+        InputDataSize.OneMinute.Rate:
+          alias: presto.execution.input_data_size.one_minute.rate
+        InputDataSize.TotalCount:
+          alias: presto.execution.input_data_size.total_count
+        InputPositions.OneMinute.Count:
+          alias: presto.execution.input_positions.one_minute.count
+        InputPositions.OneMinute.Rate:
+          alias: presto.execution.input_positions.one_minute.rate
+        InputPositions.TotalCount:
+          alias: presto.execution.input_positions.total_count
+        OutputDataSize.OneMinute.Count:
+          alias: presto.execution.output_data_size.one_minute.count
+        OutputDataSize.OneMinute.Rate:
+          alias: presto.execution.output_data_size.one_minute.rate
+        OutputDataSize.TotalCount:
+          alias: presto.execution.output_data_size.total_count
+        OutputPositions.OneMinute.Count:
+          alias: presto.execution.output_positions.one_minute.count
+        OutputPositions.OneMinute.Rate:
+          alias: presto.execution.output_positions.one_minute.rate
+        OutputPositions.TotalCount:
+          alias: presto.execution.output_positions.total_count
+        TaskNotificationExecutor.ActiveCount:
+          alias: presto.execution.task_notification_executor.active_count
+        TaskNotificationExecutor.CompletedTaskCount:
+          alias: presto.execution.task_notification_executor.completed_task_count
+        TaskNotificationExecutor.PoolSize:
+          alias: presto.execution.task_notification_executor.pool_size
+        TaskNotificationExecutor.QueuedTaskCount:
+          alias: presto.execution.task_notification_executor.queued_task_count
+      bean: presto.execution:name=TaskManager
+  - include:
+      attribute:
+        ActiveCount:
+          alias: presto.failure_detector.active_count
+      bean:
+      - presto.failureDetector:name=HeartbeatFailureDetector
+  - include:
+      attribute:
+        AssignedQueries:
+          alias: presto.memory.assigned_queries
+        BlockedNodes:
+          alias: presto.memory.blocked_nodes
+        ClusterMemoryBytes:
+          alias: presto.memory.cluster_memory_bytes
+        FreeBytes:
+          alias: presto.memory.free_bytes
+        FreeDistributedBytes:
+          alias: presto.memory.free_distributed_bytes
+        MaxBytes:
+          alias: presto.memory.max_bytes
+        Nodes:
+          alias: presto.memory.nodes
+        ReservedBytes:
+          alias: presto.memory.reserved_bytes
+        ReservedDistributedBytes:
+          alias: presto.memory.reserved_distributed_bytes
+        ReservedRevocableBytes:
+          alias: presto.memory.reserved_revocable_bytes
+        ReservedRevocableDistributedBytes:
+          alias: presto.memory.reserved_revocable_distributed_bytes
+        TotalDistributedBytes:
+          alias: presto.memory.total_distributed_bytes
+      domain: presto.memory
+  is_jmx: true
+instances:
+- host: '%%host%%'
+  port: '%%port%%'
+logs_config: null
+Auto-discovery IDs: redis
+Templates:
+check_name: redisdb
+init_config: null
+instances:
+- host: '%%host%%'
+  port: "6379"
+logs_config: null
+Auto-discovery IDs: tomcat
+Templates:
+check_name: tomcat
+init_config:
+  collect_default_metrics: true
+  conf:
+  - include:
+      attribute:
+        currentThreadCount:
+          alias: tomcat.threads.count
+          metric_type: gauge
+        currentThreadsBusy:
+          alias: tomcat.threads.busy
+          metric_type: gauge
+        maxThreads:
+          alias: tomcat.threads.max
+          metric_type: gauge
+      type: ThreadPool
+  - include:
+      attribute:
+        bytesReceived:
+          alias: tomcat.bytes_rcvd
+          metric_type: counter
+        bytesSent:
+          alias: tomcat.bytes_sent
+          metric_type: counter
+        errorCount:
+          alias: tomcat.error_count
+          metric_type: counter
+        maxTime:
+          alias: tomcat.max_time
+          metric_type: gauge
+        processingTime:
+          alias: tomcat.processing_time
+          metric_type: counter
+        requestCount:
+          alias: tomcat.request_count
+          metric_type: counter
+      type: GlobalRequestProcessor
+  - include:
+      attribute:
+        errorCount:
+          alias: tomcat.servlet.error_count
+          metric_type: counter
+        processingTime:
+          alias: tomcat.servlet.processing_time
+          metric_type: counter
+        requestCount:
+          alias: tomcat.servlet.request_count
+          metric_type: counter
+      j2eeType: Servlet
+  - include:
+      attribute:
+        accessCount:
+          alias: tomcat.cache.access_count
+          metric_type: counter
+        hitsCounts:
+          alias: tomcat.cache.hits_count
+          metric_type: counter
+      type: Cache
+  - include:
+      attribute:
+        jspCount:
+          alias: tomcat.jsp.count
+          metric_type: counter
+        jspReloadCount:
+          alias: tomcat.jsp.reload_count
+          metric_type: counter
+      type: JspMonitor
+  is_jmx: true
+instances:
+- host: '%%host%%'
+  port: "9012"
+logs_config: null
+Auto-discovery IDs: consul
+Templates:
+check_name: consul
+init_config: null
+instances:
+- catalog_checks: true
+  new_leader_checks: true
+  url: http://%%host%%:8500
+logs_config: null
+Auto-discovery IDs: etcd
+Templates:
+check_name: etcd
+init_config: null
+instances:
+- url: http://%%host%%:2379
+logs_config: null
+Auto-discovery IDs: kube-scheduler
+Templates:
+check_name: kube_scheduler
+init_config: null
+instances:
+- bearer_token_auth: true
+  prometheus_url: http://%%host%%:10251/metrics
+logs_config: null
+Auto-discovery IDs: riak
+Templates:
+check_name: riak
+init_config: null
+instances:
+- url: http://%%host%%:8098/stats
+logs_config: null
+Auto-discovery IDs: elasticsearch,elasticsearch-oss
+Templates:
+check_name: elastic
+init_config: null
+instances:
+- url: http://%%host%%:9200
+logs_config: null
+Auto-discovery IDs: kube-apiserver
+Templates:
+check_name: kube_apiserver_metrics
+init_config: null
+instances:
+- bearer_token_auth: true
+  prometheus_url: https://%%host%%:6443/metrics
+  tags:
+  - apiserver:%%host%%
+logs_config: null
+Auto-discovery IDs: nginx-photon
+Templates:
+check_name: harbor
+init_config: null
+instances:
+- password: ********
+  url: http://%%host%%/
+  username: <USER_ID>
+logs_config: null

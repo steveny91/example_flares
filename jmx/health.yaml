@@ -1,0 +1,15 @@
+healthy:
+- ad-servicelistening
+- aggregator
+- collector-queue
+- collector-queue
+- dogstatsd-main
+- forwarder
+- healthcheck
+- jmxfetch
+- metadata-agent_checks
+- metadata-host
+- metadata-inventories
+- tagger
+- tagger-docker
+unhealthy: []

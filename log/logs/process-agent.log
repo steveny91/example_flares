@@ -1,0 +1,89 @@
+2020-05-19 21:14:18 UTC | PROCESS | INFO | (pkg/util/log/log.go:482 in func1) | pid '19223' written to pid file '/opt/datadog-agent/run/process-agent.pid'
+2020-05-19 21:14:18 UTC | PROCESS | INFO | (pkg/process/config/config.go:248 in loadConfigIfExists) | no config exists at /etc/datadog-agent/system-probe.yaml, ignoring...
+2020-05-19 21:14:18 UTC | PROCESS | INFO | (main_common.go:106 in runAgent) | running on platform: linux missingkecl 4.4.0-137-generic #163-ubuntu smp mon sep 24 13:14:43 utc 2018 x86_64 x86_64 x86_64 gnu/linux
+2020-05-19 21:14:18 UTC | PROCESS | INFO | (main_common.go:109 in runAgent) | running version: Version: 7.19.2, Git hash: f6cbd32, Git branch: HEAD, Build date: 2020-05-11T16:04:03, Go Version: go version go1.13.8 linux/amd64, 
+2020-05-19 21:14:19 UTC | PROCESS | INFO | (pkg/process/checks/container.go:43 in Init) | no network ID detected: could not detect network ID
+2020-05-19 21:14:19 UTC | PROCESS | INFO | (collector.go:129 in run) | Starting process-agent for host=missingkecl, endpoints=[https://process.datadoghq.com], orchestrator endpoints=[https://orchestrator.datadoghq.com], enabled checks=[container rtcontainer]
+2020-05-19 21:14:19 UTC | PROCESS | INFO | (pkg/forwarder/forwarder.go:231 in Start) | Forwarder started, sending to 1 endpoint(s) with 1 worker(s) each: "https://process.datadoghq.com" (1 api key(s))
+2020-05-19 21:14:19 UTC | PROCESS | INFO | (pkg/forwarder/forwarder.go:231 in Start) | Forwarder started, sending to 1 endpoint(s) with 1 worker(s) each: "https://orchestrator.datadoghq.com" (1 api key(s))
+2020-05-19 21:14:19 UTC | PROCESS | INFO | (collector.go:110 in runCheck) | Finished container check #1 in 27.547µs
+2020-05-19 21:14:29 UTC | PROCESS | INFO | (collector.go:110 in runCheck) | Finished container check #2 in 2.365505ms
+2020-05-19 21:14:39 UTC | PROCESS | INFO | (collector.go:110 in runCheck) | Finished container check #3 in 239.397µs
+2020-05-19 21:14:49 UTC | PROCESS | INFO | (collector.go:110 in runCheck) | Finished container check #4 in 21.75µs
+2020-05-19 21:14:59 UTC | PROCESS | INFO | (collector.go:112 in runCheck) | Finished container check #5 in 225.084µs. First 5 check runs finished, next runs will be logged every 20 runs.
+2020-05-19 21:17:29 UTC | PROCESS | INFO | (collector.go:114 in runCheck) | Finish container check #20 in 17.706µs
+2020-05-19 21:18:05 UTC | PROCESS | CRITICAL | (pkg/process/util/signal_nowindows.go:21 in HandleSignals) | Caught signal 'terminated'; terminating.
+2020-05-19 21:18:05 UTC | PROCESS | INFO | (pkg/forwarder/forwarder.go:243 in Stop) | stopping the Forwarder
+2020-05-19 21:18:05 UTC | PROCESS | INFO | (pkg/forwarder/domain_forwarder.go:200 in Stop) | domainForwarder stopped
+2020-05-19 21:18:05 UTC | PROCESS | INFO | (pkg/forwarder/forwarder.go:243 in Stop) | stopping the Forwarder
+2020-05-19 21:19:28 UTC | PROCESS | INFO | (pkg/util/log/log.go:482 in func1) | pid '1144' written to pid file '/opt/datadog-agent/run/process-agent.pid'
+2020-05-19 21:19:28 UTC | PROCESS | INFO | (pkg/process/config/config.go:248 in loadConfigIfExists) | no config exists at /etc/datadog-agent/system-probe.yaml, ignoring...
+2020-05-19 21:19:28 UTC | PROCESS | INFO | (main_common.go:106 in runAgent) | running on platform: linux ubuntu-xenial 4.4.0-137-generic #163-ubuntu smp mon sep 24 13:14:43 utc 2018 x86_64 x86_64 x86_64 gnu/linux
+2020-05-19 21:19:28 UTC | PROCESS | INFO | (main_common.go:109 in runAgent) | running version: Version: 7.19.2, Git hash: f6cbd32, Git branch: HEAD, Build date: 2020-05-11T16:04:03, Go Version: go version go1.13.8 linux/amd64, 
+2020-05-19 21:19:29 UTC | PROCESS | INFO | (pkg/process/checks/container.go:43 in Init) | no network ID detected: could not detect network ID
+2020-05-19 21:19:29 UTC | PROCESS | INFO | (collector.go:129 in run) | Starting process-agent for host=ubuntu-xenial, endpoints=[https://process.datadoghq.com], orchestrator endpoints=[https://orchestrator.datadoghq.com], enabled checks=[container rtcontainer]
+2020-05-19 21:19:29 UTC | PROCESS | INFO | (pkg/forwarder/forwarder.go:231 in Start) | Forwarder started, sending to 1 endpoint(s) with 1 worker(s) each: "https://process.datadoghq.com" (1 api key(s))
+2020-05-19 21:19:29 UTC | PROCESS | INFO | (pkg/forwarder/forwarder.go:231 in Start) | Forwarder started, sending to 1 endpoint(s) with 1 worker(s) each: "https://orchestrator.datadoghq.com" (1 api key(s))
+2020-05-19 21:19:29 UTC | PROCESS | INFO | (collector.go:110 in runCheck) | Finished container check #1 in 25.115µs
+2020-05-19 21:19:39 UTC | PROCESS | INFO | (collector.go:110 in runCheck) | Finished container check #2 in 236.69µs
+2020-05-19 21:19:49 UTC | PROCESS | INFO | (collector.go:110 in runCheck) | Finished container check #3 in 236.987µs
+2020-05-19 21:19:59 UTC | PROCESS | INFO | (collector.go:110 in runCheck) | Finished container check #4 in 38.365µs
+2020-05-19 21:20:09 UTC | PROCESS | INFO | (collector.go:112 in runCheck) | Finished container check #5 in 248.651µs. First 5 check runs finished, next runs will be logged every 20 runs.
+2020-05-19 21:22:39 UTC | PROCESS | INFO | (collector.go:114 in runCheck) | Finish container check #20 in 17.939µs
+2020-05-19 21:25:59 UTC | PROCESS | INFO | (collector.go:114 in runCheck) | Finish container check #40 in 22.156µs
+2020-05-19 21:27:21 UTC | PROCESS | CRITICAL | (pkg/process/util/signal_nowindows.go:21 in HandleSignals) | Caught signal 'terminated'; terminating.
+2020-05-19 21:27:21 UTC | PROCESS | INFO | (pkg/forwarder/forwarder.go:243 in Stop) | stopping the Forwarder
+2020-05-19 21:27:21 UTC | PROCESS | INFO | (pkg/forwarder/domain_forwarder.go:200 in Stop) | domainForwarder stopped
+2020-05-19 21:27:21 UTC | PROCESS | INFO | (pkg/forwarder/forwarder.go:243 in Stop) | stopping the Forwarder
+2020-05-19 21:27:21 UTC | PROCESS | INFO | (pkg/util/log/log.go:482 in func1) | pid '3446' written to pid file '/opt/datadog-agent/run/process-agent.pid'
+2020-05-19 21:27:21 UTC | PROCESS | INFO | (pkg/process/config/config.go:248 in loadConfigIfExists) | no config exists at /etc/datadog-agent/system-probe.yaml, ignoring...
+2020-05-19 21:27:21 UTC | PROCESS | INFO | (main_common.go:106 in runAgent) | running on platform: linux ubuntu-xenial 4.4.0-137-generic #163-ubuntu smp mon sep 24 13:14:43 utc 2018 x86_64 x86_64 x86_64 gnu/linux
+2020-05-19 21:27:21 UTC | PROCESS | INFO | (main_common.go:109 in runAgent) | running version: Version: 7.19.2, Git hash: f6cbd32, Git branch: HEAD, Build date: 2020-05-11T16:04:03, Go Version: go version go1.13.8 linux/amd64, 
+2020-05-19 21:27:22 UTC | PROCESS | INFO | (pkg/process/checks/container.go:43 in Init) | no network ID detected: could not detect network ID
+2020-05-19 21:27:22 UTC | PROCESS | INFO | (collector.go:129 in run) | Starting process-agent for host=ubuntu-xenial, endpoints=[https://process.datadoghq.com], orchestrator endpoints=[https://orchestrator.datadoghq.com], enabled checks=[container rtcontainer]
+2020-05-19 21:27:22 UTC | PROCESS | INFO | (pkg/forwarder/forwarder.go:231 in Start) | Forwarder started, sending to 1 endpoint(s) with 1 worker(s) each: "https://process.datadoghq.com" (1 api key(s))
+2020-05-19 21:27:22 UTC | PROCESS | INFO | (pkg/forwarder/forwarder.go:231 in Start) | Forwarder started, sending to 1 endpoint(s) with 1 worker(s) each: "https://orchestrator.datadoghq.com" (1 api key(s))
+2020-05-19 21:27:22 UTC | PROCESS | INFO | (collector.go:110 in runCheck) | Finished container check #1 in 23.358µs
+2020-05-19 21:27:32 UTC | PROCESS | INFO | (collector.go:110 in runCheck) | Finished container check #2 in 306.101µs
+2020-05-19 21:27:42 UTC | PROCESS | INFO | (collector.go:110 in runCheck) | Finished container check #3 in 276.201µs
+2020-05-19 21:27:52 UTC | PROCESS | INFO | (collector.go:110 in runCheck) | Finished container check #4 in 32.15µs
+2020-05-19 21:28:02 UTC | PROCESS | INFO | (collector.go:112 in runCheck) | Finished container check #5 in 211.497µs. First 5 check runs finished, next runs will be logged every 20 runs.
+2020-05-19 21:30:21 UTC | PROCESS | CRITICAL | (pkg/process/util/signal_nowindows.go:21 in HandleSignals) | Caught signal 'terminated'; terminating.
+2020-05-19 21:30:21 UTC | PROCESS | INFO | (pkg/forwarder/forwarder.go:243 in Stop) | stopping the Forwarder
+2020-05-19 21:30:21 UTC | PROCESS | INFO | (pkg/forwarder/domain_forwarder.go:200 in Stop) | domainForwarder stopped
+2020-05-19 21:30:21 UTC | PROCESS | INFO | (pkg/forwarder/forwarder.go:243 in Stop) | stopping the Forwarder
+2020-05-19 21:30:21 UTC | PROCESS | INFO | (pkg/util/log/log.go:482 in func1) | pid '4048' written to pid file '/opt/datadog-agent/run/process-agent.pid'
+2020-05-19 21:30:21 UTC | PROCESS | INFO | (pkg/process/config/config.go:248 in loadConfigIfExists) | no config exists at /etc/datadog-agent/system-probe.yaml, ignoring...
+2020-05-19 21:30:21 UTC | PROCESS | INFO | (main_common.go:106 in runAgent) | running on platform: linux ubuntu-xenial 4.4.0-137-generic #163-ubuntu smp mon sep 24 13:14:43 utc 2018 x86_64 x86_64 x86_64 gnu/linux
+2020-05-19 21:30:21 UTC | PROCESS | INFO | (main_common.go:109 in runAgent) | running version: Version: 7.19.2, Git hash: f6cbd32, Git branch: HEAD, Build date: 2020-05-11T16:04:03, Go Version: go version go1.13.8 linux/amd64, 
+2020-05-19 21:30:22 UTC | PROCESS | INFO | (pkg/process/checks/container.go:43 in Init) | no network ID detected: could not detect network ID
+2020-05-19 21:30:22 UTC | PROCESS | INFO | (collector.go:129 in run) | Starting process-agent for host=ubuntu-xenial, endpoints=[https://process.datadoghq.com], orchestrator endpoints=[https://orchestrator.datadoghq.com], enabled checks=[container rtcontainer]
+2020-05-19 21:30:22 UTC | PROCESS | INFO | (pkg/forwarder/forwarder.go:231 in Start) | Forwarder started, sending to 1 endpoint(s) with 1 worker(s) each: "https://process.datadoghq.com" (1 api key(s))
+2020-05-19 21:30:22 UTC | PROCESS | INFO | (pkg/forwarder/forwarder.go:231 in Start) | Forwarder started, sending to 1 endpoint(s) with 1 worker(s) each: "https://orchestrator.datadoghq.com" (1 api key(s))
+2020-05-19 21:30:22 UTC | PROCESS | INFO | (collector.go:110 in runCheck) | Finished container check #1 in 19.303µs
+2020-05-19 21:30:32 UTC | PROCESS | INFO | (collector.go:110 in runCheck) | Finished container check #2 in 310.517µs
+2020-05-19 21:30:42 UTC | PROCESS | INFO | (collector.go:110 in runCheck) | Finished container check #3 in 233.871µs
+2020-05-19 21:30:52 UTC | PROCESS | INFO | (collector.go:110 in runCheck) | Finished container check #4 in 21.687µs
+2020-05-19 21:31:02 UTC | PROCESS | INFO | (collector.go:112 in runCheck) | Finished container check #5 in 241.794µs. First 5 check runs finished, next runs will be logged every 20 runs.
+2020-05-19 21:33:32 UTC | PROCESS | INFO | (collector.go:114 in runCheck) | Finish container check #20 in 41.675µs
+2020-05-19 21:36:52 UTC | PROCESS | INFO | (collector.go:114 in runCheck) | Finish container check #40 in 21.802µs
+2020-05-19 21:40:12 UTC | PROCESS | INFO | (collector.go:114 in runCheck) | Finish container check #60 in 20.779µs
+2020-05-19 21:43:32 UTC | PROCESS | INFO | (collector.go:114 in runCheck) | Finish container check #80 in 18.681µs
+2020-05-19 21:46:52 UTC | PROCESS | INFO | (collector.go:114 in runCheck) | Finish container check #100 in 16.153µs
+2020-05-19 21:50:12 UTC | PROCESS | INFO | (collector.go:114 in runCheck) | Finish container check #120 in 34.907µs
+2020-05-19 21:53:32 UTC | PROCESS | INFO | (collector.go:114 in runCheck) | Finish container check #140 in 16.18µs
+2020-05-19 21:56:52 UTC | PROCESS | INFO | (collector.go:114 in runCheck) | Finish container check #160 in 21.003µs
+2020-05-19 22:00:12 UTC | PROCESS | INFO | (collector.go:114 in runCheck) | Finish container check #180 in 30.723µs
+2020-05-19 22:08:46 UTC | PROCESS | INFO | (pkg/util/log/log.go:482 in func1) | pid '1155' written to pid file '/opt/datadog-agent/run/process-agent.pid'
+2020-05-19 22:08:46 UTC | PROCESS | INFO | (pkg/process/config/config.go:248 in loadConfigIfExists) | no config exists at /etc/datadog-agent/system-probe.yaml, ignoring...
+2020-05-19 22:08:46 UTC | PROCESS | INFO | (main_common.go:106 in runAgent) | running on platform: linux ubuntu-xenial 4.4.0-137-generic #163-ubuntu smp mon sep 24 13:14:43 utc 2018 x86_64 x86_64 x86_64 gnu/linux
+2020-05-19 22:08:46 UTC | PROCESS | INFO | (main_common.go:109 in runAgent) | running version: Version: 7.19.2, Git hash: f6cbd32, Git branch: HEAD, Build date: 2020-05-11T16:04:03, Go Version: go version go1.13.8 linux/amd64, 
+2020-05-19 22:08:47 UTC | PROCESS | INFO | (pkg/process/checks/container.go:43 in Init) | no network ID detected: could not detect network ID
+2020-05-19 22:08:47 UTC | PROCESS | INFO | (collector.go:129 in run) | Starting process-agent for host=ubuntu-xenial, endpoints=[https://process.datadoghq.com], orchestrator endpoints=[https://orchestrator.datadoghq.com], enabled checks=[container rtcontainer]
+2020-05-19 22:08:47 UTC | PROCESS | INFO | (pkg/forwarder/forwarder.go:231 in Start) | Forwarder started, sending to 1 endpoint(s) with 1 worker(s) each: "https://process.datadoghq.com" (1 api key(s))
+2020-05-19 22:08:47 UTC | PROCESS | INFO | (pkg/forwarder/forwarder.go:231 in Start) | Forwarder started, sending to 1 endpoint(s) with 1 worker(s) each: "https://orchestrator.datadoghq.com" (1 api key(s))
+2020-05-19 22:08:47 UTC | PROCESS | INFO | (collector.go:110 in runCheck) | Finished container check #1 in 25.009µs
+2020-05-19 22:08:57 UTC | PROCESS | INFO | (collector.go:110 in runCheck) | Finished container check #2 in 1.80429ms
+2020-05-19 22:09:07 UTC | PROCESS | INFO | (collector.go:110 in runCheck) | Finished container check #3 in 511.129µs
+2020-05-19 22:09:17 UTC | PROCESS | INFO | (collector.go:110 in runCheck) | Finished container check #4 in 15.785µs
+2020-05-19 22:09:27 UTC | PROCESS | INFO | (collector.go:112 in runCheck) | Finished container check #5 in 231.122µs. First 5 check runs finished, next runs will be logged every 20 runs.

@@ -1,0 +1,37 @@
+=== Running Alibaba Metadata availability diagnosis ===
+[ERROR] error: Alibaba HostAliases: unable to query metadata endpoint: Get http://100.100.100.200/latest/meta-data/instance-id: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers) - 1589873445994037000
+===> FAIL
+=== Running Azure Metadata availability diagnosis ===
+[ERROR] error: Azure HostAliases: unable to query metadata endpoint: Get http://169.254.169.254/metadata/instance/compute/vmId?api-version=2017-04-02&format=text: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers) - 1589873446313350000
+===> FAIL
+=== Running Cluster Agent availability diagnosis ===
+[ERROR] error: temporary failure in clusterAgentClient, will retry later: cannot get a cluster agent endpoint for kubernetes service DATADOG_CLUSTER_AGENT, env DATADOG_CLUSTER_AGENT_SERVICE_HOST is empty - 1589873446314529000
+===> FAIL
+=== Running Docker availability diagnosis ===
+[INFO] info: successfully connected to docker - 1589873446314657000
+[INFO] infof: successfully got hostname "docker-desktop" from docker - 1589873446329406000
+===> PASS
+=== Running EC2 Metadata availability diagnosis ===
+[ERROR] error: unable to fetch EC2 API, Get http://169.254.169.254/latest/meta-data/hostname: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers) - 1589873446473456000
+===> FAIL
+=== Running ECS Fargate Metadata availability diagnosis ===
+[INFO] infof: Running check uptime - 1589873446893445000
+[INFO] infof: Done running check uptime - 1589873446893568000
+[ERROR] error: Get http://169.254.170.2/v2/metadata: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers) - 1589873447045939000
+===> FAIL
+=== Running ECS Metadata availability diagnosis ===
+[ERROR] error: temporary failure in ecsutil-meta-v1, will retry later: could not detect ECS agent, tried URLs: [http://localhost:51678/] - 1589873447048600000
+===> FAIL
+=== Running ECS Metadata with tags availability diagnosis ===
+[ERROR] error: temporary failure in ecsutil-meta-v3, will retry later: Could not initialize client: missing metadata v3 URL - 1589873447048686000
+===> FAIL
+=== Running GCE Metadata availability diagnosis ===
+[ERROR] error: unable to retrieve hostname from GCE: Get http://169.254.169.254/computeMetadata/v1/instance/hostname: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers) - 1589873447356852000
+===> FAIL
+=== Running Kubelet availability diagnosis ===
+[ERROR] error: temporary failure in kubeutil, will retry later: cannot set a valid kubelet host: cannot connect to kubelet using any of the given hosts: [] [docker-desktop], Errors: [Get https://docker-desktop:10250/: dial tcp: lookup docker-desktop: no such host cannot connect: http: "Get http://docker-desktop:10255/: dial tcp: lookup docker-desktop: no such host"] - 1589873447373173000
+===> FAIL
+=== Running Kubernetes API Server availability diagnosis ===
+[INFO] infof: Could not get apiserver client: unable to load in-cluster configuration, KUBERNETES_SERVICE_HOST and KUBERNETES_SERVICE_PORT must be defined - 1589873447373245000
+[ERROR] error: temporary failure in apiserver, will retry later: unable to load in-cluster configuration, KUBERNETES_SERVICE_HOST and KUBERNETES_SERVICE_PORT must be defined - 1589873447373379000
+===> FAIL

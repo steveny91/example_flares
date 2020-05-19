@@ -1,0 +1,66 @@
+instances:
+- community_string: ********
+  ip_address: 172.22.0.2
+  metrics:
+  - OID: 1.3.6.1.2.1.7.1.0
+    name: udpDatagrams
+  - OID: 1.3.6.1.2.1.6.10.0
+    name: tcpInSegs
+  - OID: .1.3.6.1.6.3.10.2.1.3.0
+    name: snmpEngineTime
+  - MIB: TCP-MIB
+    symbol: tcpCurrEstab
+  - OID: 1.3.6.1.2.1.7.1.0
+    metric_tags:
+    - udpdgrams
+    - UDP
+    name: udpDatagrams
+  - OID: 1.3.6.1.2.1.6.10.0
+    metric_tags:
+    - tcpinsegs
+    - TCP
+    name: tcpInSegs
+  - MIB: TCP-MIB
+    metric_tags:
+    - MIB
+    - TCP
+    - estab
+    symbol: tcpCurrEstab
+  - MIB: IF-MIB
+    metric_tags:
+    - column: ifDescr
+      tag: interface
+    - index: 1
+      tag: dumbindex
+    symbols:
+    - ifInOctets
+    - ifOutOctets
+    table: ifTable
+init_config:
+  profiles:
+    et-profile:
+      definition:
+        sysobjectid: 1.3.6.1.4.1.8072.3.2.10
+        metrics:
+        - MIB: IF-MIB
+          table: ifTable
+          symbols:
+            - ifInOctets
+            - ifInErrors
+            - ifOutOctets
+            - ifOutErrors
+          metric_tags:
+            - tag: interface
+              column: ifDescr
+    f5-big-ip:
+      definition_file: f5-big-ip.yaml
+    router:
+      definition_file: generic-router.yaml
+    cisco-3850:
+      definition_file: cisco-3850.yaml
+    meraki-cloud-controller:
+      definition_file: meraki-cloud-controller.yaml
+    idrac:
+      definition_file: idrac.yaml
+    cisco-nexus:
+      definition_file: cisco-nexus.yaml

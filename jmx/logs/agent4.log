@@ -1,0 +1,38 @@
+2020-05-19 03:50:03 EDT | CORE | INFO | (cmd/agent/app/run.go:210 in StartAgent) | Hostname is: MissingKecl
+2020-05-19 03:50:03 EDT | CORE | INFO | (cmd/agent/gui/gui.go:81 in StartGUIServer) | GUI server is listening at 127.0.0.1:5002
+2020-05-19 03:50:03 EDT | CORE | INFO | (pkg/forwarder/forwarder.go:231 in Start) | Forwarder started, sending to 1 endpoint(s) with 1 worker(s) each: "https://7-19-2-app.agent.datadoghq.com" (1 api key(s))
+2020-05-19 03:50:03 EDT | CORE | INFO | (cmd/agent/app/run.go:277 in StartAgent) | logs-agent disabled
+2020-05-19 03:50:03 EDT | CORE | INFO | (pkg/dogstatsd/listeners/udp.go:97 in Listen) | dogstatsd-udp: starting to listen on 127.0.0.1:8125
+2020-05-19 03:50:03 EDT | CORE | INFO | (pkg/tagger/tagger.go:152 in tryCollectors) | docker tag collector successfully started
+2020-05-19 03:50:03 EDT | CORE | INFO | (pkg/collector/runner/runner.go:92 in NewRunner) | Runner started with 4 workers.
+2020-05-19 03:50:03 EDT | CORE | INFO | (pkg/collector/python/init.go:303 in Initialize) | Initializing rtloader with python3 /opt/datadog-agent/embedded
+2020-05-19 03:50:26 EDT | CORE | INFO | (pkg/jmxfetch/jmxfetch.go:249 in func1) | 2020-05-19 03:50:26,190 | INFO  | App | JMX Fetch 0.36.1 has started
+2020-05-19 03:50:26 EDT | CORE | INFO | (pkg/jmxfetch/jmxfetch.go:249 in func1) | 2020-05-19 03:50:26,486 | INFO  | App | Found 0 config files
+2020-05-19 03:50:26 EDT | CORE | INFO | (pkg/jmxfetch/jmxfetch.go:249 in func1) | 2020-05-19 03:50:26,487 | INFO  | App | Cleaning up instances...
+2020-05-19 03:50:26 EDT | CORE | INFO | (pkg/jmxfetch/jmxfetch.go:249 in func1) | 2020-05-19 03:50:26,487 | INFO  | App | Dealing with YAML config instances...
+2020-05-19 03:50:26 EDT | CORE | INFO | (pkg/jmxfetch/jmxfetch.go:249 in func1) | 2020-05-19 03:50:26,488 | INFO  | App | Dealing with Auto-Config instances collected...
+2020-05-19 03:50:26 EDT | CORE | INFO | (pkg/jmxfetch/jmxfetch.go:249 in func1) | 2020-05-19 03:50:26,488 | INFO  | App | Started instance initialization...
+2020-05-19 03:50:26 EDT | CORE | INFO | (pkg/jmxfetch/jmxfetch.go:249 in func1) | 2020-05-19 03:50:26,488 | INFO  | App | Completed instance initialization...
+2020-05-19 03:50:26 EDT | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check ntp
+2020-05-19 03:50:26 EDT | CORE | INFO | (pkg/jmxfetch/jmxfetch.go:249 in func1) | 2020-05-19 03:50:26,770 | INFO  | App | update is in order - updating timestamp: 1589873066
+2020-05-19 03:50:26 EDT | CORE | INFO | (pkg/jmxfetch/jmxfetch.go:249 in func1) | 2020-05-19 03:50:26,771 | INFO  | App | Reinitializing...
+2020-05-19 03:50:26 EDT | CORE | INFO | (pkg/jmxfetch/jmxfetch.go:249 in func1) | 2020-05-19 03:50:26,771 | INFO  | App | Cleaning up instances...
+2020-05-19 03:50:26 EDT | CORE | INFO | (pkg/jmxfetch/jmxfetch.go:249 in func1) | 2020-05-19 03:50:26,771 | INFO  | App | Dealing with YAML config instances...
+2020-05-19 03:50:26 EDT | CORE | INFO | (pkg/jmxfetch/jmxfetch.go:249 in func1) | 2020-05-19 03:50:26,771 | INFO  | App | Dealing with Auto-Config instances collected...
+2020-05-19 03:50:26 EDT | CORE | INFO | (pkg/jmxfetch/jmxfetch.go:249 in func1) | 2020-05-19 03:50:26,771 | INFO  | App | Instantiating instance for: cassandra
+2020-05-19 03:50:26 EDT | CORE | INFO | (pkg/jmxfetch/jmxfetch.go:249 in func1) | 2020-05-19 03:50:26,849 | INFO  | App | Started instance initialization...
+2020-05-19 03:50:26 EDT | CORE | INFO | (pkg/jmxfetch/jmxfetch.go:249 in func1) | 2020-05-19 03:50:26,849 | INFO  | Instance | Trying to connect to JMX Server at localhost:7199
+2020-05-19 03:50:26 EDT | CORE | INFO | (pkg/jmxfetch/jmxfetch.go:249 in func1) | 2020-05-19 03:50:26,850 | INFO  | Instance | Connection closed or does not exist. Attempting to create a new connection...
+2020-05-19 03:50:26 EDT | CORE | INFO | (pkg/jmxfetch/jmxfetch.go:249 in func1) | 2020-05-19 03:50:26,853 | INFO  | ConnectionFactory | Connecting using JMX Remote
+2020-05-19 03:50:26 EDT | CORE | INFO | (pkg/jmxfetch/jmxfetch.go:249 in func1) | 2020-05-19 03:50:26,857 | INFO  | Connection | Connecting to: service:jmx:rmi:///jndi/rmi://localhost:7199/jmxrmi
+2020-05-19 03:50:27 EDT | CORE | INFO | (pkg/jmxfetch/jmxfetch.go:249 in func1) | 2020-05-19 03:50:27,007 | INFO  | Instance | Trying to collect bean list for the first time for JMX Server at localhost:7199
+2020-05-19 03:50:27 EDT | CORE | INFO | (pkg/jmxfetch/jmxfetch.go:249 in func1) | 2020-05-19 03:50:27,121 | INFO  | Instance | Connected to JMX Server at localhost:7199
+2020-05-19 03:50:28 EDT | CORE | INFO | (pkg/metadata/host/host.go:164 in getNetworkMeta) | could not get network metadata: could not detect network ID
+2020-05-19 03:50:30 EDT | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check APM Agent
+2020-05-19 03:50:30 EDT | CORE | INFO | (pkg/collector/runner/runner.go:333 in work) | Check APM Agent one-time's execution has finished
+2020-05-19 03:50:31 EDT | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check network
+2020-05-19 03:50:32 EDT | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check load
+2020-05-19 03:50:32 EDT | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check load
+2020-05-19 03:50:33 EDT | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check disk
+2020-05-19 03:50:33 EDT | CORE | INFO | (pkg/collector/runner/runner.go:327 in work) | Done running check disk
+2020-05-19 03:50:33 EDT | CORE | INFO | (pkg/serializer/serializer.go:346 in SendMetadata) | Sent metadata payload, size (raw/compressed): 4096/1882 bytes.

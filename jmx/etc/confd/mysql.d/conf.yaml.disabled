@@ -1,0 +1,14 @@
+init_config:
+instances:
+  - user: datadog
+    pass: ********
+    sock: "/opt/zimbra/data/tmp/mysql/mysql.sock"
+    defaults_file: "/opt/zimbra/conf/my.cnf"
+    options:
+      replication: false
+      galera_cluster: true
+      extra_status_metrics: true
+      extra_innodb_metrics: true
+      extra_performance_metrics: true
+      schema_size_metrics: false
+      disable_innodb_metrics: false

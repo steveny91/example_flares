@@ -1,0 +1,41 @@
+agent_metadata:
+  hostname_source: os
+check_metadata:
+  cpu:
+  - config.hash: cpu
+    config.provider: file
+    last_updated: 1.5899261261698947e+18
+  disk:
+  - config.hash: disk:e5dffb8bef24336f
+    config.provider: file
+    last_updated: 1.5899261261698947e+18
+  file_handle:
+  - config.hash: file_handle
+    config.provider: file
+    last_updated: 1.5899261261698947e+18
+  io:
+  - config.hash: io
+    config.provider: file
+    last_updated: 1.5899261261698947e+18
+  load:
+  - config.hash: load
+    config.provider: file
+    last_updated: 1.5899261261698947e+18
+  memory:
+  - config.hash: memory
+    config.provider: file
+    last_updated: 1.5899261261698947e+18
+  network:
+  - config.hash: network:e0204ad63d43c949
+    config.provider: file
+    last_updated: 1.5899261261698947e+18
+  ntp:
+  - config.hash: ntp:d884b5186b651429
+    config.provider: file
+    last_updated: 1.5899261261698947e+18
+  uptime:
+  - config.hash: uptime
+    config.provider: file
+    last_updated: 1.5899261261698947e+18
+hostname: ubuntu-xenial
+timestamp: 1.589926311652371e+18

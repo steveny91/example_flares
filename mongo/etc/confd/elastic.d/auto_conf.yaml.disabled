@@ -1,0 +1,5 @@
+init_config: {}
+instances:
+- password: ********
+  url: http://localhost:9200
+  username: elastic

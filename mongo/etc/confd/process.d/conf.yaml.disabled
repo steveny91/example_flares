@@ -1,0 +1,6 @@
+init_config:
+instances:
+  - name: consul-template
+    exact_match: false
+    search_strings:
+      - 'googlqweqwee'

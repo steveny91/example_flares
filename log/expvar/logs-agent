@@ -1,0 +1,10 @@
+BytesSent: 0
+DestinationErrors: 0
+DestinationLogsDropped: {}
+EncodedBytesSent: 28
+Errors: ""
+IsRunning: true
+LogsDecoded: 0
+LogsProcessed: 0
+LogsSent: 0
+Warnings: ""

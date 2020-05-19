@@ -1,0 +1,73 @@
+ad_identifiers:
+  - prod-gdms-timeseries-calculatedtag
+  - prod-gdms-calculatedtag-outage-scheduler
+  - prod-gdms-exception-based-service
+  - prod-gdms-latest-calculatedtag
+init_config:
+  is_jmx: true
+  collect_default_metrics: true
+instances:
+  - host: "%%host_timerange-calctag-engine_default%%"
+    port: 9010
+    max_returned_metrics: 500
+    conf:
+      - include:
+        domain: com.nextera.CalcTagEngine
+        bean_regex:
+          - .*name=*.HIVE_MESSAGE_PUBLISH
+          - .*name=*.HIVE_MESSAGE_SUCCESS
+          - .*name=*.HIVE_MESSAGE_ERROR
+          - .*name=*.HIVE_TOTAL_WRITE_RECORD
+          - .*name=*.CALCULATED_TAG_SUCCESSFUL
+          - .*name=*.CALCULATED_TAG_FAILURE
+          - .*name=*.TOTAL_TIME_TAKEN
+          - .*name=*.TOTAL_NOT_NULL_VALUES
+          - .*name=*.TOTAL_VALUES
+  - host: "%%host_outage-scheduler-asg_default%%"
+    port: 9010
+    max_returned_metrics: 500
+    conf:
+      - include:
+        domain: com.nextera.outageScheduler
+        bean_regex:
+          - .*name=*.HIVE_MESSAGE_PUBLISH
+          - .*name=*.HIVE_MESSAGE_SUCCESS
+          - .*name=*.HIVE_MESSAGE_ERROR
+          - .*name=*.HIVE_TOTAL_WRITE_RECORD
+          - .*name=*.CALCULATED_TAG_SUCCESSFUL
+          - .*name=*.CALCULATED_TAG_FAILURE
+          - .*name=*.TOTAL_TIME_TAKEN
+          - .*name=*.TOTAL_NOT_NULL_VALUES
+          - .*name=*.TOTAL_VALUES
+      - host: "%%host_proxy_web%%"
+        port: 9010
+        max_returned_metrics: 500
+        conf:
+          - include:
+            domain: com.nextera.Exceptionbased
+            bean_regex:
+              - .*name=*.HIVE_MESSAGE_PUBLISH
+              - .*name=*.HIVE_MESSAGE_SUCCESS
+              - .*name=*.HIVE_MESSAGE_ERROR
+              - .*name=*.HIVE_TOTAL_WRITE_RECORD
+              - .*name=*.CALCULATED_TAG_SUCCESSFUL
+              - .*name=*.CALCULATED_TAG_FAILURE
+              - .*name=*.TOTAL_TIME_TAKEN
+              - .*name=*.TOTAL_NOT_NULL_VALUES
+              - .*name=*.TOTAL_VALUES
+      - host: "%%host_prod-latest-value-caltag-swarm_default%%"
+        port: 9010
+        max_returned_metrics: 500
+        conf:
+          - include:
+            domain: com.nextera.latestValueCalTagEngine
+            bean_regex:
+              - .*name=*.HIVE_MESSAGE_PUBLISH
+              - .*name=*.HIVE_MESSAGE_SUCCESS
+              - .*name=*.HIVE_MESSAGE_ERROR
+              - .*name=*.HIVE_TOTAL_WRITE_RECORD
+              - .*name=*.CALCULATED_TAG_SUCCESSFUL
+              - .*name=*.CALCULATED_TAG_FAILURE
+              - .*name=*.TOTAL_TIME_TAKEN
+              - .*name=*.TOTAL_NOT_NULL_VALUES
+              - .*name=*.TOTAL_VALUES

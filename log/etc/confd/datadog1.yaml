@@ -1,0 +1,10 @@
+api_key: ***************************
+tags:
+  - environment:dev
+  - hello:world
+logs_enabled: false
+logs_config:
+  use_http: true
+apm_config:
+  enabled: false
+use_dogstatsd: false

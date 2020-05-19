@@ -1,0 +1,30 @@
+init_config:
+instances:
+  - name: datajar.co.uk
+    url: https://datajar.co.uk/
+    http_response_status_code: (2)\d\d
+    tls_ignore_warning: true
+    timeout: 60
+    tags:
+    - app:datajar.co.uk
+    - type:non-dotmobi
+  - name: Adaptive Lab
+    url: https://adaptivelab.datajar.mobi/healthCheck.html
+    http_response_status_code: (2)\d\d
+    content_match: '\[\]'
+    tls_ignore_warning: true
+    tls_verify: false
+    timeout: 60
+    tags:
+    - app:adaptivelab
+    - type:dotmobi
+logs:
+  - type : file
+    path : /var/log/datadog/agent.log
+    service : service
+    source : csharp
+    sourcecategory: category
+  - type : file
+    path : /Users/steven.yuen/Desktop/maximo3.log.20.20.20
+    service : maximo
+    source : csharp

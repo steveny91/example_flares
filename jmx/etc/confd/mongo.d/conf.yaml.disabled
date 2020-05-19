@@ -1,0 +1,5 @@
+init_config:
+instances:
+  - hosts:
+      - <HOST_1>
+      - <HOST_2>:<PORT_2>

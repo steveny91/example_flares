@@ -1,0 +1,40 @@
+agent_metadata:
+  hostname_source: configuration
+check_metadata:
+  apm: []
+  cpu:
+  - config.hash: cpu
+    config.provider: file
+    last_updated: 1.589865249631088e+18
+  disk:
+  - config.hash: disk:e5dffb8bef24336f
+    config.provider: file
+    last_updated: 1.589865249631088e+18
+  io:
+  - config.hash: io
+    config.provider: file
+    last_updated: 1.589865249631088e+18
+  load:
+  - config.hash: load
+    config.provider: file
+    last_updated: 1.589865249631088e+18
+  memory:
+  - config.hash: memory
+    config.provider: file
+    last_updated: 1.589865249631088e+18
+  mongo: []
+  network:
+  - config.hash: network:e0204ad63d43c949
+    config.provider: file
+    last_updated: 1.589865249631088e+18
+  ntp:
+  - config.hash: ntp:d884b5186b651429
+    config.provider: file
+    last_updated: 1.589865249631088e+18
+  process_agent: []
+  uptime:
+  - config.hash: uptime
+    config.provider: file
+    last_updated: 1.589865249631088e+18
+hostname: MissingKecl
+timestamp: 1.589865362017764e+18

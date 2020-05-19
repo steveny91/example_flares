@@ -1,0 +1,76 @@
+2020-05-19 21:14:18 UTC | TRACE | INFO | (pkg/util/log/log.go:482 in func1) | Loaded configuration: /etc/datadog-agent/datadog.yaml
+2020-05-19 21:14:18 UTC | TRACE | INFO | (pkg/trace/agent/run.go:99 in Run) | PID '19222' written to PID file '/opt/datadog-agent/run/trace-agent.pid'
+2020-05-19 21:14:19 UTC | TRACE | INFO | (pkg/trace/agent/run.go:118 in Run) | Trace agent running on host missingkecl
+2020-05-19 21:14:19 UTC | TRACE | INFO | (pkg/trace/api/api.go:152 in Start) | Listening for traces at http://localhost:8126
+2020-05-19 21:14:29 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 21:15:29 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 21:16:29 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 21:17:29 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 21:18:05 UTC | TRACE | INFO | (main.go:23 in handleSignal) | received signal 15 (terminated)
+2020-05-19 21:18:05 UTC | TRACE | INFO | (pkg/trace/agent/agent.go:129 in loop) | Exiting...
+2020-05-19 21:18:05 UTC | TRACE | INFO | (pkg/trace/stats/concentrator.go:108 in Run) | Exiting concentrator, computing remaining stats
+2020-05-19 21:19:28 UTC | TRACE | INFO | (pkg/util/log/log.go:482 in func1) | Loaded configuration: /etc/datadog-agent/datadog.yaml
+2020-05-19 21:19:28 UTC | TRACE | INFO | (pkg/trace/agent/run.go:99 in Run) | PID '1143' written to PID file '/opt/datadog-agent/run/trace-agent.pid'
+2020-05-19 21:19:28 UTC | TRACE | INFO | (pkg/trace/agent/run.go:118 in Run) | Trace agent running on host ubuntu-xenial
+2020-05-19 21:19:28 UTC | TRACE | INFO | (pkg/trace/api/api.go:152 in Start) | Listening for traces at http://localhost:8126
+2020-05-19 21:19:38 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 21:20:38 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 21:21:48 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 21:22:58 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 21:24:08 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 21:25:08 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 21:26:18 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 21:27:18 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 21:27:21 UTC | TRACE | INFO | (main.go:23 in handleSignal) | received signal 15 (terminated)
+2020-05-19 21:27:21 UTC | TRACE | INFO | (pkg/trace/agent/agent.go:129 in loop) | Exiting...
+2020-05-19 21:27:21 UTC | TRACE | INFO | (pkg/trace/stats/concentrator.go:108 in Run) | Exiting concentrator, computing remaining stats
+2020-05-19 21:27:21 UTC | TRACE | INFO | (pkg/util/log/log.go:482 in func1) | Loaded configuration: /etc/datadog-agent/datadog.yaml
+2020-05-19 21:27:21 UTC | TRACE | INFO | (pkg/trace/agent/run.go:99 in Run) | PID '3445' written to PID file '/opt/datadog-agent/run/trace-agent.pid'
+2020-05-19 21:27:21 UTC | TRACE | INFO | (pkg/trace/agent/run.go:118 in Run) | Trace agent running on host ubuntu-xenial
+2020-05-19 21:27:21 UTC | TRACE | INFO | (pkg/trace/api/api.go:152 in Start) | Listening for traces at http://localhost:8126
+2020-05-19 21:27:31 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 21:28:31 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 21:29:41 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 21:30:21 UTC | TRACE | INFO | (main.go:23 in handleSignal) | received signal 15 (terminated)
+2020-05-19 21:30:21 UTC | TRACE | INFO | (pkg/trace/agent/agent.go:129 in loop) | Exiting...
+2020-05-19 21:30:21 UTC | TRACE | INFO | (pkg/trace/stats/concentrator.go:108 in Run) | Exiting concentrator, computing remaining stats
+2020-05-19 21:30:21 UTC | TRACE | INFO | (pkg/util/log/log.go:482 in func1) | Loaded configuration: /etc/datadog-agent/datadog.yaml
+2020-05-19 21:30:21 UTC | TRACE | INFO | (pkg/trace/agent/run.go:99 in Run) | PID '4047' written to PID file '/opt/datadog-agent/run/trace-agent.pid'
+2020-05-19 21:30:21 UTC | TRACE | INFO | (pkg/trace/agent/run.go:118 in Run) | Trace agent running on host ubuntu-xenial
+2020-05-19 21:30:21 UTC | TRACE | INFO | (pkg/trace/api/api.go:152 in Start) | Listening for traces at http://localhost:8126
+2020-05-19 21:30:31 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 21:31:31 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 21:32:31 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 21:33:31 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 21:34:41 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 21:35:51 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 21:37:01 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 21:38:01 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 21:39:11 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 21:40:11 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 21:41:11 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 21:42:11 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 21:43:21 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 21:44:31 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 21:45:41 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 21:46:41 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 21:47:41 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 21:48:41 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 21:49:51 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 21:50:51 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 21:52:01 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 21:53:01 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 21:54:11 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 21:55:21 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 21:56:31 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 21:57:31 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 21:58:41 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 21:59:41 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 22:00:41 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 22:08:46 UTC | TRACE | INFO | (pkg/util/log/log.go:482 in func1) | Loaded configuration: /etc/datadog-agent/datadog.yaml
+2020-05-19 22:08:46 UTC | TRACE | INFO | (pkg/trace/agent/run.go:99 in Run) | PID '1153' written to PID file '/opt/datadog-agent/run/trace-agent.pid'
+2020-05-19 22:08:46 UTC | TRACE | INFO | (pkg/trace/agent/run.go:118 in Run) | Trace agent running on host ubuntu-xenial
+2020-05-19 22:08:46 UTC | TRACE | INFO | (pkg/trace/api/api.go:152 in Start) | Listening for traces at http://localhost:8126
+2020-05-19 22:08:56 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 22:10:06 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received
+2020-05-19 22:11:16 UTC | TRACE | INFO | (pkg/trace/info/stats.go:101 in LogStats) | No data received

@@ -1,0 +1,234 @@
+===============
+Agent (v7.19.2)
+===============
+  Status date: 2020-05-19 03:16:01.808013 EDT
+  Agent start: 2020-05-19 03:14:09.633734 EDT
+  Pid: 99174
+  Go Version: go1.13.8
+  Python Version: 3.8.1
+  Build arch: amd64
+  Check Runners: 4
+  Log Level: info
+  Paths
+  =====
+    Config File: /opt/datadog-agent/etc/datadog.yaml
+    conf.d: /opt/datadog-agent/etc/conf.d
+    checks.d: /opt/datadog-agent/etc/checks.d
+  Clocks
+  ======
+    NTP offset: -18.145ms
+    System UTC time: 2020-05-19 03:16:01.808013 EDT
+  Host Info
+  =========
+    bootTime: 2020-05-15 10:20:10.000000 EDT
+    kernelVersion: 17.7.0
+    os: darwin
+    platform: darwin
+    platformVersion: 10.13.6
+    procs: 411
+    uptime: 86h54m0s
+  Hostnames
+  =========
+    hostname: MissingKecl
+    socket-fqdn: Stevens-Macbook-Pro.local
+    socket-hostname: Stevens-Macbook-Pro.local
+    host tags:
+      environment:dev
+      hello:world
+      docker_swarm_node_role:manager
+    hostname provider: configuration
+  Metadata
+  ========
+    hostname_source: configuration
+=========
+Collector
+=========
+  Running Checks
+  ==============
+    cpu
+    ---
+      Instance ID: cpu [OK]
+      Configuration Source: file:/opt/datadog-agent/etc/conf.d/cpu.d/conf.yaml.default
+      Total Runs: 8
+      Metric Samples: Last Run: 6, Total: 42
+      Events: Last Run: 0, Total: 0
+      Service Checks: Last Run: 0, Total: 0
+      Average Execution Time : 0s
+      Last Execution Date : 2020-05-19 01:15:56.000000 EDT
+      Last Successful Execution Date : 2020-05-19 01:15:56.000000 EDT
+    disk (2.8.0)
+    ------------
+      Instance ID: disk:e5dffb8bef24336f [OK]
+      Configuration Source: file:/opt/datadog-agent/etc/conf.d/disk.d/conf.yaml.default
+      Total Runs: 7
+      Metric Samples: Last Run: 26, Total: 182
+      Events: Last Run: 0, Total: 0
+      Service Checks: Last Run: 0, Total: 0
+      Average Execution Time : 3ms
+      Last Execution Date : 2020-05-19 01:15:48.000000 EDT
+      Last Successful Execution Date : 2020-05-19 01:15:48.000000 EDT
+    io
+    --
+      Instance ID: io [OK]
+      Configuration Source: file:/opt/datadog-agent/etc/conf.d/io.d/conf.yaml.default
+      Total Runs: 7
+      Metric Samples: Last Run: 13, Total: 82
+      Events: Last Run: 0, Total: 0
+      Service Checks: Last Run: 0, Total: 0
+      Average Execution Time : 0s
+      Last Execution Date : 2020-05-19 01:15:55.000000 EDT
+      Last Successful Execution Date : 2020-05-19 01:15:55.000000 EDT
+    load
+    ----
+      Instance ID: load [OK]
+      Configuration Source: file:/opt/datadog-agent/etc/conf.d/load.d/conf.yaml.default
+      Total Runs: 7
+      Metric Samples: Last Run: 6, Total: 42
+      Events: Last Run: 0, Total: 0
+      Service Checks: Last Run: 0, Total: 0
+      Average Execution Time : 7ms
+      Last Execution Date : 2020-05-19 01:15:47.000000 EDT
+      Last Successful Execution Date : 2020-05-19 01:15:47.000000 EDT
+    memory
+    ------
+      Instance ID: memory [OK]
+      Configuration Source: file:/opt/datadog-agent/etc/conf.d/memory.d/conf.yaml.default
+      Total Runs: 7
+      Metric Samples: Last Run: 9, Total: 63
+      Events: Last Run: 0, Total: 0
+      Service Checks: Last Run: 0, Total: 0
+      Average Execution Time : 6ms
+      Last Execution Date : 2020-05-19 01:15:54.000000 EDT
+      Last Successful Execution Date : 2020-05-19 01:15:54.000000 EDT
+    mongo (1.14.0)
+    --------------
+      Instance ID: mongo:5fe85aee661f4e49 [OK]
+      Configuration Source: file:/etc/datadog-agent/conf.d/mongo.d/mongo.yaml
+      Total Runs: 28
+      Metric Samples: Last Run: 54, Total: 1,512
+      Events: Last Run: 0, Total: 0
+      Service Checks: Last Run: 1, Total: 28
+      Average Execution Time : 29ms
+      Last Execution Date : 2020-05-19 05:47:07.000000 UTC
+      Last Successful Execution Date : 2020-05-19 05:47:07.000000 UTC
+      metadata:
+        version.major: 4
+        version.minor: 1
+        version.patch: 13
+        version.raw: 4.1.13
+        version.scheme: semver
+    network (1.15.1)
+    ----------------
+      Instance ID: network:e0204ad63d43c949 [OK]
+      Configuration Source: file:/opt/datadog-agent/etc/conf.d/network.d/conf.yaml.default
+      Total Runs: 7
+      Metric Samples: Last Run: 54, Total: 378
+      Events: Last Run: 0, Total: 0
+      Service Checks: Last Run: 0, Total: 0
+      Average Execution Time : 10.084s
+      Last Execution Date : 2020-05-19 01:15:56.000000 EDT
+      Last Successful Execution Date : 2020-05-19 01:15:56.000000 EDT
+    ntp
+    ---
+      Instance ID: ntp:d884b5186b651429 [OK]
+      Configuration Source: file:/opt/datadog-agent/etc/conf.d/ntp.d/conf.yaml.default
+      Total Runs: 1
+      Metric Samples: Last Run: 1, Total: 1
+      Events: Last Run: 0, Total: 0
+      Service Checks: Last Run: 1, Total: 1
+      Average Execution Time : 5.246s
+      Last Execution Date : 2020-05-19 01:14:16.000000 EDT
+      Last Successful Execution Date : 2020-05-19 01:14:16.000000 EDT
+    uptime
+    ------
+      Instance ID: uptime [OK]
+      Configuration Source: file:/opt/datadog-agent/etc/conf.d/uptime.d/conf.yaml.default
+      Total Runs: 7
+      Metric Samples: Last Run: 1, Total: 7
+      Events: Last Run: 0, Total: 0
+      Service Checks: Last Run: 0, Total: 0
+      Average Execution Time : 0s
+      Last Execution Date : 2020-05-19 01:15:53.000000 EDT
+      Last Successful Execution Date : 2020-05-19 01:15:53.000000 EDT
+
+========
+JMXFetch
+========
+  Initialized checks
+  ==================
+    no checks
+  Failed checks
+  =============
+    no checks
+=========
+Forwarder
+=========
+  Transactions
+  ============
+    CheckRunsV1: 7
+    Connections: 0
+    Containers: 0
+    Dropped: 0
+    DroppedOnInput: 0
+    Events: 0
+    HostMetadata: 0
+    IntakeV1: 2
+    Metadata: 0
+    Pods: 0
+    Processes: 0
+    RTContainers: 0
+    RTProcesses: 0
+    Requeued: 0
+    Retried: 0
+    RetryQueueSize: 0
+    Series: 0
+    ServiceChecks: 0
+    SketchSeries: 0
+    Success: 16
+    TimeseriesV1: 7
+  API Keys status
+  ===============
+    API key ending with cec0d: API Key valid
+==========
+Endpoints
+==========
+  https://app.datadoghq.com - API Key ending with:
+      - cec0d
+==========
+Logs Agent
+==========
+  Logs Agent is not running
+============
+System Probe
+============
+  System Probe is not running:
+    Errors
+    ======
+    BPF-based system probe not implemented on non-linux systems
+=========
+Aggregator
+=========
+  Checks Metric Sample: 898
+  Dogstatsd Metric Sample: 1
+  Event: 1
+  Events Flushed: 1
+  Number Of Flushes: 7
+  Series Flushed: 662
+  Service Check: 52
+  Service Checks Flushed: 56
+=========
+DogStatsD
+=========
+  Event Packets: 0
+  Event Parse Errors: 0
+  Metric Packets: 0
+  Metric Parse Errors: 0
+  Service Check Packets: 0
+  Service Check Parse Errors: 0
+  Udp Bytes: 0
+  Udp Packet Reading Errors: 0
+  Udp Packets: 1
+  Uds Bytes: 0
+  Uds Origin Detection Errors: 0
+  Uds Packet Reading Errors: 0
+  Uds Packets: 0

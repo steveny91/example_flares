@@ -1,0 +1,243 @@
+===============
+Agent (v7.19.2)
+===============
+  Status date: 2020-05-19 23:03:35.159153 UTC
+  Agent start: 2020-05-19 23:01:20.798515 UTC
+  Pid: 11110
+  Go Version: go1.13.8
+  Python Version: 3.8.1
+  Build arch: amd64
+  Check Runners: 4
+  Log Level: info
+  Paths
+  =====
+    Config File: /etc/datadog-agent/datadog.yaml
+    conf.d: /etc/datadog-agent/conf.d
+    checks.d: /etc/datadog-agent/checks.d
+  Clocks
+  ======
+    NTP offset: 269.602ms
+    System UTC time: 2020-05-19 23:03:35.159153 UTC
+  Host Info
+  =========
+    bootTime: 2020-05-19 22:08:38.000000 UTC
+    kernelVersion: 4.4.0-137-generic
+    os: linux
+    platform: ubuntu
+    platformFamily: debian
+    platformVersion: 16.04
+    procs: 171
+    uptime: 52m45s
+    virtualizationRole: guest
+    virtualizationSystem: vbox
+  Hostnames
+  =========
+    hostname: ubuntu-xenial
+    socket-fqdn: ubuntu-xenial
+    socket-hostname: ubuntu-xenial
+    hostname provider: os
+    unused hostname providers:
+      aws: not retrieving hostname from AWS: the host is not an ECS instance, and other providers already retrieve non-default hostnames
+      configuration/environment: hostname is empty
+      gce: unable to retrieve hostname from GCE: Get http://169.254.169.254/computeMetadata/v1/instance/hostname: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+  Metadata
+  ========
+    hostname_source: os
+=========
+Collector
+=========
+  Running Checks
+  ==============
+    cpu
+    ---
+      Instance ID: cpu [OK]
+      Configuration Source: file:/etc/datadog-agent/conf.d/cpu.d/conf.yaml.default
+      Total Runs: 9
+      Metric Samples: Last Run: 6, Total: 48
+      Events: Last Run: 0, Total: 0
+      Service Checks: Last Run: 0, Total: 0
+      Average Execution Time : 0s
+      Last Execution Date : 2020-05-19 23:03:22.000000 UTC
+      Last Successful Execution Date : 2020-05-19 23:03:22.000000 UTC
+    disk (2.8.0)
+    ------------
+      Instance ID: disk:e5dffb8bef24336f [OK]
+      Configuration Source: file:/etc/datadog-agent/conf.d/disk.d/conf.yaml.default
+      Total Runs: 9
+      Metric Samples: Last Run: 94, Total: 846
+      Events: Last Run: 0, Total: 0
+      Service Checks: Last Run: 0, Total: 0
+      Average Execution Time : 14ms
+      Last Execution Date : 2020-05-19 23:03:29.000000 UTC
+      Last Successful Execution Date : 2020-05-19 23:03:29.000000 UTC
+    file_handle
+    -----------
+      Instance ID: file_handle [OK]
+      Configuration Source: file:/etc/datadog-agent/conf.d/file_handle.d/conf.yaml.default
+      Total Runs: 8
+      Metric Samples: Last Run: 5, Total: 40
+      Events: Last Run: 0, Total: 0
+      Service Checks: Last Run: 0, Total: 0
+      Average Execution Time : 0s
+      Last Execution Date : 2020-05-19 23:03:21.000000 UTC
+      Last Successful Execution Date : 2020-05-19 23:03:21.000000 UTC
+    io
+    --
+      Instance ID: io [OK]
+      Configuration Source: file:/etc/datadog-agent/conf.d/io.d/conf.yaml.default
+      Total Runs: 9
+      Metric Samples: Last Run: 52, Total: 432
+      Events: Last Run: 0, Total: 0
+      Service Checks: Last Run: 0, Total: 0
+      Average Execution Time : 0s
+      Last Execution Date : 2020-05-19 23:03:28.000000 UTC
+      Last Successful Execution Date : 2020-05-19 23:03:28.000000 UTC
+    load
+    ----
+      Instance ID: load [OK]
+      Configuration Source: file:/etc/datadog-agent/conf.d/load.d/conf.yaml.default
+      Total Runs: 8
+      Metric Samples: Last Run: 6, Total: 48
+      Events: Last Run: 0, Total: 0
+      Service Checks: Last Run: 0, Total: 0
+      Average Execution Time : 0s
+      Last Execution Date : 2020-05-19 23:03:20.000000 UTC
+      Last Successful Execution Date : 2020-05-19 23:03:20.000000 UTC
+    memory
+    ------
+      Instance ID: memory [OK]
+      Configuration Source: file:/etc/datadog-agent/conf.d/memory.d/conf.yaml.default
+      Total Runs: 9
+      Metric Samples: Last Run: 17, Total: 153
+      Events: Last Run: 0, Total: 0
+      Service Checks: Last Run: 0, Total: 0
+      Average Execution Time : 0s
+      Last Execution Date : 2020-05-19 23:03:27.000000 UTC
+      Last Successful Execution Date : 2020-05-19 23:03:27.000000 UTC
+    network (1.15.1)
+    ----------------
+      Instance ID: network:e0204ad63d43c949 [OK]
+      Configuration Source: file:/etc/datadog-agent/conf.d/network.d/conf.yaml.default
+      Total Runs: 9
+      Metric Samples: Last Run: 32, Total: 288
+      Events: Last Run: 0, Total: 0
+      Service Checks: Last Run: 0, Total: 0
+      Average Execution Time : 1ms
+      Last Execution Date : 2020-05-19 23:03:34.000000 UTC
+      Last Successful Execution Date : 2020-05-19 23:03:34.000000 UTC
+    ntp
+    ---
+      Instance ID: ntp:d884b5186b651429 [OK]
+      Configuration Source: file:/etc/datadog-agent/conf.d/ntp.d/conf.yaml.default
+      Total Runs: 1
+      Metric Samples: Last Run: 1, Total: 1
+      Events: Last Run: 0, Total: 0
+      Service Checks: Last Run: 1, Total: 1
+      Average Execution Time : 10.512s
+      Last Execution Date : 2020-05-19 23:01:33.000000 UTC
+      Last Successful Execution Date : 2020-05-19 23:01:33.000000 UTC
+    uptime
+    ------
+      Instance ID: uptime [OK]
+      Configuration Source: file:/etc/datadog-agent/conf.d/uptime.d/conf.yaml.default
+      Total Runs: 9
+      Metric Samples: Last Run: 1, Total: 9
+      Events: Last Run: 0, Total: 0
+      Service Checks: Last Run: 0, Total: 0
+      Average Execution Time : 0s
+      Last Execution Date : 2020-05-19 23:03:26.000000 UTC
+      Last Successful Execution Date : 2020-05-19 23:03:26.000000 UTC
+========
+JMXFetch
+========
+  Initialized checks
+  ==================
+    no checks
+  Failed checks
+  =============
+    no checks
+=========
+Forwarder
+=========
+  Transactions
+  ============
+    CheckRunsV1: 8
+    Connections: 0
+    Containers: 0
+    Dropped: 0
+    DroppedOnInput: 0
+    Events: 0
+    HostMetadata: 0
+    IntakeV1: 2
+    Metadata: 0
+    Pods: 0
+    Processes: 0
+    RTContainers: 0
+    RTProcesses: 0
+    Requeued: 0
+    Retried: 0
+    RetryQueueSize: 0
+    Series: 0
+    ServiceChecks: 0
+    SketchSeries: 0
+    Success: 18
+    TimeseriesV1: 8
+  API Keys status
+  ===============
+    API key ending with cec0d: API Key valid
+==========
+Endpoints
+==========
+  https://app.datadoghq.com - API Key ending with:
+      - cec0d
+==========
+Logs Agent
+==========
+    Sending compressed logs in HTTPS to agent-http-intake.logs.datadoghq.com on port 443
+    BytesSent: 3258
+    EncodedBytesSent: 387
+    LogsProcessed: 22
+    LogsSent: 22
+  log
+  ---
+    Type: file
+    Path: /var/log/spring/access.log
+    Status: OK
+    Inputs: /var/log/spring/access.log 
+    Type: file
+    Path: /var/log/spring/app/app.log
+    Status: Error: file /var/log/spring/app/app.log does not exist
+============
+System Probe
+============
+  System Probe is not running:
+    Errors
+    ======
+    error setting up remote system probe util, socket path does not exist: stat /opt/datadog-agent/run/sysprobe.sock: no such file or directory
+=========
+Aggregator
+=========
+  Checks Metric Sample: 2,006
+  Dogstatsd Metric Sample: 642
+  Event: 1
+  Events Flushed: 1
+  Number Of Flushes: 8
+  Series Flushed: 1,623
+  Service Check: 72
+  Service Checks Flushed: 73
+=========
+DogStatsD
+=========
+  Event Packets: 0
+  Event Parse Errors: 0
+  Metric Packets: 641
+  Metric Parse Errors: 0
+  Service Check Packets: 0
+  Service Check Parse Errors: 0
+  Udp Bytes: 41,403
+  Udp Packet Reading Errors: 0
+  Udp Packets: 642
+  Uds Bytes: 0
+  Uds Origin Detection Errors: 0
+  Uds Packet Reading Errors: 0
+  Uds Packets: 0

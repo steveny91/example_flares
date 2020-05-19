@@ -1,0 +1,983 @@
+goroutine 2522 [running]:
+runtime/pprof.writeGoroutineStacks(0x612f320, 0xc000a680e0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/runtime/pprof/pprof.go:679 +0x9d
+runtime/pprof.writeGoroutine(0x612f320, 0xc000a680e0, 0x2, 0x5561dea8, 0x968c6912acf2da99)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/runtime/pprof/pprof.go:668 +0x44
+runtime/pprof.(*Profile).WriteTo(0x745fc60, 0x612f320, 0xc000a680e0, 0x2, 0xc000a680e0, 0xd)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/runtime/pprof/pprof.go:329 +0x3da
+net/http/pprof.handler.ServeHTTP(0xc000e6c041, 0x9, 0x617c900, 0xc000a680e0, 0xc000653200)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/pprof/pprof.go:245 +0x33a
+net/http/pprof.Index(0x617c900, 0xc000a680e0, 0xc000653200)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/pprof/pprof.go:268 +0x6f1
+net/http.HandlerFunc.ServeHTTP(0x5ea6ef0, 0x617c900, 0xc000a680e0, 0xc000653200)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/server.go:2007 +0x44
+net/http.(*ServeMux).ServeHTTP(0x7480900, 0x617c900, 0xc000a680e0, 0xc000653200)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/server.go:2387 +0x1bd
+net/http.serverHandler.ServeHTTP(0xc000914000, 0x617c900, 0xc000a680e0, 0xc000653200)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/server.go:2802 +0xa4
+net/http.(*conn).serve(0xc000973860, 0x6186ec0, 0xc000e4d040)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/server.go:1890 +0x875
+created by net/http.(*Server).Serve
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/server.go:2928 +0x384
+goroutine 1 [chan receive, 1 minutes]:
+github.com/DataDog/datadog-agent/cmd/agent/app.run(0x746dca0, 0x74a1b68, 0x0, 0x0, 0x0, 0x0)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/cmd/agent/app/run.go:125 +0x211
+github.com/DataDog/datadog-agent/vendor/github.com/spf13/cobra.(*Command).execute(0x746dca0, 0x74a1b68, 0x0, 0x0, 0x746dca0, 0x74a1b68)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/vendor/github.com/spf13/cobra/command.go:826 +0x460
+github.com/DataDog/datadog-agent/vendor/github.com/spf13/cobra.(*Command).ExecuteC(0x7469420, 0x0, 0x9a400, 0xc0000ae058)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/vendor/github.com/spf13/cobra/command.go:914 +0x2fb
+github.com/DataDog/datadog-agent/vendor/github.com/spf13/cobra.(*Command).Execute(...)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/vendor/github.com/spf13/cobra/command.go:864
+main.main()
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/cmd/agent/main.go:18 +0x2d
+goroutine 21 [sync.Cond.Wait, 1 minutes]:
+runtime.goparkunlock(...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/runtime/proc.go:310
+sync.runtime_notifyListWait(0xc0000aa790, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/runtime/sema.go:510 +0xf8
+sync.(*Cond).Wait(0xc0000aa780)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/sync/cond.go:56 +0x9d
+github.com/DataDog/datadog-agent/vendor/github.com/cihub/seelog.(*asyncLoopLogger).processItem(0xc0000e0090, 0x0)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/vendor/github.com/cihub/seelog/behavior_asynclooplogger.go:50 +0x9b
+github.com/DataDog/datadog-agent/vendor/github.com/cihub/seelog.(*asyncLoopLogger).processQueue(0xc0000e0090)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/vendor/github.com/cihub/seelog/behavior_asynclooplogger.go:63 +0x42
+created by github.com/DataDog/datadog-agent/vendor/github.com/cihub/seelog.NewAsyncLoopLogger
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/vendor/github.com/cihub/seelog/behavior_asynclooplogger.go:40 +0x9c
+goroutine 22 [sync.Cond.Wait, 1 minutes]:
+runtime.goparkunlock(...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/runtime/proc.go:310
+sync.runtime_notifyListWait(0xc0000aa910, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/runtime/sema.go:510 +0xf8
+sync.(*Cond).Wait(0xc0000aa900)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/sync/cond.go:56 +0x9d
+github.com/DataDog/datadog-agent/vendor/github.com/cihub/seelog.(*asyncLoopLogger).processItem(0xc0000e01b0, 0x0)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/vendor/github.com/cihub/seelog/behavior_asynclooplogger.go:50 +0x9b
+github.com/DataDog/datadog-agent/vendor/github.com/cihub/seelog.(*asyncLoopLogger).processQueue(0xc0000e01b0)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/vendor/github.com/cihub/seelog/behavior_asynclooplogger.go:63 +0x42
+created by github.com/DataDog/datadog-agent/vendor/github.com/cihub/seelog.NewAsyncLoopLogger
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/vendor/github.com/cihub/seelog/behavior_asynclooplogger.go:40 +0x9c
+goroutine 23 [select]:
+github.com/DataDog/datadog-agent/vendor/github.com/patrickmn/go-cache.(*janitor).Run(0xc0003434e0, 0xc00035c600)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/vendor/github.com/patrickmn/go-cache/cache.go:1079 +0xd5
+created by github.com/DataDog/datadog-agent/vendor/github.com/patrickmn/go-cache.runJanitor
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/vendor/github.com/patrickmn/go-cache/cache.go:1099 +0xa9
+goroutine 24 [chan receive]:
+github.com/DataDog/datadog-agent/vendor/k8s.io/klog.(*loggingT).flushDaemon(0x7481440)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/vendor/k8s.io/klog/klog.go:1010 +0x8b
+created by github.com/DataDog/datadog-agent/vendor/k8s.io/klog.init.0
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/vendor/k8s.io/klog/klog.go:411 +0xd6
+goroutine 112 [chan receive, 1 minutes]:
+github.com/DataDog/datadog-agent/cmd/agent/app.run.func3(0xc00026e840)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/cmd/agent/app/run.go:115 +0x47
+created by github.com/DataDog/datadog-agent/cmd/agent/app.run
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/cmd/agent/app/run.go:114 +0x1d9
+goroutine 68 [syscall, 1 minutes]:
+os/signal.signal_recv(0x4061896)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/runtime/sigqueue.go:144 +0x96
+os/signal.loop()
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/os/signal/signal_unix.go:23 +0x22
+created by os/signal.init.0
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/os/signal/signal_unix.go:29 +0x41
+goroutine 118 [select, 1 minutes]:
+github.com/DataDog/datadog-agent/cmd/agent/app.run.func2(0xc0000ae4e0, 0xc0006f0660)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/cmd/agent/app/run.go:96 +0xe8
+created by github.com/DataDog/datadog-agent/cmd/agent/app.run
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/cmd/agent/app/run.go:94 +0x143
+goroutine 146 [sync.Cond.Wait]:
+runtime.goparkunlock(...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/runtime/proc.go:310
+sync.runtime_notifyListWait(0xc00074a9d0, 0xbb)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/runtime/sema.go:510 +0xf8
+sync.(*Cond).Wait(0xc00074a9c0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/sync/cond.go:56 +0x9d
+github.com/DataDog/datadog-agent/vendor/github.com/cihub/seelog.(*asyncLoopLogger).processItem(0xc0007de000, 0x0)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/vendor/github.com/cihub/seelog/behavior_asynclooplogger.go:50 +0x9b
+github.com/DataDog/datadog-agent/vendor/github.com/cihub/seelog.(*asyncLoopLogger).processQueue(0xc0007de000)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/vendor/github.com/cihub/seelog/behavior_asynclooplogger.go:63 +0x42
+created by github.com/DataDog/datadog-agent/vendor/github.com/cihub/seelog.NewAsyncLoopLogger
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/vendor/github.com/cihub/seelog/behavior_asynclooplogger.go:40 +0x9c
+goroutine 147 [IO wait]:
+internal/poll.runtime_pollWait(0xc5a0e58, 0x72, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/runtime/netpoll.go:184 +0x55
+internal/poll.(*pollDesc).wait(0xc000266018, 0x72, 0x0, 0x0, 0x5dd0010)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_poll_runtime.go:87 +0x45
+internal/poll.(*pollDesc).waitRead(...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_poll_runtime.go:92
+internal/poll.(*FD).Accept(0xc000266000, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_unix.go:384 +0x1f8
+net.(*netFD).accept(0xc000266000, 0xc0cee30f73, 0x5b7dcee30f73, 0x100000001)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/fd_unix.go:238 +0x42
+net.(*TCPListener).accept(0xc0007ce020, 0x5ec36b93, 0xc00091fd80, 0x408b2f6)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/tcpsock_posix.go:139 +0x32
+net.(*TCPListener).Accept(0xc0007ce020, 0xc00091fdd0, 0x18, 0xc0004f2600, 0x443ffa4)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/tcpsock.go:261 +0x47
+net/http.(*Server).Serve(0xc000914000, 0x617c640, 0xc0007ce020, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/server.go:2896 +0x280
+net/http.(*Server).ListenAndServe(0xc000914000, 0xc000914000, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/server.go:2825 +0xb7
+net/http.ListenAndServe(0xc000838cd0, 0xe, 0x612f0c0, 0x7480900, 0xe, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/server.go:3081 +0x74
+created by github.com/DataDog/datadog-agent/cmd/agent/app.StartAgent
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/cmd/agent/app/run.go:186 +0x651
+goroutine 168 [IO wait]:
+internal/poll.runtime_pollWait(0xc5a0f28, 0x72, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/runtime/netpoll.go:184 +0x55
+internal/poll.(*pollDesc).wait(0xc00083c218, 0x72, 0x0, 0x0, 0x5dd0010)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_poll_runtime.go:87 +0x45
+internal/poll.(*pollDesc).waitRead(...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_poll_runtime.go:92
+internal/poll.(*FD).Accept(0xc00083c200, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_unix.go:384 +0x1f8
+net.(*netFD).accept(0xc00083c200, 0x4061002, 0x404fa5c, 0x40631f0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/fd_unix.go:238 +0x42
+net.(*TCPListener).accept(0xc0006ebec0, 0x40631f0, 0xc00091dd98, 0xc059e0d7ca)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/tcpsock_posix.go:139 +0x32
+net.(*TCPListener).Accept(0xc0006ebec0, 0x30cb9f78, 0x30cb9f780091dda0, 0x5ec36b91, 0xc00091de00)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/tcpsock.go:261 +0x47
+crypto/tls.(*listener).Accept(0xc000359900, 0xc00091de50, 0x18, 0xc000513b00, 0x443ffa4)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/crypto/tls/tls.go:59 +0x37
+net/http.(*Server).Serve(0xc00012c700, 0x616c940, 0xc000359900, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/server.go:2896 +0x280
+created by github.com/DataDog/datadog-agent/cmd/agent/api.StartServer
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/cmd/agent/api/server.go:92 +0x76d
+goroutine 169 [IO wait, 1 minutes]:
+internal/poll.runtime_pollWait(0xc5a0d88, 0x72, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/runtime/netpoll.go:184 +0x55
+internal/poll.(*pollDesc).wait(0xc00083c718, 0x72, 0x0, 0x0, 0x5dd0010)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_poll_runtime.go:87 +0x45
+internal/poll.(*pollDesc).waitRead(...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_poll_runtime.go:92
+internal/poll.(*FD).Accept(0xc00083c700, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_unix.go:384 +0x1f8
+net.(*netFD).accept(0xc00083c700, 0xc0f30e3fcb, 0x5b67f30e3fcb, 0x100000001)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/fd_unix.go:238 +0x42
+net.(*TCPListener).accept(0xc00000fec0, 0x5ec36b35, 0xc00091edc0, 0x408b2f6)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/tcpsock_posix.go:139 +0x32
+net.(*TCPListener).Accept(0xc00000fec0, 0xc00091ee10, 0x18, 0xc000513c80, 0x443ffa4)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/tcpsock.go:261 +0x47
+net/http.(*Server).Serve(0xc0009140e0, 0x617c640, 0xc00000fec0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/server.go:2896 +0x280
+net/http.Serve(0x617c640, 0xc00000fec0, 0x612da60, 0xc0001ab5e0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/server.go:2468 +0x6e
+created by github.com/DataDog/datadog-agent/cmd/agent/gui.StartGUIServer
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/cmd/agent/gui/gui.go:80 +0x83b
+goroutine 170 [select]:
+github.com/DataDog/datadog-agent/pkg/forwarder.(*Worker).Start.func1(0xc00074a500)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/forwarder/worker.go:100 +0x221
+created by github.com/DataDog/datadog-agent/pkg/forwarder.(*Worker).Start
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/forwarder/worker.go:83 +0x3f
+goroutine 171 [select]:
+github.com/DataDog/datadog-agent/pkg/forwarder.(*domainForwarder).handleFailedTransactions(0xc0003dcf30)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/forwarder/domain_forwarder.go:135 +0x118
+created by github.com/DataDog/datadog-agent/pkg/forwarder.(*domainForwarder).Start
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/forwarder/domain_forwarder.go:174 +0x316
+goroutine 172 [chan receive]:
+github.com/DataDog/datadog-agent/pkg/status/health.(*catalog).run(0xc00035cf40)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/status/health/health.go:80 +0x53
+created by github.com/DataDog/datadog-agent/pkg/status/health.(*catalog).register
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/status/health/health.go:52 +0x23b
+goroutine 173 [select]:
+github.com/DataDog/datadog-agent/pkg/forwarder.(*forwarderHealth).healthCheckLoop(0xc0006227e0)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/forwarder/forwarder_health.go:100 +0x1e0
+created by github.com/DataDog/datadog-agent/pkg/forwarder.(*forwarderHealth).Start
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/forwarder/forwarder_health.go:76 +0x89
+goroutine 2497 [IO wait]:
+internal/poll.runtime_pollWait(0xc5a0088, 0x72, 0xffffffffffffffff)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/runtime/netpoll.go:184 +0x55
+internal/poll.(*pollDesc).wait(0xc00073ab98, 0x72, 0x1000, 0x1000, 0xffffffffffffffff)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_poll_runtime.go:87 +0x45
+internal/poll.(*pollDesc).waitRead(...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_poll_runtime.go:92
+internal/poll.(*FD).Read(0xc00073ab80, 0xc000986000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_unix.go:169 +0x22b
+net.(*netFD).Read(0xc00073ab80, 0xc000986000, 0x1000, 0x1000, 0x4, 0x1, 0xc000f63700)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/fd_unix.go:202 +0x4f
+net.(*conn).Read(0xc000730048, 0xc000986000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/net.go:184 +0x68
+net/http.(*persistConn).Read(0xc00070ad80, 0xc000986000, 0x1000, 0x1000, 0x40072ed, 0x60, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:1758 +0x75
+bufio.(*Reader).fill(0xc000e8c600)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/bufio/bufio.go:100 +0x103
+bufio.(*Reader).Peek(0xc000e8c600, 0x1, 0xc00075b4a0, 0x5950b40, 0xc000eca420, 0x8, 0x5950b40)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/bufio/bufio.go:138 +0x4f
+net/http.(*persistConn).readLoop(0xc00070ad80)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:1911 +0x1d6
+created by net/http.(*Transport).dialConn
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:1580 +0xb0d
+goroutine 174 [select]:
+github.com/DataDog/datadog-agent/pkg/aggregator.(*BufferedAggregator).run(0xc00070a120)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/aggregator/aggregator.go:637 +0x322
+created by github.com/DataDog/datadog-agent/pkg/aggregator.InitAggregatorWithFlushInterval.func1
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/aggregator/aggregator.go:158 +0x96
+goroutine 177 [select]:
+github.com/DataDog/datadog-agent/pkg/dogstatsd/listeners.(*packetsBuffer).flushLoop(0xc00074a600)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/dogstatsd/listeners/packets_buffer.go:38 +0xa3
+created by github.com/DataDog/datadog-agent/pkg/dogstatsd/listeners.newPacketsBuffer
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/dogstatsd/listeners/packets_buffer.go:32 +0x10e
+goroutine 210 [select]:
+github.com/DataDog/datadog-agent/pkg/dogstatsd/listeners.(*packetAssembler).flushLoop(0xc00074a6c0)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/dogstatsd/listeners/packet_assembler.go:44 +0xa3
+created by github.com/DataDog/datadog-agent/pkg/dogstatsd/listeners.newPacketAssembler
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/dogstatsd/listeners/packet_assembler.go:38 +0xe0
+goroutine 211 [IO wait, 1 minutes]:
+internal/poll.runtime_pollWait(0xc5a0be8, 0x72, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/runtime/netpoll.go:184 +0x55
+internal/poll.(*pollDesc).wait(0xc00083ca18, 0x72, 0x2000, 0x2000, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_poll_runtime.go:87 +0x45
+internal/poll.(*pollDesc).waitRead(...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_poll_runtime.go:92
+internal/poll.(*FD).ReadFrom(0xc00083ca00, 0xc000ab4000, 0x2000, 0x2000, 0x0, 0x0, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_unix.go:219 +0x1c3
+net.(*netFD).readFrom(0xc00083ca00, 0xc000ab4000, 0x2000, 0x2000, 0xc00074aa20, 0xc0001262c0, 0xc000126a40, 0x10, 0xc000810210)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/fd_unix.go:208 +0x5b
+net.(*UDPConn).readFrom(0xc0000c30a8, 0xc000ab4000, 0x2000, 0x2000, 0xc00007df48, 0x439eb04, 0xc00074aa00, 0x5e12e10)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/udpsock_posix.go:47 +0x6a
+net.(*UDPConn).ReadFrom(0xc0000c30a8, 0xc000ab4000, 0x2000, 0x2000, 0x1, 0x0, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/udpsock.go:121 +0x5d
+github.com/DataDog/datadog-agent/pkg/dogstatsd/listeners.(*UDPListener).Listen(0xc0006235f0)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/dogstatsd/listeners/udp.go:100 +0xf8
+created by github.com/DataDog/datadog-agent/pkg/dogstatsd.(*Server).handleMessages
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/dogstatsd/server.go:234 +0x84
+goroutine 212 [select]:
+github.com/DataDog/datadog-agent/pkg/dogstatsd.(*Server).worker(0xc00012c7e0)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/dogstatsd/server.go:275 +0x119
+created by github.com/DataDog/datadog-agent/pkg/dogstatsd.(*Server).handleMessages
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/dogstatsd/server.go:245 +0xe9
+goroutine 213 [select, 1 minutes]:
+github.com/DataDog/datadog-agent/pkg/dogstatsd.(*Server).worker(0xc00012c7e0)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/dogstatsd/server.go:275 +0x119
+created by github.com/DataDog/datadog-agent/pkg/dogstatsd.(*Server).handleMessages
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/dogstatsd/server.go:245 +0xe9
+goroutine 214 [select]:
+github.com/DataDog/datadog-agent/pkg/dogstatsd.(*Server).worker(0xc00012c7e0)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/dogstatsd/server.go:275 +0x119
+created by github.com/DataDog/datadog-agent/pkg/dogstatsd.(*Server).handleMessages
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/dogstatsd/server.go:245 +0xe9
+goroutine 215 [select]:
+github.com/DataDog/datadog-agent/pkg/dogstatsd.(*Server).worker(0xc00012c7e0)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/dogstatsd/server.go:275 +0x119
+created by github.com/DataDog/datadog-agent/pkg/dogstatsd.(*Server).handleMessages
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/dogstatsd/server.go:245 +0xe9
+goroutine 216 [select, 1 minutes]:
+github.com/DataDog/datadog-agent/pkg/dogstatsd.(*Server).worker(0xc00012c7e0)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/dogstatsd/server.go:275 +0x119
+created by github.com/DataDog/datadog-agent/pkg/dogstatsd.(*Server).handleMessages
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/dogstatsd/server.go:245 +0xe9
+goroutine 217 [select, 1 minutes]:
+github.com/DataDog/datadog-agent/pkg/dogstatsd.(*Server).worker(0xc00012c7e0)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/dogstatsd/server.go:275 +0x119
+created by github.com/DataDog/datadog-agent/pkg/dogstatsd.(*Server).handleMessages
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/dogstatsd/server.go:245 +0xe9
+goroutine 197 [select, 1 minutes]:
+net/http.(*persistConn).readLoop(0xc000544900)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:2032 +0x999
+created by net/http.(*Transport).dialConn
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:1580 +0xb0d
+goroutine 198 [select, 1 minutes]:
+net/http.(*persistConn).writeLoop(0xc000544900)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:2210 +0x123
+created by net/http.(*Transport).dialConn
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:1581 +0xb32
+goroutine 120 [IO wait, 1 minutes]:
+internal/poll.runtime_pollWait(0xc5a0b18, 0x72, 0xffffffffffffffff)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/runtime/netpoll.go:184 +0x55
+internal/poll.(*pollDesc).wait(0xc00073aa18, 0x72, 0x1000, 0x1000, 0xffffffffffffffff)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_poll_runtime.go:87 +0x45
+internal/poll.(*pollDesc).waitRead(...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_poll_runtime.go:92
+internal/poll.(*FD).Read(0xc00073aa00, 0xc000b7e000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_unix.go:169 +0x22b
+net.(*netFD).Read(0xc00073aa00, 0xc000b7e000, 0x1000, 0x1000, 0x203000, 0x74a1b68, 0xc0006338d8)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/fd_unix.go:202 +0x4f
+net.(*conn).Read(0xc0003c80b0, 0xc000b7e000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/net.go:184 +0x68
+net/http.(*persistConn).Read(0xc000544900, 0xc000b7e000, 0x1000, 0x1000, 0x8, 0xc0000100a8, 0x30)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:1758 +0x75
+bufio.(*Reader).fill(0xc00012f320)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/bufio/bufio.go:100 +0x103
+bufio.(*Reader).ReadSlice(0xc00012f320, 0xc0003dc30a, 0xc000633978, 0x401745f, 0xc022900, 0x20300000000000, 0xc1fffff)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/bufio/bufio.go:359 +0x3d
+net/http/internal.readChunkLine(0xc00012f320, 0xc022900, 0x100, 0xc1fffff, 0x400, 0xc022a00)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/internal/chunked.go:122 +0x34
+net/http/internal.(*chunkedReader).beginChunk(0xc000454690)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/internal/chunked.go:48 +0x32
+net/http/internal.(*chunkedReader).Read(0xc000454690, 0xc000452000, 0x200, 0x200, 0x203000, 0xa00000100, 0x2000)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/internal/chunked.go:93 +0x132
+net/http.(*body).readLocked(0xc00074a080, 0xc000452000, 0x200, 0x200, 0xc223660, 0x0, 0x78)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transfer.go:847 +0x5f
+net/http.(*body).Read(0xc00074a080, 0xc000452000, 0x200, 0x200, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transfer.go:839 +0x102
+net/http.(*bodyEOFSignal).Read(0xc00074a0c0, 0xc000452000, 0x200, 0x200, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:2582 +0xe5
+encoding/json.(*Decoder).refill(0xc0000ea2c0, 0xc0003dc510, 0x400b6bb)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/encoding/json/stream.go:161 +0xeb
+encoding/json.(*Decoder).readValue(0xc0000ea2c0, 0x0, 0x0, 0x5ce60c0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/encoding/json/stream.go:136 +0x1dc
+encoding/json.(*Decoder).Decode(0xc0000ea2c0, 0x58b7ca0, 0xc0003dc510, 0x612f120, 0xc00074a0c0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/encoding/json/stream.go:63 +0x79
+github.com/DataDog/datadog-agent/vendor/github.com/docker/docker/client.(*Client).Events.func1(0xc000b62420, 0xc00073a200, 0xc0003407a0, 0xa, 0x0, 0x0, 0xc0004542a0, 0xc000c8a240, 0x6186ec0, 0xc00074a000, ...)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/vendor/github.com/docker/docker/client/events.go:53 +0x37f
+created by github.com/DataDog/datadog-agent/vendor/github.com/docker/docker/client.(*Client).Events
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/vendor/github.com/docker/docker/client/events.go:25 +0x117
+goroutine 119 [select, 1 minutes]:
+github.com/DataDog/datadog-agent/pkg/util/docker.(*DockerUtil).dispatchEvents(0xc000b76000, 0xc000454270)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/util/docker/event_stream.go:103 +0x3a4
+created by github.com/DataDog/datadog-agent/pkg/util/docker.(*DockerUtil).SubscribeToContainerEvents
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/util/docker/event_stream.go:33 +0xbb
+goroutine 149 [select]:
+net/http.(*persistConn).roundTrip(0xc00070ad80, 0xc000e6fa10, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:2431 +0x770
+net/http.(*Transport).roundTrip(0x7467f40, 0xc000653100, 0xc0006de180, 0xc001242aa0, 0x400f218)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:535 +0x9b6
+net/http.(*Transport).RoundTrip(0x7467f40, 0xc000653100, 0x7467f40, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/roundtrip.go:17 +0x35
+net/http.send(0xc000653100, 0x612f0e0, 0x7467f40, 0x0, 0x0, 0x0, 0xc000c0a510, 0x203000, 0x1, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/client.go:250 +0x443
+net/http.(*Client).send(0xc000e6f950, 0xc000653100, 0x0, 0x0, 0x0, 0xc000c0a510, 0x0, 0x1, 0x5d7b900)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/client.go:174 +0xfa
+net/http.(*Client).do(0xc000e6f950, 0xc000653100, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/client.go:641 +0x3ce
+net/http.(*Client).Do(...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/client.go:509
+github.com/DataDog/datadog-agent/pkg/flare.zipHTTPCallContent(0xc000712370, 0x4e, 0xc000f30610, 0xb, 0x5de793e, 0x13, 0xc0003b8c00, 0x33, 0x0, 0x0)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/flare/archive.go:544 +0x1f9
+github.com/DataDog/datadog-agent/pkg/flare.zipStackTraces(...)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/flare/archive.go:528
+github.com/DataDog/datadog-agent/pkg/flare.createArchive(0xc000616b40, 0x56, 0x5dd1c00, 0xc000a7b4e0, 0x5df4f7e, 0x1a, 0x0, 0x0, 0x0, 0x0)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/flare/archive.go:206 +0xac3
+github.com/DataDog/datadog-agent/pkg/flare.CreateArchive(0xc0000f8a00, 0xc000880390, 0x21, 0xc00086eae0, 0x1b, 0x5df4f7e, 0x1a, 0x0, 0x0, 0xc000637601, ...)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/flare/archive.go:94 +0x2af
+github.com/DataDog/datadog-agent/cmd/agent/gui.makeFlare(0xc56c870, 0xc000c0a028, 0xc000ddb000)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/cmd/agent/gui/agent.go:137 +0x19e
+net/http.HandlerFunc.ServeHTTP(0x5ea25b8, 0xc56c870, 0xc000c0a028, 0xc000ddb000)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/server.go:2007 +0x44
+github.com/DataDog/datadog-agent/vendor/github.com/gorilla/mux.(*Router).ServeHTTP(0xc00015a850, 0xc56c870, 0xc000c0a028, 0xc000ddb000)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/vendor/github.com/gorilla/mux/mux.go:162 +0x104
+github.com/DataDog/datadog-agent/vendor/github.com/urfave/negroni.Wrap.func1(0xc56c870, 0xc000c0a028, 0xc000ddae00, 0xc0003c43a0)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/vendor/github.com/urfave/negroni/negroni.go:46 +0x4d
+github.com/DataDog/datadog-agent/vendor/github.com/urfave/negroni.HandlerFunc.ServeHTTP(0xc00000fcc0, 0xc56c870, 0xc000c0a028, 0xc000ddae00, 0xc0003c43a0)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/vendor/github.com/urfave/negroni/negroni.go:29 +0x4e
+github.com/DataDog/datadog-agent/vendor/github.com/urfave/negroni.middleware.ServeHTTP(0x6130700, 0xc00000fcc0, 0xc00000fd40, 0xc56c870, 0xc000c0a028, 0xc000ddae00)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/vendor/github.com/urfave/negroni/negroni.go:38 +0x9c
+github.com/DataDog/datadog-agent/cmd/agent/gui.authorizePOST(0xc56c870, 0xc000c0a028, 0xc000ddae00, 0xc0003c4320)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/cmd/agent/gui/gui.go:176 +0x188
+github.com/DataDog/datadog-agent/vendor/github.com/urfave/negroni.HandlerFunc.ServeHTTP(0x5ea2548, 0xc56c870, 0xc000c0a028, 0xc000ddae00, 0xc0003c4320)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/vendor/github.com/urfave/negroni/negroni.go:29 +0x4e
+github.com/DataDog/datadog-agent/vendor/github.com/urfave/negroni.middleware.ServeHTTP(0x6130700, 0x5ea2548, 0xc00000fd20, 0xc56c870, 0xc000c0a028, 0xc000ddae00)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/vendor/github.com/urfave/negroni/negroni.go:38 +0x9c
+github.com/DataDog/datadog-agent/vendor/github.com/urfave/negroni.(*Negroni).ServeHTTP(0xc000622450, 0x617c900, 0xc0009d0700, 0xc000ddae00)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/vendor/github.com/urfave/negroni/negroni.go:96 +0xeb
+github.com/DataDog/datadog-agent/vendor/github.com/gorilla/mux.(*Router).ServeHTTP(0xc0001ab5e0, 0x617c900, 0xc0009d0700, 0xc000ddae00)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/vendor/github.com/gorilla/mux/mux.go:162 +0x104
+net/http.serverHandler.ServeHTTP(0xc0009140e0, 0x617c900, 0xc0009d0700, 0xc000ddab00)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/server.go:2802 +0xa4
+net/http.(*conn).serve(0xc000281040, 0x6186ec0, 0xc000048ac0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/server.go:1890 +0x875
+created by net/http.(*Server).Serve
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/server.go:2928 +0x384
+goroutine 228 [select]:
+github.com/DataDog/datadog-agent/pkg/tagger/collectors.(*DockerCollector).Stream(0xc000498300, 0x6, 0xc0005303e8)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/tagger/collectors/docker_main.go:67 +0x1ad
+created by github.com/DataDog/datadog-agent/pkg/tagger.(*Tagger).registerCollectors
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/tagger/tagger.go:184 +0x421
+goroutine 229 [select]:
+github.com/DataDog/datadog-agent/pkg/tagger.(*Tagger).run(0xc0001b2af0, 0xb, 0xc0000be588)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/tagger/tagger.go:89 +0x142
+created by github.com/DataDog/datadog-agent/pkg/tagger.(*Tagger).Init
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/tagger/tagger.go:83 +0x191
+goroutine 233 [chan receive]:
+github.com/DataDog/datadog-agent/pkg/collector/runner.(*Runner).work(0xc00086df20)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/collector/runner/runner.go:245 +0x161
+created by github.com/DataDog/datadog-agent/pkg/collector/runner.(*Runner).AddWorker
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/collector/runner/runner.go:100 +0x8a
+goroutine 234 [semacquire, locked to thread]:
+sync.runtime_Semacquire(0xc000eee508)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/runtime/sema.go:56 +0x42
+sync.(*WaitGroup).Wait(0xc000eee500)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/sync/waitgroup.go:130 +0x64
+github.com/DataDog/datadog-agent/pkg/collector/python.GetSubprocessOutput(0x8e11d60, 0x700010724058, 0x700010724050, 0x70001072406c, 0x700010724048)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/collector/python/util.go:68 +0x40f
+github.com/DataDog/datadog-agent/pkg/collector/python._cgoexpwrap_e275dbe0020f_GetSubprocessOutput(0x8e11d60, 0x700010724058, 0x700010724050, 0x70001072406c, 0x700010724048)
+	_cgo_gotypes.go:900 +0x53
+_cgo_wait_runtime_init_done
+	/opt/datadog-agent/bin/agent/agent:0 pc=0x576d563
+GetSubprocessOutput
+	/opt/datadog-agent/bin/agent/agent:0 pc=0x576af0c
+subprocess_output
+	/opt/datadog-agent/embedded/lib/libdatadog-agent-three.dylib:0 pc=0xd092da0
+cfunction_call_varargs
+	/opt/datadog-agent/embedded/lib/libpython3.8.dylib:0 pc=0xd22053b
+_PyObject_MakeTpCall
+	/opt/datadog-agent/embedded/lib/libpython3.8.dylib:0 pc=0xd21ff76
+call_function
+	/opt/datadog-agent/embedded/lib/libpython3.8.dylib:0 pc=0xd2f6f7c
+_PyEval_EvalFrameDefault
+	/opt/datadog-agent/embedded/lib/libpython3.8.dylib:0 pc=0xd2f3f2d
+_PyEval_EvalCodeWithName
+	/opt/datadog-agent/embedded/lib/libpython3.8.dylib:0 pc=0xd2f7b36
+_PyFunction_Vectorcall
+	/opt/datadog-agent/embedded/lib/libpython3.8.dylib:0 pc=0xd220abe
+call_function
+	/opt/datadog-agent/embedded/lib/libpython3.8.dylib:0 pc=0xd2f6e52
+_PyEval_EvalFrameDefault
+	/opt/datadog-agent/embedded/lib/libpython3.8.dylib:0 pc=0xd2f3f2d
+function_code_fastcall
+	/opt/datadog-agent/embedded/lib/libpython3.8.dylib:0 pc=0xd22094d
+call_function
+	/opt/datadog-agent/embedded/lib/libpython3.8.dylib:0 pc=0xd2f6e52
+_PyEval_EvalFrameDefault
+	/opt/datadog-agent/embedded/lib/libpython3.8.dylib:0 pc=0xd2f3e72
+function_code_fastcall
+	/opt/datadog-agent/embedded/lib/libpython3.8.dylib:0 pc=0xd22094d
+call_function
+	/opt/datadog-agent/embedded/lib/libpython3.8.dylib:0 pc=0xd2f6e52
+_PyEval_EvalFrameDefault
+	/opt/datadog-agent/embedded/lib/libpython3.8.dylib:0 pc=0xd2f3e72
+function_code_fastcall
+	/opt/datadog-agent/embedded/lib/libpython3.8.dylib:0 pc=0xd22094d
+method_vectorcall
+	/opt/datadog-agent/embedded/lib/libpython3.8.dylib:0 pc=0xd2232bb
+_PyObject_CallFunctionVa
+	/opt/datadog-agent/embedded/lib/libpython3.8.dylib:0 pc=0xd221628
+PyObject_CallMethod
+	/opt/datadog-agent/embedded/lib/libpython3.8.dylib:0 pc=0xd221aab
+_ZN5Three8runCheckEP16RtLoaderPyObject
+	/opt/datadog-agent/embedded/lib/libdatadog-agent-three.dylib:0 pc=0xd088ccc
+run_check
+	/opt/datadog-agent/embedded/lib/libdatadog-agent-rtloader.1.dylib:0 pc=0x8b0b73f
+_cgo_e275dbe0020f_Cfunc_run_check
+	/opt/datadog-agent/bin/agent/agent:0 pc=0x576b291
+github.com/DataDog/datadog-agent/pkg/collector/python._Cfunc_run_check(0x8f00390, 0x12429490, 0x0)
+	_cgo_gotypes.go:613 +0x4e
+github.com/DataDog/datadog-agent/pkg/collector/python.(*PythonCheck).runCheck.func1(0xc000266b80, 0x1a)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/collector/python/check.go:74 +0xa4
+github.com/DataDog/datadog-agent/pkg/collector/python.(*PythonCheck).runCheck(0xc000266b80, 0x5ec36b01, 0x0, 0x0)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/collector/python/check.go:74 +0x172
+github.com/DataDog/datadog-agent/pkg/collector/python.(*PythonCheck).Run(0xc000266b80, 0x1a0980a1d3, 0x7480fe0)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/collector/python/check.go:103 +0x30
+github.com/DataDog/datadog-agent/pkg/collector/runner.(*Runner).work(0xc00086df20)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/collector/runner/runner.go:270 +0x4c4
+created by github.com/DataDog/datadog-agent/pkg/collector/runner.(*Runner).AddWorker
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/collector/runner/runner.go:100 +0x8a
+goroutine 235 [chan receive, 1 minutes]:
+github.com/DataDog/datadog-agent/pkg/collector/scheduler.(*Scheduler).Run.func1(0xc000742a20)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/collector/scheduler/scheduler.go:154 +0xb4
+created by github.com/DataDog/datadog-agent/pkg/collector/scheduler.(*Scheduler).Run
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/collector/scheduler/scheduler.go:142 +0x98
+goroutine 237 [select]:
+github.com/DataDog/datadog-agent/pkg/autodiscovery.(*AutoConfig).serviceListening(0xc00063c480)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/autodiscovery/autoconfig.go:95 +0x187
+created by github.com/DataDog/datadog-agent/pkg/autodiscovery.NewAutoConfig
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/autodiscovery/autoconfig.go:83 +0x37c
+goroutine 123 [chan receive]:
+github.com/DataDog/datadog-agent/pkg/collector/runner.(*Runner).work(0xc00086df20)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/collector/runner/runner.go:245 +0x161
+created by github.com/DataDog/datadog-agent/pkg/collector/runner.(*Runner).AddWorker
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/collector/runner/runner.go:100 +0x8a
+goroutine 121 [select]:
+github.com/DataDog/datadog-agent/pkg/collector/scheduler.(*jobQueue).process(0xc000c60090, 0xc000742a20, 0x1)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/collector/scheduler/job.go:161 +0x10d
+github.com/DataDog/datadog-agent/pkg/collector/scheduler.(*jobQueue).run.func1(0xc000c60090, 0xc000742a20)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/collector/scheduler/job.go:150 +0x5f
+created by github.com/DataDog/datadog-agent/pkg/collector/scheduler.(*jobQueue).run
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/collector/scheduler/job.go:148 +0x49
+goroutine 239 [select]:
+github.com/DataDog/datadog-agent/pkg/collector/scheduler.(*jobQueue).process(0xc0003dc630, 0xc000742a20, 0x1)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/collector/scheduler/job.go:161 +0x10d
+github.com/DataDog/datadog-agent/pkg/collector/scheduler.(*jobQueue).run.func1(0xc0003dc630, 0xc000742a20)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/collector/scheduler/job.go:150 +0x5f
+created by github.com/DataDog/datadog-agent/pkg/collector/scheduler.(*jobQueue).run
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/collector/scheduler/job.go:148 +0x49
+goroutine 244 [chan receive]:
+github.com/DataDog/datadog-agent/pkg/collector/runner.(*Runner).work(0xc00086df20)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/collector/runner/runner.go:245 +0x161
+created by github.com/DataDog/datadog-agent/pkg/collector/runner.(*Runner).AddWorker
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/collector/runner/runner.go:100 +0x8a
+goroutine 2021 [select]:
+github.com/DataDog/datadog-agent/pkg/metadata.(*Scheduler).AddCollector.func1(0xc00086c5a0, 0xc0009c27a0, 0x8bb2c97000, 0x612cae0, 0x74a1b68, 0x5dd9d5a, 0xc)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/metadata/scheduler.go:91 +0x15a
+created by github.com/DataDog/datadog-agent/pkg/metadata.(*Scheduler).AddCollector
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/metadata/scheduler.go:87 +0x1f5
+goroutine 2431 [select]:
+os/exec.(*Cmd).Start.func2(0xc0000ea6e0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/os/exec/exec.go:443 +0xc4
+created by os/exec.(*Cmd).Start
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/os/exec/exec.go:442 +0x6a6
+goroutine 2515 [IO wait]:
+internal/poll.runtime_pollWait(0xc5a0708, 0x77, 0xc000b0cd80)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/runtime/netpoll.go:184 +0x55
+internal/poll.(*pollDesc).wait(0xc000644d98, 0x77, 0x6186f00, 0xc000ee8240, 0xc000644d80)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_poll_runtime.go:87 +0x45
+internal/poll.(*pollDesc).waitWrite(...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_poll_runtime.go:96
+internal/poll.(*FD).WaitWrite(...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_unix.go:498
+net.(*netFD).connect(0xc000644d80, 0x6186f40, 0xc000ee8240, 0x0, 0x0, 0x612f680, 0xc000c5a0c0, 0x0, 0x0, 0x0, ...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/fd_unix.go:152 +0x29d
+net.(*netFD).dial(0xc000644d80, 0x6186f40, 0xc000ee8240, 0x6197a60, 0x0, 0x6197a60, 0xc000d14510, 0x0, 0x1, 0xc000635360)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/sock_posix.go:149 +0xff
+net.socket(0x6186f40, 0xc000ee8240, 0x5dcd884, 0x3, 0x2, 0x1, 0x0, 0x0, 0x6197a60, 0x0, ...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/sock_posix.go:70 +0x1c0
+net.internetSocket(0x6186f40, 0xc000ee8240, 0x5dcd884, 0x3, 0x6197a60, 0x0, 0x6197a60, 0xc000d14510, 0x1, 0x0, ...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/ipsock_posix.go:141 +0x141
+net.(*sysDialer).doDialTCP(0xc000644680, 0x6186f40, 0xc000ee8240, 0x0, 0xc000d14510, 0x5a77280, 0x74a1b68, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/tcpsock_posix.go:65 +0xc2
+net.(*sysDialer).dialTCP(0xc000644680, 0x6186f40, 0xc000ee8240, 0x0, 0xc000d14510, 0xc0931d79c3, 0xc000b08000, 0xc0006355a0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/tcpsock_posix.go:61 +0xd7
+net.(*sysDialer).dialSingle(0xc000644680, 0x6186f40, 0xc000ee8240, 0x6162840, 0xc000d14510, 0x0, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/dial.go:578 +0x36e
+net.(*sysDialer).dialSerial(0xc000644680, 0x6186f40, 0xc000ee8240, 0xc000980370, 0x1, 0x1, 0x0, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/dial.go:546 +0x221
+net.(*Dialer).DialContext(0xc0000ac900, 0x6186f00, 0xc0000c4008, 0x5dcd884, 0x3, 0xc000c5a0a0, 0x12, 0x0, 0x0, 0x0, ...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/dial.go:424 +0x666
+net/http.(*Transport).dial(0x7467f40, 0x6186f00, 0xc0000c4008, 0x5dcd884, 0x3, 0xc000c5a0a0, 0x12, 0x0, 0x0, 0x0, ...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:1045 +0x1f5
+net/http.(*Transport).dialConn(0x7467f40, 0x6186f00, 0xc0000c4008, 0x0, 0xc000880630, 0x4, 0xc000c5a0a0, 0x12, 0x0, 0xc000b58480, ...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:1483 +0x195d
+net/http.(*Transport).dialConnFor(0x7467f40, 0xc00003c210)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:1313 +0xdc
+created by net/http.(*Transport).queueForDial
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:1282 +0x41d
+goroutine 2516 [select]:
+net.(*netFD).connect.func2(0x6186f40, 0xc000ee8240, 0xc000644d80, 0xc000c8a660, 0xc000c8a600)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/fd_unix.go:129 +0xba
+created by net.(*netFD).connect
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/fd_unix.go:128 +0x275
+goroutine 318 [IO wait]:
+internal/poll.runtime_pollWait(0xc5a0638, 0x72, 0xffffffffffffffff)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/runtime/netpoll.go:184 +0x55
+internal/poll.(*pollDesc).wait(0xc000645918, 0x72, 0x1000, 0x1000, 0xffffffffffffffff)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_poll_runtime.go:87 +0x45
+internal/poll.(*pollDesc).waitRead(...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_poll_runtime.go:92
+internal/poll.(*FD).Read(0xc000645900, 0xc000ac3000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_unix.go:169 +0x22b
+net.(*netFD).Read(0xc000645900, 0xc000ac3000, 0x1000, 0x1000, 0x40337ac, 0xc000934b20, 0x405e5e0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/fd_unix.go:202 +0x4f
+net.(*conn).Read(0xc000c0a118, 0xc000ac3000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/net.go:184 +0x68
+net/http.(*persistConn).Read(0xc00052e7e0, 0xc000ac3000, 0x1000, 0x1000, 0xc000643800, 0xc000934c20, 0x40073b5)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:1758 +0x75
+bufio.(*Reader).fill(0xc0006f1ec0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/bufio/bufio.go:100 +0x103
+bufio.(*Reader).Peek(0xc0006f1ec0, 0x1, 0x0, 0x0, 0x1, 0xc00075b100, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/bufio/bufio.go:138 +0x4f
+net/http.(*persistConn).readLoop(0xc00052e7e0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:1911 +0x1d6
+created by net/http.(*Transport).dialConn
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:1580 +0xb0d
+goroutine 319 [select]:
+net/http.(*persistConn).writeLoop(0xc00052e7e0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:2210 +0x123
+created by net/http.(*Transport).dialConn
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:1581 +0xb32
+goroutine 2026 [select]:
+net/http.(*persistConn).writeLoop(0xc0004646c0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:2210 +0x123
+created by net/http.(*Transport).dialConn
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:1581 +0xb32
+goroutine 2298 [IO wait]:
+internal/poll.runtime_pollWait(0xc5a0498, 0x72, 0xffffffffffffffff)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/runtime/netpoll.go:184 +0x55
+internal/poll.(*pollDesc).wait(0xc000307a18, 0x72, 0x7b00, 0x7b28, 0xffffffffffffffff)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_poll_runtime.go:87 +0x45
+internal/poll.(*pollDesc).waitRead(...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_poll_runtime.go:92
+internal/poll.(*FD).Read(0xc000307a00, 0xc000d48000, 0x7b28, 0x7b28, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_unix.go:169 +0x22b
+net.(*netFD).Read(0xc000307a00, 0xc000d48000, 0x7b28, 0x7b28, 0x203000, 0x400, 0xc064300)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/fd_unix.go:202 +0x4f
+net.(*conn).Read(0xc000c887e8, 0xc000d48000, 0x7b28, 0x7b28, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/net.go:184 +0x68
+crypto/tls.(*atLeastReader).Read(0xc0007040c0, 0xc000d48000, 0x7b28, 0x7b28, 0x28, 0x8, 0xc0009198a0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/crypto/tls/conn.go:780 +0x60
+bytes.(*Buffer).ReadFrom(0xc000a62258, 0x612c720, 0xc0007040c0, 0x400c8b5, 0x5aaa140, 0x5d1c160)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/bytes/buffer.go:204 +0xb4
+crypto/tls.(*Conn).readFromUntil(0xc000a62000, 0xc2529b8, 0xc000c887e8, 0x5, 0xc000c887e8, 0x5ba2a20)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/crypto/tls/conn.go:802 +0xec
+crypto/tls.(*Conn).readRecordOrCCS(0xc000a62000, 0x0, 0x0, 0x3)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/crypto/tls/conn.go:609 +0x124
+crypto/tls.(*Conn).readRecord(...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/crypto/tls/conn.go:577
+crypto/tls.(*Conn).Read(0xc000a62000, 0xc0009a3000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/crypto/tls/conn.go:1255 +0x161
+net/http.(*persistConn).Read(0xc0001c2900, 0xc0009a3000, 0x1000, 0x1000, 0xc0000ae240, 0xc000919c20, 0x40073b5)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:1758 +0x75
+bufio.(*Reader).fill(0xc0006f0de0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/bufio/bufio.go:100 +0x103
+bufio.(*Reader).Peek(0xc0006f0de0, 0x1, 0x0, 0x0, 0x1, 0xc000642200, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/bufio/bufio.go:138 +0x4f
+net/http.(*persistConn).readLoop(0xc0001c2900)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:1911 +0x1d6
+created by net/http.(*Transport).dialConn
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:1580 +0xb0d
+goroutine 2532 [IO wait]:
+internal/poll.runtime_pollWait(0xc231230, 0x72, 0xffffffffffffffff)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/runtime/netpoll.go:184 +0x55
+internal/poll.(*pollDesc).wait(0xc000645f18, 0x72, 0x0, 0x1, 0xffffffffffffffff)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_poll_runtime.go:87 +0x45
+internal/poll.(*pollDesc).waitRead(...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_poll_runtime.go:92
+internal/poll.(*FD).Read(0xc000645f00, 0xc000e6fb11, 0x1, 0x1, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_unix.go:169 +0x22b
+net.(*netFD).Read(0xc000645f00, 0xc000e6fb11, 0x1, 0x1, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/fd_unix.go:202 +0x4f
+net.(*conn).Read(0xc0003c82d8, 0xc000e6fb11, 0x1, 0x1, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/net.go:184 +0x68
+net/http.(*connReader).backgroundRead(0xc000e6fb00)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/server.go:677 +0x58
+created by net/http.(*connReader).startBackgroundRead
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/server.go:673 +0xd4
+goroutine 2320 [select]:
+net.(*netFD).connect.func2(0x6186f40, 0xc000d662a0, 0xc000644b80, 0xc00113a300, 0xc00113a2a0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/fd_unix.go:129 +0xba
+created by net.(*netFD).connect
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/fd_unix.go:128 +0x275
+goroutine 2429 [IO wait]:
+internal/poll.runtime_pollWait(0xc5a08a8, 0x72, 0xffffffffffffffff)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/runtime/netpoll.go:184 +0x55
+internal/poll.(*pollDesc).wait(0xc000e620d8, 0x72, 0x201, 0x200, 0xffffffffffffffff)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_poll_runtime.go:87 +0x45
+internal/poll.(*pollDesc).waitRead(...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_poll_runtime.go:92
+internal/poll.(*FD).Read(0xc000e620c0, 0xc0008ca000, 0x200, 0x200, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_unix.go:169 +0x22b
+os.(*File).read(...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/os/file_unix.go:259
+os.(*File).Read(0xc000c88060, 0xc0008ca000, 0x200, 0x200, 0xc0008ca000, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/os/file.go:116 +0x71
+bytes.(*Buffer).ReadFrom(0xc0008fb700, 0x612f480, 0xc000c88060, 0x400b6bb, 0xc000798000, 0x5aaa140)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/bytes/buffer.go:204 +0xb4
+io/ioutil.readAll(0x612f480, 0xc000c88060, 0x200, 0x0, 0x0, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/io/ioutil/ioutil.go:36 +0x100
+io/ioutil.ReadAll(...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/io/ioutil/ioutil.go:45
+github.com/DataDog/datadog-agent/pkg/collector/python.GetSubprocessOutput.func1(0xc000eee500, 0x6163140, 0xc000c88060, 0xc000264a40)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/collector/python/util.go:49 +0xa3
+created by github.com/DataDog/datadog-agent/pkg/collector/python.GetSubprocessOutput
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/collector/python/util.go:47 +0x283
+goroutine 2299 [select]:
+net/http.(*persistConn).writeLoop(0xc0001c2900)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:2210 +0x123
+created by net/http.(*Transport).dialConn
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:1581 +0xb32
+goroutine 2530 [IO wait]:
+internal/poll.runtime_pollWait(0xc5a0158, 0x77, 0xc000d82f00)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/runtime/netpoll.go:184 +0x55
+internal/poll.(*pollDesc).wait(0xc0006ce918, 0x77, 0x6186f00, 0xc0000ad200, 0xc0006ce900)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_poll_runtime.go:87 +0x45
+internal/poll.(*pollDesc).waitWrite(...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_poll_runtime.go:96
+internal/poll.(*FD).WaitWrite(...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_unix.go:498
+net.(*netFD).connect(0xc0006ce900, 0x6186f40, 0xc0000ad200, 0x0, 0x0, 0x612f680, 0xc000906220, 0x0, 0x0, 0x0, ...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/fd_unix.go:152 +0x29d
+net.(*netFD).dial(0xc0006ce900, 0x6186f40, 0xc0000ad200, 0x6197a60, 0x0, 0x6197a60, 0xc000ee2330, 0x0, 0x1, 0xc000afd360)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/sock_posix.go:149 +0xff
+net.socket(0x6186f40, 0xc0000ad200, 0x5dcd884, 0x3, 0x2, 0x1, 0x0, 0x0, 0x6197a60, 0x0, ...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/sock_posix.go:70 +0x1c0
+net.internetSocket(0x6186f40, 0xc0000ad200, 0x5dcd884, 0x3, 0x6197a60, 0x0, 0x6197a60, 0xc000ee2330, 0x1, 0x0, ...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/ipsock_posix.go:141 +0x141
+net.(*sysDialer).doDialTCP(0xc0006ce700, 0x6186f40, 0xc0000ad200, 0x0, 0xc000ee2330, 0x5a77280, 0x74a1b68, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/tcpsock_posix.go:65 +0xc2
+net.(*sysDialer).dialTCP(0xc0006ce700, 0x6186f40, 0xc0000ad200, 0x0, 0xc000ee2330, 0xc0994f7468, 0xc000500800, 0xc000afd5a0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/tcpsock_posix.go:61 +0xd7
+net.(*sysDialer).dialSingle(0xc0006ce700, 0x6186f40, 0xc0000ad200, 0x6162840, 0xc000ee2330, 0x0, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/dial.go:578 +0x36e
+net.(*sysDialer).dialSerial(0xc0006ce700, 0x6186f40, 0xc0000ad200, 0xc0009ae310, 0x1, 0x1, 0x0, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/dial.go:546 +0x221
+net.(*Dialer).DialContext(0xc0000ac900, 0x6186f00, 0xc0000c4008, 0x5dcd884, 0x3, 0xc00063a140, 0x10, 0x0, 0x0, 0x0, ...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/dial.go:424 +0x666
+net/http.(*Transport).dial(0x7467f40, 0x6186f00, 0xc0000c4008, 0x5dcd884, 0x3, 0xc00063a140, 0x10, 0x0, 0xc000010040, 0x30, ...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:1045 +0x1f5
+net/http.(*Transport).dialConn(0x7467f40, 0x6186f00, 0xc0000c4008, 0x0, 0xc0009061e0, 0x4, 0xc00063a140, 0x10, 0x0, 0xc000ed2fb0, ...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:1483 +0x195d
+net/http.(*Transport).dialConnFor(0x7467f40, 0xc000f580b0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:1313 +0xdc
+created by net/http.(*Transport).queueForDial
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:1282 +0x41d
+goroutine 2319 [IO wait]:
+internal/poll.runtime_pollWait(0xc5a03c8, 0x77, 0xc000b70a80)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/runtime/netpoll.go:184 +0x55
+internal/poll.(*pollDesc).wait(0xc000644b98, 0x77, 0x6186f00, 0xc000d662a0, 0xc000644b80)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_poll_runtime.go:87 +0x45
+internal/poll.(*pollDesc).waitWrite(...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_poll_runtime.go:96
+internal/poll.(*FD).WaitWrite(...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_unix.go:498
+net.(*netFD).connect(0xc000644b80, 0x6186f40, 0xc000d662a0, 0x0, 0x0, 0x612f680, 0xc001136100, 0x0, 0x0, 0x0, ...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/fd_unix.go:152 +0x29d
+net.(*netFD).dial(0xc000644b80, 0x6186f40, 0xc000d662a0, 0x6197a60, 0x0, 0x6197a60, 0xc000e6f290, 0x0, 0x1, 0xc000af3360)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/sock_posix.go:149 +0xff
+net.socket(0x6186f40, 0xc000d662a0, 0x5dcd884, 0x3, 0x2, 0x1, 0x0, 0x0, 0x6197a60, 0x0, ...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/sock_posix.go:70 +0x1c0
+net.internetSocket(0x6186f40, 0xc000d662a0, 0x5dcd884, 0x3, 0x6197a60, 0x0, 0x6197a60, 0xc000e6f290, 0x1, 0x0, ...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/ipsock_posix.go:141 +0x141
+net.(*sysDialer).doDialTCP(0xc000644a80, 0x6186f40, 0xc000d662a0, 0x0, 0xc000e6f290, 0x5a77280, 0x74a1b68, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/tcpsock_posix.go:65 +0xc2
+net.(*sysDialer).dialTCP(0xc000644a80, 0x6186f40, 0xc000d662a0, 0x0, 0xc000e6f290, 0xc06680c526, 0xc00006e800, 0xc000af35a0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/tcpsock_posix.go:61 +0xd7
+net.(*sysDialer).dialSingle(0xc000644a80, 0x6186f40, 0xc000d662a0, 0x6162840, 0xc000e6f290, 0x0, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/dial.go:578 +0x36e
+net.(*sysDialer).dialSerial(0xc000644a80, 0x6186f40, 0xc000d662a0, 0xc0009da120, 0x1, 0x1, 0x0, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/dial.go:546 +0x221
+net.(*Dialer).DialContext(0xc0000ac900, 0x6186f00, 0xc0000c4008, 0x5dcd884, 0x3, 0xc0011360e0, 0x12, 0x0, 0x0, 0x0, ...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/dial.go:424 +0x666
+net/http.(*Transport).dial(0x7467f40, 0x6186f00, 0xc0000c4008, 0x5dcd884, 0x3, 0xc0011360e0, 0x12, 0x0, 0x0, 0x0, ...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:1045 +0x1f5
+net/http.(*Transport).dialConn(0x7467f40, 0x6186f00, 0xc0000c4008, 0x0, 0xc001138140, 0x4, 0xc0011360e0, 0x12, 0x0, 0xc000e317a8, ...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:1483 +0x195d
+net/http.(*Transport).dialConnFor(0x7467f40, 0xc0004bc0b0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:1313 +0xdc
+created by net/http.(*Transport).queueForDial
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:1282 +0x41d
+goroutine 2521 [select]:
+net.(*netFD).connect.func2(0x6186f40, 0xc000ee8480, 0xc000645b00, 0xc000c8ab40, 0xc000c8aae0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/fd_unix.go:129 +0xba
+created by net.(*netFD).connect
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/fd_unix.go:128 +0x275
+goroutine 2520 [IO wait]:
+internal/poll.runtime_pollWait(0xc5a0cb8, 0x77, 0xc000b71080)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/runtime/netpoll.go:184 +0x55
+internal/poll.(*pollDesc).wait(0xc000645b18, 0x77, 0x6186f00, 0xc000ee8480, 0xc000645b00)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_poll_runtime.go:87 +0x45
+internal/poll.(*pollDesc).waitWrite(...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_poll_runtime.go:96
+internal/poll.(*FD).WaitWrite(...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_unix.go:498
+net.(*netFD).connect(0xc000645b00, 0x6186f40, 0xc000ee8480, 0x0, 0x0, 0x612f680, 0xc000c5a180, 0x0, 0x0, 0x0, ...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/fd_unix.go:152 +0x29d
+net.(*netFD).dial(0xc000645b00, 0x6186f40, 0xc000ee8480, 0x6197a60, 0x0, 0x6197a60, 0xc000d14990, 0x0, 0x1, 0xc000af7360)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/sock_posix.go:149 +0xff
+net.socket(0x6186f40, 0xc000ee8480, 0x5dcd884, 0x3, 0x2, 0x1, 0x0, 0x0, 0x6197a60, 0x0, ...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/sock_posix.go:70 +0x1c0
+net.internetSocket(0x6186f40, 0xc000ee8480, 0x5dcd884, 0x3, 0x6197a60, 0x0, 0x6197a60, 0xc000d14990, 0x1, 0x0, ...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/ipsock_posix.go:141 +0x141
+net.(*sysDialer).doDialTCP(0xc000645700, 0x6186f40, 0xc000ee8480, 0x0, 0xc000d14990, 0x5a77280, 0x74a1b68, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/tcpsock_posix.go:65 +0xc2
+net.(*sysDialer).dialTCP(0xc000645700, 0x6186f40, 0xc000ee8480, 0x0, 0xc000d14990, 0xc0b74943a9, 0xc0004f0000, 0xc000af75a0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/tcpsock_posix.go:61 +0xd7
+net.(*sysDialer).dialSingle(0xc000645700, 0x6186f40, 0xc000ee8480, 0x6162840, 0xc000d14990, 0x0, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/dial.go:578 +0x36e
+net.(*sysDialer).dialSerial(0xc000645700, 0x6186f40, 0xc000ee8480, 0xc0009808f0, 0x1, 0x1, 0x0, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/dial.go:546 +0x221
+net.(*Dialer).DialContext(0xc0000ac900, 0x6186f00, 0xc0000c4008, 0x5dcd884, 0x3, 0xc000c5a160, 0x12, 0x0, 0x0, 0x0, ...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/dial.go:424 +0x666
+net/http.(*Transport).dial(0x7467f40, 0x6186f00, 0xc0000c4008, 0x5dcd884, 0x3, 0xc000c5a160, 0x12, 0x0, 0x0, 0x0, ...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:1045 +0x1f5
+net/http.(*Transport).dialConn(0x7467f40, 0x6186f00, 0xc0000c4008, 0x0, 0xc0010e6600, 0x4, 0xc000c5a160, 0x12, 0x0, 0xc000df07a0, ...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:1483 +0x195d
+net/http.(*Transport).dialConnFor(0x7467f40, 0xc00003c2c0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:1313 +0xdc
+created by net/http.(*Transport).queueForDial
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:1282 +0x41d
+goroutine 2023 [chan receive, 1 minutes]:
+github.com/DataDog/datadog-agent/pkg/metadata/inventories.StartMetadataUpdatedGoroutine.func1(0x45d964b800, 0x612cf20, 0xc00086c5a0)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/metadata/inventories/inventories.go:182 +0x3a
+created by github.com/DataDog/datadog-agent/pkg/metadata/inventories.StartMetadataUpdatedGoroutine
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/metadata/inventories/inventories.go:180 +0x53
+goroutine 2020 [select]:
+github.com/DataDog/datadog-agent/pkg/metadata.(*Scheduler).AddCollector.func1(0xc00086c5a0, 0xc0009c2780, 0x1a3185c5000, 0x612cee0, 0x74a1b68, 0x5dce1a3, 0x4)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/metadata/scheduler.go:91 +0x15a
+created by github.com/DataDog/datadog-agent/pkg/metadata.(*Scheduler).AddCollector
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/metadata/scheduler.go:87 +0x1f5
+goroutine 2001 [IO wait]:
+internal/poll.runtime_pollWait(0xc5a02f8, 0x72, 0xffffffffffffffff)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/runtime/netpoll.go:184 +0x55
+internal/poll.(*pollDesc).wait(0xc000756018, 0x72, 0x1000, 0x1000, 0xffffffffffffffff)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_poll_runtime.go:87 +0x45
+internal/poll.(*pollDesc).waitRead(...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_poll_runtime.go:92
+internal/poll.(*FD).Read(0xc000756000, 0xc000dc7000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_unix.go:169 +0x22b
+net.(*netFD).Read(0xc000756000, 0xc000dc7000, 0x1000, 0x1000, 0xc000afb9e8, 0x409373d, 0xc000756000)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/fd_unix.go:202 +0x4f
+net.(*conn).Read(0xc000c0a018, 0xc000dc7000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/net.go:184 +0x68
+net/http.(*connReader).Read(0xc000ee2660, 0xc000dc7000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/server.go:785 +0xf4
+bufio.(*Reader).fill(0xc000cfe0c0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/bufio/bufio.go:100 +0x103
+bufio.(*Reader).Peek(0xc000cfe0c0, 0x4, 0x0, 0x0, 0x0, 0x0, 0xc000afbad0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/bufio/bufio.go:138 +0x4f
+net/http.(*conn).readRequest(0xc000aa80a0, 0x6186ec0, 0xc000f2e200, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/server.go:962 +0xb3b
+net/http.(*conn).serve(0xc000aa80a0, 0x6186ec0, 0xc000f2e200)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/server.go:1817 +0x6d4
+created by net/http.(*Server).Serve
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/server.go:2928 +0x384
+goroutine 2457 [IO wait]:
+internal/poll.runtime_pollWait(0xc5a0978, 0x72, 0xffffffffffffffff)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/runtime/netpoll.go:184 +0x55
+internal/poll.(*pollDesc).wait(0xc000795798, 0x72, 0x0, 0x1, 0xffffffffffffffff)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_poll_runtime.go:87 +0x45
+internal/poll.(*pollDesc).waitRead(...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_poll_runtime.go:92
+internal/poll.(*FD).Read(0xc000795780, 0xc00069cf41, 0x1, 0x1, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_unix.go:169 +0x22b
+net.(*netFD).Read(0xc000795780, 0xc00069cf41, 0x1, 0x1, 0xc000048b58, 0xc000ed5f68, 0x406db5c)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/fd_unix.go:202 +0x4f
+net.(*conn).Read(0xc0003c8678, 0xc00069cf41, 0x1, 0x1, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/net.go:184 +0x68
+net/http.(*connReader).backgroundRead(0xc00069cf30)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/server.go:677 +0x58
+created by net/http.(*connReader).startBackgroundRead
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/server.go:673 +0xd4
+goroutine 2022 [select]:
+github.com/DataDog/datadog-agent/pkg/metadata.(*Scheduler).AddCollector.func1(0xc00086c5a0, 0xc0009c2800, 0x8bb2c97000, 0x612fd60, 0xc000bb1320, 0x5dd875a, 0xb)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/metadata/scheduler.go:91 +0x15a
+created by github.com/DataDog/datadog-agent/pkg/metadata.(*Scheduler).AddCollector
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/metadata/scheduler.go:87 +0x1f5
+goroutine 2025 [IO wait]:
+internal/poll.runtime_pollWait(0xc5a0228, 0x72, 0xffffffffffffffff)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/runtime/netpoll.go:184 +0x55
+internal/poll.(*pollDesc).wait(0xc000467718, 0x72, 0x1600, 0x1697, 0xffffffffffffffff)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_poll_runtime.go:87 +0x45
+internal/poll.(*pollDesc).waitRead(...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_poll_runtime.go:92
+internal/poll.(*FD).Read(0xc000467700, 0xc000aae000, 0x1697, 0x1697, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_unix.go:169 +0x22b
+net.(*netFD).Read(0xc000467700, 0xc000aae000, 0x1697, 0x1697, 0x203000, 0x0, 0x168a)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/fd_unix.go:202 +0x4f
+net.(*conn).Read(0xc000c0a4b8, 0xc000aae000, 0x1697, 0x1697, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/net.go:184 +0x68
+crypto/tls.(*atLeastReader).Read(0xc0006ea100, 0xc000aae000, 0x1697, 0x1697, 0xc000b318c0, 0x4019fbe, 0xc000b318a0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/crypto/tls/conn.go:780 +0x60
+bytes.(*Buffer).ReadFrom(0xc00084ccd8, 0x612c720, 0xc0006ea100, 0x400c8b5, 0x5aaa140, 0x5d1c160)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/bytes/buffer.go:204 +0xb4
+crypto/tls.(*Conn).readFromUntil(0xc00084ca80, 0xc2529b8, 0xc000c0a4b8, 0x5, 0xc000c0a4b8, 0x22)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/crypto/tls/conn.go:802 +0xec
+crypto/tls.(*Conn).readRecordOrCCS(0xc00084ca80, 0x0, 0x0, 0x3)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/crypto/tls/conn.go:609 +0x124
+crypto/tls.(*Conn).readRecord(...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/crypto/tls/conn.go:577
+crypto/tls.(*Conn).Read(0xc00084ca80, 0xc0008b3000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/crypto/tls/conn.go:1255 +0x161
+net/http.(*persistConn).Read(0xc0004646c0, 0xc0008b3000, 0x1000, 0x1000, 0xc00075b320, 0xc000b31c20, 0x40073b5)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:1758 +0x75
+bufio.(*Reader).fill(0xc000e63380)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/bufio/bufio.go:100 +0x103
+bufio.(*Reader).Peek(0xc000e63380, 0x1, 0x0, 0x0, 0x1, 0xc00075ab00, 0x7466b40)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/bufio/bufio.go:138 +0x4f
+net/http.(*persistConn).readLoop(0xc0004646c0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:1911 +0x1d6
+created by net/http.(*Transport).dialConn
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:1580 +0xb0d
+goroutine 2494 [IO wait]:
+internal/poll.runtime_pollWait(0xc5a0a48, 0x77, 0xc000fae000)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/runtime/netpoll.go:184 +0x55
+internal/poll.(*pollDesc).wait(0xc00061a518, 0x77, 0x6186f00, 0xc000e8c3c0, 0xc00061a500)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_poll_runtime.go:87 +0x45
+internal/poll.(*pollDesc).waitWrite(...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_poll_runtime.go:96
+internal/poll.(*FD).WaitWrite(...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_unix.go:498
+net.(*netFD).connect(0xc00061a500, 0x6186f40, 0xc000e8c3c0, 0x0, 0x0, 0x612f680, 0xc00099c180, 0x0, 0x0, 0x0, ...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/fd_unix.go:152 +0x29d
+net.(*netFD).dial(0xc00061a500, 0x6186f40, 0xc000e8c3c0, 0x6197a60, 0x0, 0x6197a60, 0xc000dca540, 0x0, 0x1, 0xc000af1360)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/sock_posix.go:149 +0xff
+net.socket(0x6186f40, 0xc000e8c3c0, 0x5dcd884, 0x3, 0x2, 0x1, 0x0, 0x0, 0x6197a60, 0x0, ...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/sock_posix.go:70 +0x1c0
+net.internetSocket(0x6186f40, 0xc000e8c3c0, 0x5dcd884, 0x3, 0x6197a60, 0x0, 0x6197a60, 0xc000dca540, 0x1, 0x0, ...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/ipsock_posix.go:141 +0x141
+net.(*sysDialer).doDialTCP(0xc00061a300, 0x6186f40, 0xc000e8c3c0, 0x0, 0xc000dca540, 0x5a77280, 0x74a1b68, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/tcpsock_posix.go:65 +0xc2
+net.(*sysDialer).dialTCP(0xc00061a300, 0x6186f40, 0xc000e8c3c0, 0x0, 0xc000dca540, 0xc07bac05a1, 0xc000b40000, 0xc000af15a0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/tcpsock_posix.go:61 +0xd7
+net.(*sysDialer).dialSingle(0xc00061a300, 0x6186f40, 0xc000e8c3c0, 0x6162840, 0xc000dca540, 0x0, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/dial.go:578 +0x36e
+net.(*sysDialer).dialSerial(0xc00061a300, 0x6186f40, 0xc000e8c3c0, 0xc00082a2e0, 0x1, 0x1, 0x0, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/dial.go:546 +0x221
+net.(*Dialer).DialContext(0xc0000ac900, 0x6186f00, 0xc0000c4008, 0x5dcd884, 0x3, 0xc00099c160, 0x12, 0x0, 0x0, 0x0, ...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/dial.go:424 +0x666
+net/http.(*Transport).dial(0x7467f40, 0x6186f00, 0xc0000c4008, 0x5dcd884, 0x3, 0xc00099c160, 0x12, 0x0, 0x4345530, 0xc0007c6400, ...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:1045 +0x1f5
+net/http.(*Transport).dialConn(0x7467f40, 0x6186f00, 0xc0000c4008, 0x0, 0xc00075a000, 0x4, 0xc00099c160, 0x12, 0x0, 0xc000c72fa0, ...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:1483 +0x195d
+net/http.(*Transport).dialConnFor(0x7467f40, 0xc0004bc210)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:1313 +0xdc
+created by net/http.(*Transport).queueForDial
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:1282 +0x41d
+goroutine 2495 [select]:
+net.(*netFD).connect.func2(0x6186f40, 0xc000e8c3c0, 0xc00061a500, 0xc00075ab40, 0xc00075a480)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/fd_unix.go:129 +0xba
+created by net.(*netFD).connect
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/fd_unix.go:128 +0x275
+goroutine 2430 [IO wait]:
+internal/poll.runtime_pollWait(0xc5a0568, 0x72, 0xffffffffffffffff)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/runtime/netpoll.go:184 +0x55
+internal/poll.(*pollDesc).wait(0xc000e62198, 0x72, 0x201, 0x200, 0xffffffffffffffff)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_poll_runtime.go:87 +0x45
+internal/poll.(*pollDesc).waitRead(...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_poll_runtime.go:92
+internal/poll.(*FD).Read(0xc000e62180, 0xc000452400, 0x200, 0x200, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_unix.go:169 +0x22b
+os.(*File).read(...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/os/file_unix.go:259
+os.(*File).Read(0xc000c88070, 0xc000452400, 0x200, 0x200, 0xc000452400, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/os/file.go:116 +0x71
+bytes.(*Buffer).ReadFrom(0xc000b1c700, 0x612f480, 0xc000c88070, 0x400b6bb, 0xc000798000, 0x5aaa140)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/bytes/buffer.go:204 +0xb4
+io/ioutil.readAll(0x612f480, 0xc000c88070, 0x200, 0x0, 0x0, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/io/ioutil/ioutil.go:36 +0x100
+io/ioutil.ReadAll(...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/io/ioutil/ioutil.go:45
+github.com/DataDog/datadog-agent/pkg/collector/python.GetSubprocessOutput.func2(0xc000eee500, 0x6163140, 0xc000c88070, 0xc000264ae0)
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/collector/python/util.go:62 +0xa3
+created by github.com/DataDog/datadog-agent/pkg/collector/python.GetSubprocessOutput
+	/var/cache/omnibus/src/datadog-agent/src/github.com/DataDog/datadog-agent/pkg/collector/python/util.go:60 +0x3ed
+goroutine 2531 [select]:
+net.(*netFD).connect.func2(0x6186f40, 0xc0000ad200, 0xc0006ce900, 0xc000616fc0, 0xc000616f60)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/fd_unix.go:129 +0xba
+created by net.(*netFD).connect
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/fd_unix.go:128 +0x275
+goroutine 2463 [IO wait]:
+internal/poll.runtime_pollWait(0xc5a07d8, 0x72, 0xffffffffffffffff)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/runtime/netpoll.go:184 +0x55
+internal/poll.(*pollDesc).wait(0xc000307c18, 0x72, 0x200, 0x205, 0xffffffffffffffff)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_poll_runtime.go:87 +0x45
+internal/poll.(*pollDesc).waitRead(...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_poll_runtime.go:92
+internal/poll.(*FD).Read(0xc000307c00, 0xc000aa6000, 0x205, 0x205, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/internal/poll/fd_unix.go:169 +0x22b
+net.(*netFD).Read(0xc000307c00, 0xc000aa6000, 0x205, 0x205, 0x203000, 0x0, 0xc0008d74e0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/fd_unix.go:202 +0x4f
+net.(*conn).Read(0xc000c0a758, 0xc000aa6000, 0x205, 0x205, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/net.go:184 +0x68
+crypto/tls.(*atLeastReader).Read(0xc0005e6020, 0xc000aa6000, 0x205, 0x205, 0x8000, 0x7294, 0xc0008d7548)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/crypto/tls/conn.go:780 +0x60
+bytes.(*Buffer).ReadFrom(0xc0005373d8, 0x612c720, 0xc0005e6020, 0x400c8b5, 0x5aaa140, 0x5d1c160)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/bytes/buffer.go:204 +0xb4
+crypto/tls.(*Conn).readFromUntil(0xc000537180, 0xc2529b8, 0xc000c0a758, 0x5, 0xc000c0a758, 0xc000cba000)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/crypto/tls/conn.go:802 +0xec
+crypto/tls.(*Conn).readRecordOrCCS(0xc000537180, 0x0, 0x0, 0xc0008d77c0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/crypto/tls/conn.go:609 +0x124
+crypto/tls.(*Conn).readRecord(...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/crypto/tls/conn.go:577
+crypto/tls.(*Conn).Read(0xc000537180, 0xc000c12000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/crypto/tls/conn.go:1255 +0x161
+net/http.(*connReader).Read(0xc0009a5590, 0xc000c12000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/server.go:785 +0xf4
+bufio.(*Reader).fill(0xc0007424e0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/bufio/bufio.go:100 +0x103
+bufio.(*Reader).ReadSlice(0xc0007424e0, 0xc000c4000a, 0x1d, 0xc0008d79a8, 0x400e9a6, 0xc000930900, 0x100)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/bufio/bufio.go:359 +0x3d
+bufio.(*Reader).ReadLine(0xc0007424e0, 0xc0008d79b0, 0xc000b08000, 0x8b83008, 0x0, 0x0, 0xc000307c00)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/bufio/bufio.go:388 +0x34
+net/textproto.(*Reader).readLineSlice(0xc000f26390, 0xc000930900, 0x0, 0x0, 0xc0008d7d70, 0xc000307c00)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/textproto/reader.go:57 +0x6c
+net/textproto.(*Reader).ReadLine(...)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/textproto/reader.go:38
+net/http.readRequest(0xc0007424e0, 0x0, 0xc000930900, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/request.go:1012 +0x92
+net/http.(*conn).readRequest(0xc0009c43c0, 0x6186ec0, 0xc00035d700, 0x0, 0x0, 0x0)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/server.go:965 +0x15f
+net/http.(*conn).serve(0xc0009c43c0, 0x6186ec0, 0xc00035d700)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/server.go:1817 +0x6d4
+created by net/http.(*Server).Serve
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/server.go:2928 +0x384
+goroutine 2562 [select]:
+net/http.(*persistConn).writeLoop(0xc00070ad80)
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:2210 +0x123
+created by net/http.(*Transport).dialConn
+	/Users/builder/.gimme/versions/go1.13.8.darwin.amd64/src/net/http/transport.go:1581 +0xb32

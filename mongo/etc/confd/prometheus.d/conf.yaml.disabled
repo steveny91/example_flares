@@ -1,0 +1,7 @@
+init_config:
+instances:
+  - prometheus_url: http://localhost:8080/prometheus3.txt
+    namespace: openmetriz
+    metrics:
+      - "*"
+    send_histograms_buckets: true

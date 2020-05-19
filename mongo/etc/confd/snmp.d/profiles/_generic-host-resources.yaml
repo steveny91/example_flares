@@ -1,0 +1,28 @@
+metrics:
+  - MIB: HOST-RESOURCES-MIB
+    symbol: hrSystemUptime
+  - MIB: HOST-RESOURCES-MIB
+    symbol: hrSystemNumUsers
+  - MIB: HOST-RESOURCES-MIB
+    symbol: hrSystemProcesses
+  - MIB: HOST-RESOURCES-MIB
+    symbol: hrSystemMaxProcesses
+  - MIB: HOST-RESOURCES-MIB
+    table: hrStorageTable
+    symbols:
+      - hrStorageAllocationUnits
+      - hrStorageSize
+      - hrStorageUsed
+      - hrStorageAllocationFailures
+    metric_tags:
+      - tag: storagedesc
+        column: hrStorageDescr
+      - tag: storagetype
+        column: hrStorageType
+  - MIB: HOST-RESOURCES-MIB
+    table: hrProcessorTable
+    symbols:
+      - hrProcessorLoad
+    metric_tags:
+      - tag: processorid
+        column: hrProcessorFrwID

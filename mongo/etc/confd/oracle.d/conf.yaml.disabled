@@ -1,0 +1,6 @@
+init_config:
+instances:
+  - server: localhost:1521
+    service_name: <SERVICE_NAME>
+    user: datadog
+    password: ********

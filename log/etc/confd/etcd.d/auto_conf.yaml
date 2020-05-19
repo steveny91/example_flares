@@ -1,0 +1,5 @@
+ad_identifiers:
+  - etcd
+init_config:
+instances:
+  - prometheus_url: "http://%%host%%:2379/metrics"

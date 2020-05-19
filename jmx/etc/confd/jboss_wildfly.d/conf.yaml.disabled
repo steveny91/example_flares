@@ -1,0 +1,9 @@
+init_config:
+  collect_default_metrics: true
+  custom_jar_paths:
+  - /Users/steven.yuen/Desktop/wildfly-8.2.0.Final/bin/client/jboss-cli-client.jar
+  is_jmx: true
+instances:
+- jmx_url: service:jmx:http-remoting-jmx://localhost:9990
+  password: ********
+  user: datadog

@@ -1,0 +1,5 @@
+ad_identifiers:
+  - kube-state-metrics
+init_config:
+instances:
+  - kube_state_url: http://%%host%%:8080/metrics

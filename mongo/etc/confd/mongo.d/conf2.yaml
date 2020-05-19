@@ -1,0 +1,4 @@
+init_config:
+instances:
+  - hosts:
+      my_host_address

@@ -1,0 +1,22 @@
+init_config:
+instances:
+  -
+    ip_address: 10.184.5.2
+    port: 161
+    snmp_version: 3
+    user: svc-snmp-cisco
+    authProtocol: SHA
+    authKey: ********
+    privProtocol: AES
+    privKey: ********
+    use_global_metrics: true
+    metrics:
+      - MIB: UDP-MIB
+        symbol: udpInDatagrams
+      - MIB: TCP-MIB
+        symbol: tcpActiveOpens
+      - OID: 1.3.6.1.2.1.6.5
+        name: tcpPassiveOpens
+      - OID: 1.3.6.1.2.1.6.5
+        name: tcpPassiveOpens
+        metric_tags:

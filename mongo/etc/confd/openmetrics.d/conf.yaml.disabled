@@ -1,0 +1,6 @@
+init_config:
+instances:
+  - prometheus_url: http://localhost:8080/prometheusx.txt
+    namespace: openmets
+    metrics:
+    - "*"

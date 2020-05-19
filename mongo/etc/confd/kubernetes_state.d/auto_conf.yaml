@@ -1,0 +1,6 @@
+ad_identifiers:
+  - kube-state-metrics
+init_config:
+ignore_autodiscovery_tags: true
+instances:
+  - kube_state_url: http://%%host%%:8080/metrics

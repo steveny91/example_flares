@@ -1,0 +1,33 @@
+File path                                          | mode  | owner      | group     
+-------------------------------------------------------------------------------------
+/etc/datadog-agent/conf.d/load.d/conf.yaml.default | -rw-r--r-- | dd-agent   | dd-agent  
+/etc/datadog-agent/conf.d/confluent_platform.d/metrics.yaml | -rw-r--r-- | dd-agent   | dd-agent  
+/etc/datadog-agent/conf.d/couch.d/auto_conf.yaml   | -rw-r--r-- | dd-agent   | dd-agent  
+/etc/datadog-agent/conf.d/kafka.d/metrics.yaml     | -rw-r--r-- | dd-agent   | dd-agent  
+/etc/datadog-agent/conf.d/cassandra.d/metrics.yaml | -rw-r--r-- | dd-agent   | dd-agent  
+/etc/datadog-agent/conf.d/cilium.d/auto_conf.yaml  | -rw-r--r-- | dd-agent   | dd-agent  
+/etc/datadog-agent/conf.d/couchbase.d/auto_conf.yaml | -rw-r--r-- | dd-agent   | dd-agent  
+/etc/datadog-agent/conf.d/harbor.d/auto_conf.yaml  | -rw-r--r-- | dd-agent   | dd-agent  
+/etc/datadog-agent/conf.d/hive.d/metrics.yaml      | -rw-r--r-- | dd-agent   | dd-agent  
+/etc/datadog-agent/conf.d/kubernetes_state.d/auto_conf.yaml | -rw-r--r-- | dd-agent   | dd-agent  
+/var/log/datadog/trace-agent.log                   | -rw-r--r-- | dd-agent   | dd-agent  
+/etc/datadog-agent/auth_token                      | -rw------- | dd-agent   | dd-agent  
+/etc/datadog-agent/conf.d/cpu.d/conf.yaml.default  | -rw-r--r-- | dd-agent   | dd-agent  
+/etc/datadog-agent/conf.d/etcd.d/auto_conf.yaml    | -rw-r--r-- | dd-agent   | dd-agent  
+/etc/datadog-agent/conf.d/disk.d/conf.yaml.default | -rw-r--r-- | dd-agent   | dd-agent  
+/etc/datadog-agent/conf.d/external_dns.d/auto_conf.yaml | -rw-r--r-- | dd-agent   | dd-agent  
+/etc/datadog-agent/conf.d/kyototycoon.d/auto_conf.yaml | -rw-r--r-- | dd-agent   | dd-agent  
+/etc/datadog-agent/conf.d/jboss_wildfly.d/metrics.yaml | -rw-r--r-- | dd-agent   | dd-agent  
+/etc/datadog-agent/conf.d/kube_apiserver_metrics.d/auto_conf.yaml | -rw-r--r-- | dd-agent   | dd-agent  
+/etc/datadog-agent/conf.d/kube_dns.d/auto_conf.yaml | -rw-r--r-- | dd-agent   | dd-agent  
+/var/log/datadog/process-agent.log                 | -rw-r--r-- | dd-agent   | dd-agent  
+/etc/datadog-agent/conf.d/activemq.d/metrics.yaml  | -rw-r--r-- | dd-agent   | dd-agent  
+/etc/datadog-agent/conf.d/apache.d/auto_conf.yaml  | -rw-r--r-- | dd-agent   | dd-agent  
+/etc/datadog-agent/conf.d/elastic.d/auto_conf.yaml | -rw-r--r-- | dd-agent   | dd-agent  
+/etc/datadog-agent/conf.d/consul.d/auto_conf.yaml  | -rw-r--r-- | dd-agent   | dd-agent  
+/etc/datadog-agent/conf.d/kube_controller_manager.d/auto_conf.yaml | -rw-r--r-- | dd-agent   | dd-agent  
+/etc/datadog-agent/conf.d/kube_scheduler.d/auto_conf.yaml | -rw-r--r-- | dd-agent   | dd-agent  
+/var/log/datadog/agent.log                         | -rw-r--r-- | dd-agent   | dd-agent  
+/etc/datadog-agent/conf.d/coredns.d/auto_conf.yaml | -rw-r--r-- | dd-agent   | dd-agent  
+/etc/datadog-agent/conf.d/file_handle.d/conf.yaml.default | -rw-r--r-- | dd-agent   | dd-agent  
+/etc/datadog-agent/conf.d/io.d/conf.yaml.default   | -rw-r--r-- | dd-agent   | dd-agent  

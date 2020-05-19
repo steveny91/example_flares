@@ -1,0 +1,64 @@
+ConfigErrors: {}
+ResolveWarnings:
+  apache:
+  - 'No service found with this AD identifier: httpd'
+  - Can't resolve the template for apache at this moment.
+  cilium:
+  - 'No service found with this AD identifier: cilium-agent'
+  - Can't resolve the template for cilium at this moment.
+  consul:
+  - 'No service found with this AD identifier: consul'
+  - Can't resolve the template for consul at this moment.
+  couch:
+  - 'No service found with this AD identifier: couchdb'
+  - Can't resolve the template for couch at this moment.
+  couchbase:
+  - 'No service found with this AD identifier: couchbase'
+  - Can't resolve the template for couchbase at this moment.
+  elastic:
+  - 'No service found with this AD identifier: elasticsearch'
+  - 'No service found with this AD identifier: elasticsearch-oss'
+  - Can't resolve the template for elastic at this moment.
+  etcd:
+  - 'No service found with this AD identifier: etcd'
+  - Can't resolve the template for etcd at this moment.
+  external_dns:
+  - 'No service found with this AD identifier: external-dns'
+  - Can't resolve the template for external_dns at this moment.
+  harbor:
+  - 'No service found with this AD identifier: nginx-photon'
+  - Can't resolve the template for harbor at this moment.
+  kube_apiserver_metrics:
+  - 'No service found with this AD identifier: kube-apiserver'
+  - Can't resolve the template for kube_apiserver_metrics at this moment.
+  kube_controller_manager:
+  - 'No service found with this AD identifier: kube-controller-manager'
+  - Can't resolve the template for kube_controller_manager at this moment.
+  kube_dns:
+  - 'No service found with this AD identifier: kubedns-amd64'
+  - 'No service found with this AD identifier: k8s-dns-kube-dns-amd64'
+  - Can't resolve the template for kube_dns at this moment.
+  kube_scheduler:
+  - 'No service found with this AD identifier: kube-scheduler'
+  - Can't resolve the template for kube_scheduler at this moment.
+  kubernetes_state:
+  - 'No service found with this AD identifier: kube-state-metrics'
+  - Can't resolve the template for kubernetes_state at this moment.
+  kyototycoon:
+  - 'No service found with this AD identifier: kyototycoon'
+  - Can't resolve the template for kyototycoon at this moment.
+  mcache:
+  - 'No service found with this AD identifier: memcached'
+  - Can't resolve the template for mcache at this moment.
+  presto:
+  - 'No service found with this AD identifier: presto'
+  - Can't resolve the template for presto at this moment.
+  redisdb:
+  - 'No service found with this AD identifier: redis'
+  - Can't resolve the template for redisdb at this moment.
+  riak:
+  - 'No service found with this AD identifier: riak'
+  - Can't resolve the template for riak at this moment.
+  tomcat:
+  - 'No service found with this AD identifier: tomcat'
+  - Can't resolve the template for tomcat at this moment.

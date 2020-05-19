@@ -1,0 +1,4 @@
+metric_tags:
+  - MIB: SNMPv2-MIB
+    symbol: sysName
+    tag: snmp_host

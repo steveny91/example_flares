@@ -1,0 +1,34 @@
+2020-05-19 03:13:06 EDT | CORE | INFO | (cmd/agent/app/run.go:179 in StartAgent) | Starting Datadog Agent v7.19.2
+2020-05-19 03:13:06 EDT | CORE | INFO | (cmd/agent/app/run.go:210 in StartAgent) | Hostname is: MissingKecl
+2020-05-19 03:13:06 EDT | CORE | INFO | (cmd/agent/gui/gui.go:81 in StartGUIServer) | GUI server is listening at 127.0.0.1:5002
+2020-05-19 03:13:06 EDT | CORE | INFO | (pkg/forwarder/forwarder.go:231 in Start) | Forwarder started, sending to 1 endpoint(s) with 1 worker(s) each: "https://7-19-2-app.agent.datadoghq.com" (1 api key(s))
+2020-05-19 03:13:06 EDT | CORE | INFO | (cmd/agent/app/run.go:277 in StartAgent) | logs-agent disabled
+2020-05-19 03:13:06 EDT | CORE | INFO | (pkg/dogstatsd/listeners/udp.go:97 in Listen) | dogstatsd-udp: starting to listen on 127.0.0.1:8120
+2020-05-19 03:13:06 EDT | CORE | INFO | (pkg/tagger/tagger.go:152 in tryCollectors) | docker tag collector successfully started
+2020-05-19 03:13:06 EDT | CORE | INFO | (pkg/collector/runner/runner.go:92 in NewRunner) | Runner started with 4 workers.
+2020-05-19 03:13:06 EDT | CORE | INFO | (pkg/collector/python/init.go:303 in Initialize) | Initializing rtloader with python3 /opt/datadog-agent/embedded
+2020-05-19 03:13:07 EDT | CORE | INFO | (pkg/collector/python/datadog_agent.go:120 in LogMessage) | - | (ddyaml.py:123) | monkey patching yaml.load...
+2020-05-19 03:13:07 EDT | CORE | INFO | (pkg/collector/python/datadog_agent.go:120 in LogMessage) | - | (ddyaml.py:127) | monkey patching yaml.load_all...
+2020-05-19 03:13:07 EDT | CORE | INFO | (pkg/collector/python/datadog_agent.go:120 in LogMessage) | - | (ddyaml.py:131) | monkey patching yaml.dump_all... (affects all yaml dump operations)
+2020-05-19 03:13:07 EDT | CORE | INFO | (pkg/collector/collector.go:57 in NewCollector) | Embedding Python 3.8.1 (default, May 12 2020, 03:48:15) [Clang 10.0.0 (clang-1000.10.44.4)]
+2020-05-19 03:13:07 EDT | CORE | INFO | (pkg/autodiscovery/providers/file.go:74 in Collect) | file: searching for configuration files at: /opt/datadog-agent/etc/conf.d
+2020-05-19 03:13:07 EDT | CORE | INFO | (pkg/autodiscovery/providers/file.go:74 in Collect) | file: searching for configuration files at: /opt/datadog-agent/bin/agent/dist/conf.d
+2020-05-19 03:13:07 EDT | CORE | WARN | (pkg/autodiscovery/providers/file.go:78 in Collect) | Skipping, open /opt/datadog-agent/bin/agent/dist/conf.d: no such file or directory
+2020-05-19 03:13:07 EDT | CORE | INFO | (pkg/autodiscovery/providers/file.go:74 in Collect) | file: searching for configuration files at: 
+2020-05-19 03:13:07 EDT | CORE | WARN | (pkg/autodiscovery/providers/file.go:78 in Collect) | Skipping, open : no such file or directory
+2020-05-19 03:13:07 EDT | CORE | INFO | (pkg/collector/corechecks/embed/process_agent.go:135 in Configure) | live process monitoring is disabled through main configuration file
+2020-05-19 03:13:07 EDT | CORE | INFO | (pkg/collector/scheduler/scheduler.go:244 in enqueueOnce) | Scheduling check APM Agent for one-time execution
+2020-05-19 03:13:07 EDT | CORE | INFO | (pkg/collector/collector.go:115 in RunCheck) | Adding an extra runner for the 'APM Agent' long running check
+2020-05-19 03:13:07 EDT | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check cpu with an interval of 15s
+2020-05-19 03:13:07 EDT | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check APM Agent
+2020-05-19 03:13:07 EDT | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check disk with an interval of 15s
+2020-05-19 03:13:07 EDT | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check io with an interval of 15s
+2020-05-19 03:13:07 EDT | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check load with an interval of 15s
+2020-05-19 03:13:07 EDT | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check memory with an interval of 15s
+2020-05-19 03:13:07 EDT | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check network with an interval of 15s
+2020-05-19 03:13:07 EDT | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check ntp with an interval of 15m0s
+2020-05-19 03:13:07 EDT | CORE | INFO | (pkg/collector/scheduler/scheduler.go:244 in enqueueOnce) | Scheduling check Process Agent for one-time execution
+2020-05-19 03:13:07 EDT | CORE | INFO | (pkg/collector/collector.go:115 in RunCheck) | Adding an extra runner for the 'Process Agent' long running check
+2020-05-19 03:13:07 EDT | CORE | INFO | (pkg/collector/scheduler/scheduler.go:83 in Enter) | Scheduling check uptime with an interval of 15s
+2020-05-19 03:13:07 EDT | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check Process Agent
+2020-05-19 03:13:07 EDT | CORE | INFO | (pkg/collector/runner/runner.go:261 in work) | Running check Mongo

@@ -1,0 +1,8 @@
+errors:
+  aws: 'not retrieving hostname from AWS: the host is not an ECS instance, and other
+    providers already retrieve non-default hostnames'
+  configuration/environment: hostname is empty
+  gce: 'unable to retrieve hostname from GCE: Get http://169.254.169.254/computeMetadata/v1/instance/hostname:
+    net/http: request canceled while waiting for connection (Client.Timeout exceeded
+    while awaiting headers)'
+provider: os

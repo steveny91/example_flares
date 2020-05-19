@@ -1,0 +1,7 @@
+ad_identifiers:
+  - cilium-agent
+init_config:
+instances:
+  - agent_endpoint: http://%%host%%:9090/metrics
+    tags:
+      - "cilium-pod:%%host%%"
